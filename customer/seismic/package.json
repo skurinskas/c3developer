@@ -1,0 +1,14 @@
+{
+  "name": "c3developer",
+  "version": "5.5.0-snapshot",
+  "description": "Developer Demo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c3-e/c3apps.git",
+    "path": "customer/c3developer"
+  },
+  "author": "skurinskas",
+  "license": "LicenseRef-LICENSE",
+  "homepage": "https://github.com/c3-e/c3base#readme"
+}
+

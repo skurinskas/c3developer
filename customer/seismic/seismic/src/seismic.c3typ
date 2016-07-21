@@ -1,0 +1,20 @@
+/*
+ * Copyright 2009-2014 C3 Energy (http://www.c3energy.com).  All Rights Reserved.
+ * This material, including without limitation any software, is the confidential trade secret
+ * and proprietary information of C3 Energy and its licensors.  Reproduction, use and distribution
+ * of this material in any form is strictly prohibited except as set forth in a written
+ * license agreement with C3 Energy and/or its authorized distributors.
+ */
+module seismic schema name 'SIEI' {
+
+    entity type SeismicEvent schema name 'SEIEV' {
+      eventType     : string
+      latitude  	: double
+      longitude 	: double
+      depth     	: double
+      mag			: double
+      place			: string
+      time 	: datetime
+    }
+    
+}
