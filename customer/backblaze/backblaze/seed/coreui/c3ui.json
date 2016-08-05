@@ -1,0 +1,56 @@
+{
+  "type": "UIConfig",
+  "module": "coreui",
+  "data": [{
+    "id": "skurinsk",
+    "applications": [
+      {
+        "id": "C3Tools",
+        "bundle": "platform",
+        "package": "coreui",
+        "hideSections": "false"
+      },
+      {
+        "id": "eq",
+        "package": "eq",
+        "bundle": "eq"
+      }
+    ],
+    "environments": [
+      {
+        "id": "production",
+        "server": {
+          "url": "https://skurinsk-skurinsk.c3-e.com",
+          "tenant": "skurinsk",
+          "tag": "c3developer"
+        },
+        "session": {
+          "cache": "LocalStorage"
+        },
+        "site": {
+          "renderTo": "body"
+        },
+        "connection": {
+          "cache": true
+        },
+        "designer": true,
+        "c3Tools": true,
+        "navigation": [
+          {
+            "title": "C3 Console",
+            "id": "C3Console",
+            "items": [
+              {
+                "description": "Go to the C3 Console",
+                "newTab": true,
+                "url": "/static/console#tenant=skurinsk&tag=c3developer",
+                "icon": "terminal-icon.png",
+                "externalLink": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }]
+}

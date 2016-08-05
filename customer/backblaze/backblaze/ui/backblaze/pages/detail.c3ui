@@ -1,0 +1,123 @@
+ui module backblaze {
+    page detail {
+        "name": "detail",
+        "id": "backblaze.detail",
+        "thumbnail": "template-thumbs/120/c3ui.Dashboard2x2.gif",
+        "template": "backblaze.detail",
+        "isModal": true,
+        "package": "backblaze",
+        "recordType": "",
+        "idSource": "params.id",
+        "title": "Detail",
+        "url": "detail",
+        "modalTitle": "",
+        "closeButtonText": "",
+        "actionButtonAction": "",
+        "actionButtonText": "",
+        "components": [
+            {
+                "id": "TabPanel",
+                "component": "TabPanel",
+                "icon": "th-list",
+                "name": "TabPanel",
+                "box": false,
+                "format": "framed",
+                "title": "New TabPanel",
+                "renderTo": "#TopLeft",
+                "height": 451,
+                "components": [
+                    {
+                        "id": "DefinitionList",
+                        "component": "DefinitionList",
+                        "icon": "list",
+                        "name": "DefinitionList",
+                        "box": false,
+                        "title": "Details",
+                        "cls": "dl-horizontal",
+                        "data": {
+                            "record": {
+                                "c3module": "structure",
+                                "c3type": "FixedAsset",
+                                "c3function": "fetch",
+                                "responseSelector": "response.objs",
+                                "responseTransform": {
+                                    "firstItem": true
+                                },
+                                "c3arguments": {
+                                    "spec": {
+                                        "filter": "id =='{{ params.id }}'"
+                                    }
+                                }
+                            }
+                        },
+                        "rows": [
+                            {
+                                "id": "id",
+                                "field": "id",
+                                "label": "Id",
+                                "link": "/backblaze/detail/{{id}}",
+                                "width": "100px"
+                            },
+                            {
+                                "id": "model",
+                                "field": "model",
+                                "label": "Model"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "Chart",
+                        "component": "chart.MetricsChart",
+                        "icon": "bar-chart",
+                        "name": "Chart",
+                        "box": false,
+                        "title": "Trends",
+                        "dynamicDateRange": false,
+                        "startDate": "2013-01-01T08:00:00.000Z",
+                        "endDate": "2013-03-01T08:00:00.000Z",
+                        "userMetricConfigs": [
+                            {
+                                "id": "metric-series-0",
+                                "info": {
+                                    "id": "capacity"
+                                },
+                                "chartConfig": {
+                                    "name": "capacity",
+                                    "color": "#0e90b0",
+                                    "type": "column",
+                                    "stack": "1",
+                                    "index": 0
+                                },
+                                "metric": {
+                                    "grain": "MONTH",
+                                    "id": "capacity"
+                                }
+                            }
+                        ],
+                        "currentType": {
+                            "c3Type": "FixedAsset",
+                            "c3Module": "structure"
+                        },
+                        "legend": "false",
+                        "data": {
+                            "record": {
+                                "c3function": "fetch",
+                                "responseSelector": "response.objs",
+                                "responseTransform": {
+                                    "firstItem": true
+                                },
+                                "c3arguments": {
+                                    "spec": {
+                                        "filter": "id =='{{ params.id }}'"
+                                    }
+                                },
+                                "c3module": "structure",
+                                "c3type": "FixedAsset"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "type": "UIConfig",
+    "module": "coreui",
+    "data": [
+        {
+            "type": {
+                "module": "coreui",
+                "name": "UIConfig"
+            },
+            "applications": [
+                {
+                    "id": "C3Tools",
+                    "bundle": "platform",
+                    "package": "coreui",
+                    "hideSections": "false"
+                },
+                {
+                    "id": "eq",
+                    "package": "eq",
+                    "bundle": "eq"
+                },
+                {
+                    "id": "backblaze",
+                    "package": "backblaze",
+                    "bundle": "backblaze",
+                    "hideNavigation": false
+                }
+            ],
+            "environments": [
+                {
+                    "id": "production",
+                    "server": {
+                        "url": "https://skurinsk-skurinsk.c3-e.com",
+                        "tenant": "skurinsk",
+                        "tag": "c3developer",
+                        "isLocal": true
+                    },
+                    "session": {
+                        "cache": "LocalStorage"
+                    },
+                    "site": {
+                        "renderTo": "body"
+                    },
+                    "connection": {
+                        "cache": true
+                    },
+                    "designer": true,
+                    "c3Tools": true,
+                    "navigation": [
+                        {
+                            "title": "C3 Console",
+                            "id": "C3Console",
+                            "items": [
+                                {
+                                    "description": "Go to the C3 Console",
+                                    "newTab": true,
+                                    "url": "/static/console#tenant=skurinsk&tag=c3developer",
+                                    "icon": "terminal-icon.png",
+                                    "externalLink": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "id": "skurinsk",
+            "version": 4,
+            "meta": {
+                "tenantTagId": 15,
+                "tenant": "skurinsk",
+                "tag": "c3developer",
+                "created": "2016-07-21T20:52:52.000Z",
+                "createdBy": "skurinsk@gmail.com",
+                "updated": "2016-07-22T17:19:20.000Z",
+                "updatedBy": "skurinsk@gmail.com",
+                "timestamp": "2016-07-22T17:19:20.000Z"
+            }
+        }
+    ]
+}

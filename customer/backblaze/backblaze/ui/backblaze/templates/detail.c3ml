@@ -1,0 +1,14 @@
+<div class="container c3-page c3-page-dashboard">
+    {{ if title }}
+    <div class="row title">
+        <div class="col-md-12">
+            {{ h1 title }}
+        </div>
+    </div>
+    {{ end }}
+    <div class="row">
+        <div class="c3-component-socket col-xs-12 col-sm-12" data-box="true" id="TopLeft" style="height: 463px;"></div>
+        
+    </div>
+    
+</div>

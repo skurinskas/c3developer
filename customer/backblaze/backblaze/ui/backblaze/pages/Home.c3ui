@@ -1,0 +1,42 @@
+ui module backblaze {
+    page Home {
+        "name": "Home",
+        "id": "backblaze.Home",
+        "template": "c3ui.Dashboard2x2",
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
+        "title": "Home",
+        "url": "home",
+        "components": [
+            {
+                "id": "Grid",
+                "component": "KendoGrid",
+                "icon": "align-justify",
+                "name": "Grid",
+                "box": true,
+                "paginate": true,
+                "title": "List",
+                "data": {
+                    "collection": "backblaze.HardDrives"
+                },
+                "renderTo": "#TopLeft",
+                "height": 388,
+                "small": false,
+                "checkBoxes": false,
+                "columns": [
+                    {
+                        "id": "id",
+                        "field": "id",
+                        "label": "Id",
+                        "link": "/backblaze/detail/{{id}}",
+                        "width": "100px"
+                    },
+                    {
+                        "id": "model",
+                        "field": "model",
+                        "label": "Model"
+                    }
+                ]
+            }
+        ]
+    }
+}
