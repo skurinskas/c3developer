@@ -16,5 +16,4 @@ module seismic schema name 'SIEI' {
       place			: string
       time 	: datetime
     }
-    
 }

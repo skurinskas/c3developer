@@ -1,0 +1,20 @@
+module backblazeCanonicalTransform remix canonicalTransform {
+
+  import backblazeCanonical;
+
+  /* Canonical backblazeCanonical to Asset Transformation */
+  type TransformBackBlazeCanonicalToAsset mixes FixedAsset transforms CanonicalBackblaze {
+    id                : ~ expression "serial_number"
+    name              : ~ expression "serial_number"
+    model             : ~ expression "model"
+  }
+
+  type TransformBackBlazeCanonicalToPhysicalMeasurementSeries mixes PhysicalMeasurementSeries transforms CanonicalBackblaze {
+    transform : function(CanonicalBackblaze hdMeasurements) : [PhysicalMeasurementSeries] {@transformCanonicalBBToPMS@} js server
+  }
+
+  type TransformBackBlazeCanonicalToMeasurement mixes Measurement transforms CanonicalBackblaze {
+    transform : function(CanonicalBackblaze hdMeasurements) : [Measurement] {@transformCanonicalBBToMeasurement@} js server
+  }
+
+}

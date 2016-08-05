@@ -1,0 +1,10 @@
+entity module backBlaze_Structure remix structure  {
+
+  entity type FixedAsset {
+      serialNumber    : string
+      model           : string
+  }
+
+  entity type ColumnToMetricMapping schema name 'CMM'
+
+}

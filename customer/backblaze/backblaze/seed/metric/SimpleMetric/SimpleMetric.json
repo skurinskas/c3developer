@@ -1,0 +1,1082 @@
+{
+  "module": "metric",
+  "type": "SimpleMetric",
+  "data": [
+    {
+      "id": "capacity_FixedAsset",
+      "name": "capacity",
+      "path": "measurements.(measurementType == 'capacity')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "failure_FixedAsset",
+      "name": "failure",
+      "path": "measurements.(measurementType == 'failure')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "spinRetryNormalized_FixedAsset",
+      "name": "spinRetryNormalized",
+      "path": "measurements.(measurementType == 'spinRetryNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "spinRetry_FixedAsset",
+      "name": "spinRetry",
+      "path": "measurements.(measurementType == 'spinRetry')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "calibrationRetryNormalized_FixedAsset",
+      "name": "calibrationRetryNormalized",
+      "path": "measurements.(measurementType == 'calibrationRetryNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "calibrationRetry_FixedAsset",
+      "name": "calibrationRetry",
+      "path": "measurements.(measurementType == 'calibrationRetry')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "powerCycleNormalized_FixedAsset",
+      "name": "powerCycleNormalized",
+      "path": "measurements.(measurementType == 'powerCycleNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "powerCycle_FixedAsset",
+      "name": "powerCycle",
+      "path": "measurements.(measurementType == 'powerCycle')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "softReadNormalized_FixedAsset",
+      "name": "softReadNormalized",
+      "path": "measurements.(measurementType == 'softReadNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "softRead_FixedAsset",
+      "name": "softRead",
+      "path": "measurements.(measurementType == 'softRead')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "smart15Normalized_FixedAsset",
+      "name": "smart15Normalized",
+      "path": "measurements.(measurementType == 'smart15Normalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "smart15_FixedAsset",
+      "name": "smart15",
+      "path": "measurements.(measurementType == 'smart15')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "runtimeBadBlockNormalized_FixedAsset",
+      "name": "runtimeBadBlockNormalized",
+      "path": "measurements.(measurementType == 'runtimeBadBlockNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "runtimeBadBlock_FixedAsset",
+      "name": "runtimeBadBlock",
+      "path": "measurements.(measurementType == 'runtimeBadBlock')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "endToEndErrorNormalized_FixedAsset",
+      "name": "endToEndErrorNormalized",
+      "path": "measurements.(measurementType == 'endToEndErrorNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "endToEndError_FixedAsset",
+      "name": "endToEndError",
+      "path": "measurements.(measurementType == 'endToEndError')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "uncorrectableErrorsNormalized_FixedAsset",
+      "name": "uncorrectableErrorsNormalized",
+      "path": "measurements.(measurementType == 'uncorrectableErrorsNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "uncorrectableErrors_FixedAsset",
+      "name": "uncorrectableErrors",
+      "path": "measurements.(measurementType == 'uncorrectableErrors')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "commandTimeoutNormalized_FixedAsset",
+      "name": "commandTimeoutNormalized",
+      "path": "measurements.(measurementType == 'commandTimeoutNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "commandTimeout_FixedAsset",
+      "name": "commandTimeout",
+      "path": "measurements.(measurementType == 'commandTimeout')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "highFlyWritesNormalized_FixedAsset",
+      "name": "highFlyWritesNormalized",
+      "path": "measurements.(measurementType == 'highFlyWritesNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "highFlyWrites_FixedAsset",
+      "name": "highFlyWrites",
+      "path": "measurements.(measurementType == 'highFlyWrites')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "airflowTempNormalized_FixedAsset",
+      "name": "airflowTempNormalized",
+      "path": "measurements.(measurementType == 'airflowTempNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "airflowTemp_FixedAsset",
+      "name": "airflowTemp",
+      "path": "measurements.(measurementType == 'airflowTemp')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "gSenseErrorNormalized_FixedAsset",
+      "name": "gSenseErrorNormalized",
+      "path": "measurements.(measurementType == 'gSenseErrorNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "gSenseError_FixedAsset",
+      "name": "gSenseError",
+      "path": "measurements.(measurementType == 'gSenseError')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "powerOffCountNormalized_FixedAsset",
+      "name": "powerOffCountNormalized",
+      "path": "measurements.(measurementType == 'powerOffCountNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "powerOffCount_FixedAsset",
+      "name": "powerOffCount",
+      "path": "measurements.(measurementType == 'powerOffCount')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadCycleCountNormalized_FixedAsset",
+      "name": "loadCycleCountNormalized",
+      "path": "measurements.(measurementType == 'loadCycleCountNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadCycleCount_FixedAsset",
+      "name": "loadCycleCount",
+      "path": "measurements.(measurementType == 'loadCycleCount')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "temperatureNormalized_FixedAsset",
+      "name": "temperatureNormalized",
+      "path": "measurements.(measurementType == 'temperatureNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "temperature_FixedAsset",
+      "name": "temperature",
+      "path": "measurements.(measurementType == 'temperature')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "eccRecoveredNormalized_FixedAsset",
+      "name": "eccRecoveredNormalized",
+      "path": "measurements.(measurementType == 'eccRecoveredNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "eccRecovered_FixedAsset",
+      "name": "eccRecovered",
+      "path": "measurements.(measurementType == 'eccRecovered')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "reallocationEventCountNormalized_FixedAsset",
+      "name": "reallocationEventCountNormalized",
+      "path": "measurements.(measurementType == 'reallocationEventCountNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "reallocationEventCount_FixedAsset",
+      "name": "reallocationEventCount",
+      "path": "measurements.(measurementType == 'reallocationEventCount')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "currentPendingSectorNormalized_FixedAsset",
+      "name": "currentPendingSectorNormalized",
+      "path": "measurements.(measurementType == 'currentPendingSectorNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "currentPendingSector_FixedAsset",
+      "name": "currentPendingSector",
+      "path": "measurements.(measurementType == 'currentPendingSector')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "uncorrectableSectorCountNormalized_FixedAsset",
+      "name": "uncorrectableSectorCountNormalized",
+      "path": "measurements.(measurementType == 'uncorrectableSectorCountNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "uncorrectableSectorCount_FixedAsset",
+      "name": "uncorrectableSectorCount",
+      "path": "measurements.(measurementType == 'uncorrectableSectorCount')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "dmaCrcErrorNormalized_FixedAsset",
+      "name": "dmaCrcErrorNormalized",
+      "path": "measurements.(measurementType == 'dmaCrcErrorNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "dmaCrcError_FixedAsset",
+      "name": "dmaCrcError",
+      "path": "measurements.(measurementType == 'dmaCrcError')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "readErrorRateNormalized_FixedAsset",
+      "name": "readErrorRateNormalized",
+      "path": "measurements.(measurementType == 'readErrorRateNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "readErrorRate_FixedAsset",
+      "name": "readErrorRate",
+      "path": "measurements.(measurementType == 'readErrorRate')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "multiZoneErrorNormalized_FixedAsset",
+      "name": "multiZoneErrorNormalized",
+      "path": "measurements.(measurementType == 'multiZoneErrorNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "multiZoneError_FixedAsset",
+      "name": "multiZoneError",
+      "path": "measurements.(measurementType == 'multiZoneError')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "softErrorNormalized_FixedAsset",
+      "name": "softErrorNormalized",
+      "path": "measurements.(measurementType == 'softErrorNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "softError_FixedAsset",
+      "name": "softError",
+      "path": "measurements.(measurementType == 'softError')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "diskShiftNormalized_FixedAsset",
+      "name": "diskShiftNormalized",
+      "path": "measurements.(measurementType == 'diskShiftNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "diskShift_FixedAsset",
+      "name": "diskShift",
+      "path": "measurements.(measurementType == 'diskShift')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadedHoursNormalized_FixedAsset",
+      "name": "loadedHoursNormalized",
+      "path": "measurements.(measurementType == 'loadedHoursNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadedHours_FixedAsset",
+      "name": "loadedHours",
+      "path": "measurements.(measurementType == 'loadedHours')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadUnloadRetryNormalized_FixedAsset",
+      "name": "loadUnloadRetryNormalized",
+      "path": "measurements.(measurementType == 'loadUnloadRetryNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadUnloadRetry_FixedAsset",
+      "name": "loadUnloadRetry",
+      "path": "measurements.(measurementType == 'loadUnloadRetry')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadFrictionNormalized_FixedAsset",
+      "name": "loadFrictionNormalized",
+      "path": "measurements.(measurementType == 'loadFrictionNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadFriction_FixedAsset",
+      "name": "loadFriction",
+      "path": "measurements.(measurementType == 'loadFriction')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadUnloadCycleNormalized_FixedAsset",
+      "name": "loadUnloadCycleNormalized",
+      "path": "measurements.(measurementType == 'loadUnloadCycleNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadUnloadCycle_FixedAsset",
+      "name": "loadUnloadCycle",
+      "path": "measurements.(measurementType == 'loadUnloadCycle')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadInTimeNormalized_FixedAsset",
+      "name": "loadInTimeNormalized",
+      "path": "measurements.(measurementType == 'loadInTimeNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "loadInTime_FixedAsset",
+      "name": "loadInTime",
+      "path": "measurements.(measurementType == 'loadInTime')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "heliumLevelNormalized_FixedAsset",
+      "name": "heliumLevelNormalized",
+      "path": "measurements.(measurementType == 'heliumLevelNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "heliumLevel_FixedAsset",
+      "name": "heliumLevel",
+      "path": "measurements.(measurementType == 'heliumLevel')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "transferErrorRateNormalized_FixedAsset",
+      "name": "transferErrorRateNormalized",
+      "path": "measurements.(measurementType == 'transferErrorRateNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "transferErrorRate_FixedAsset",
+      "name": "transferErrorRate",
+      "path": "measurements.(measurementType == 'transferErrorRate')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "totalLBAWrittenNormalized_FixedAsset",
+      "name": "totalLBAWrittenNormalized",
+      "path": "measurements.(measurementType == 'totalLBAWrittenNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "totalLBAWritten_FixedAsset",
+      "name": "totalLBAWritten",
+      "path": "measurements.(measurementType == 'totalLBAWritten')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "totalLBAReadNormalized_FixedAsset",
+      "name": "totalLBAReadNormalized",
+      "path": "measurements.(measurementType == 'totalLBAReadNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "totalLBARead_FixedAsset",
+      "name": "totalLBARead",
+      "path": "measurements.(measurementType == 'totalLBARead')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "readErrorRetryNormalized_FixedAsset",
+      "name": "readErrorRetryNormalized",
+      "path": "measurements.(measurementType == 'readErrorRetryNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "readErrorRetry_FixedAsset",
+      "name": "readErrorRetry",
+      "path": "measurements.(measurementType == 'readErrorRetry')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+
+      "id": "minimumSparesRemainingNormalized_FixedAsset",
+      "name": "minimumSparesRemainingNormalized",
+      "path": "measurements.(measurementType == 'minimumSparesRemainingNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "minimumSparesRemaining_FixedAsset",
+      "name": "minimumSparesRemaining",
+      "path": "measurements.(measurementType == 'minimumSparesRemaining')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "newlyAddedBadFlashNormalized_FixedAsset",
+      "name": "newlyAddedBadFlashNormalized",
+      "path": "measurements.(measurementType == 'newlyAddedBadFlashNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "newlyAddedBadFlash_FixedAsset",
+      "name": "newlyAddedBadFlash",
+      "path": "measurements.(measurementType == 'newlyAddedBadFlash')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "freeFallProtectionNormalized_FixedAsset",
+      "name": "freeFallProtectionNormalized",
+      "path": "measurements.(measurementType == 'freeFallProtectionNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "freeFallProtection_FixedAsset",
+      "name": "freeFallProtection",
+      "path": "measurements.(measurementType == 'freeFallProtection')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "smart255Normalized_FixedAsset",
+      "name": "smart255Normalized",
+      "path": "measurements.(measurementType == 'smart255Normalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "smart255_FixedAsset",
+      "name": "smart255",
+      "path": "measurements.(measurementType == 'smart255')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "throughputNormalized_FixedAsset",
+      "name": "throughputNormalized",
+      "path": "measurements.(measurementType == 'throughputNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "throughput_FixedAsset",
+      "name": "throughput",
+      "path": "measurements.(measurementType == 'throughput')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "spinUpNormalized_FixedAsset",
+      "name": "spinUpNormalized",
+      "path": "measurements.(measurementType == 'spinUpNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "spinUp_FixedAsset",
+      "name": "spinUp",
+      "path": "measurements.(measurementType == 'spinUp')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "startStopCountNormalized_FixedAsset",
+      "name": "startStopCountNormalized",
+      "path": "measurements.(measurementType == 'startStopCountNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "startStopCount_FixedAsset",
+      "name": "startStopCount",
+      "path": "measurements.(measurementType == 'startStopCount')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "reallocatedSectorsNormalized_FixedAsset",
+      "name": "reallocatedSectorsNormalized",
+      "path": "measurements.(measurementType == 'reallocatedSectorsNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "reallocatedSectors_FixedAsset",
+      "name": "reallocatedSectors",
+      "path": "measurements.(measurementType == 'reallocatedSectors')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "seekErrorNormalized_FixedAsset",
+      "name": "seekErrorNormalized",
+      "path": "measurements.(measurementType == 'seekErrorNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "seekError_FixedAsset",
+      "name": "seekError",
+      "path": "measurements.(measurementType == 'seekError')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "seekTimeNormalized_FixedAsset",
+      "name": "seekTimeNormalized",
+      "path": "measurements.(measurementType == 'seekTimeNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "seekTime_FixedAsset",
+      "name": "seekTime",
+      "path": "measurements.(measurementType == 'seekTime')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "powerOnNormalized_FixedAsset",
+      "name": "powerOnNormalized",
+      "path": "measurements.(measurementType == 'powerOnNormalized')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    },
+    {
+      "id": "powerOn_FixedAsset",
+      "name": "powerOn",
+      "path": "measurements.(measurementType == 'powerOn')",
+      "expression": "sum(sum(normalized.data.quantity))",
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      },
+      "description": ""
+    }
+  ]
+}
