@@ -173,7 +173,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "This attribute is a part of Hewlett-Packard's SMART IV technology, as well as part of other vendors' IO Error Detection and Correction schemas, and it contains a count of parity errors which occur in the data path to the media via the drive's cache RAM"
     },
     {
 
@@ -185,7 +185,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "This attribute is a part of Hewlett-Packard's SMART IV technology, as well as part of other vendors' IO Error Detection and Correction schemas, and it contains a count of parity errors which occur in the data path to the media via the drive's cache RAM"
     },
     {
 
@@ -197,7 +197,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of errors that could not be recovered using hardware ECC"
     },
     {
 
@@ -209,7 +209,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of errors that could not be recovered using hardware ECC"
     },
     {
 
@@ -221,7 +221,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of aborted operations due to HDD timeout. "
     },
     {
 
@@ -233,7 +233,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of aborted operations due to HDD timeout. "
     },
     {
 
@@ -245,7 +245,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "HDD manufacturers implement a flying height sensor that attempts to provide additional protections for write operations by detecting when a recording head is flying outside its normal operating range."
     },
     {
 
@@ -257,7 +257,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "HDD manufacturers implement a flying height sensor that attempts to provide additional protections for write operations by detecting when a recording head is flying outside its normal operating range."
     },
     {
 
@@ -269,7 +269,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Airflow temperature on Western Digital HDs"
     },
     {
 
@@ -281,7 +281,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Airflow temperature on Western Digital HDs"
     },
     {
 
@@ -293,7 +293,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of errors resulting from externally induced shock & vibration."
     },
     {
 
@@ -305,7 +305,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of errors resulting from externally induced shock & vibration."
     },
     {
 
@@ -317,7 +317,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Number of power-off or emergency retract cycles."
     },
     {
 
@@ -329,7 +329,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Number of power-off or emergency retract cycles."
     },
     {
 
@@ -341,7 +341,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of load/unload cycles into head landing zone position"
     },
     {
 
@@ -353,7 +353,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of load/unload cycles into head landing zone position"
     },
     {
 
@@ -365,7 +365,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Current internal temperature."
     },
     {
 
@@ -377,7 +377,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Current internal temperature."
     },
     {
 
@@ -389,7 +389,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The raw value has different structure for different vendors and is often not meaningful as a decimal number."
     },
     {
 
@@ -401,7 +401,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The raw value has different structure for different vendors and is often not meaningful as a decimal number."
     },
     {
 
@@ -413,7 +413,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of remap operations. "
     },
     {
 
@@ -425,7 +425,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of remap operations. "
     },
     {
 
@@ -437,7 +437,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of unstable sectors (waiting to be remapped, because of unrecoverable read errors). "
     },
     {
 
@@ -449,7 +449,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of unstable sectors (waiting to be remapped, because of unrecoverable read errors). "
     },
     {
 
@@ -461,7 +461,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The total count of uncorrectable errors when reading/writing a sector. A rise in the value of this attribute indicates defects of the disk surface and/or problems in the mechanical subsystem."
     },
     {
 
@@ -473,7 +473,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The total count of uncorrectable errors when reading/writing a sector. A rise in the value of this attribute indicates defects of the disk surface and/or problems in the mechanical subsystem."
     },
     {
 
@@ -485,7 +485,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of errors in data transfer via the interface cable as determined by ICRC (Interface Cyclic Redundancy Check)."
     },
     {
 
@@ -497,7 +497,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of errors in data transfer via the interface cable as determined by ICRC (Interface Cyclic Redundancy Check)."
     },
     {
 
@@ -509,7 +509,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Stores data related to the rate of hardware read errors that occurred when reading data from a disk surface."
     },
     {
 
@@ -521,7 +521,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Stores data related to the rate of hardware read errors that occurred when reading data from a disk surface."
     },
     {
 
@@ -533,7 +533,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of errors found when writing a sector. The higher the value, the worse the disk's mechanical condition is."
     },
     {
 
@@ -545,7 +545,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The count of errors found when writing a sector. The higher the value, the worse the disk's mechanical condition is."
     },
     {
 
@@ -581,7 +581,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Time spent operating under data load (movement of magnetic head armature)."
     },
     {
 
@@ -593,7 +593,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Time spent operating under data load (movement of magnetic head armature)."
     },
     {
 
@@ -605,7 +605,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Time spent operating under data load (movement of magnetic head armature)."
     },
     {
 
@@ -617,7 +617,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of times head changes position."
     },
     {
 
@@ -629,7 +629,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of times head changes position."
     },
     {
 
@@ -653,7 +653,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Resistance caused by friction in mechanical parts while operating"
     },
     {
 
@@ -665,7 +665,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Resistance caused by friction in mechanical parts while operating"
     },
     {
 
@@ -677,7 +677,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Total count of load cycles["
     },
     {
 
@@ -689,7 +689,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Total count of load cycles["
     },
     {
 
@@ -701,7 +701,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Total time of loading on the magnetic heads actuator (time not spent in parking area)."
     },
     {
 
@@ -713,7 +713,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Total time of loading on the magnetic heads actuator (time not spent in parking area)."
     },
     {
 
@@ -725,7 +725,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Specific to He8 drives from HGST. This value measures the helium inside of the drive specific to this manufacturer"
     },
     {
 
@@ -737,7 +737,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Specific to He8 drives from HGST. This value measures the helium inside of the drive specific to this manufacturer"
     },
     {
 
@@ -749,7 +749,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of times the link is reset during a data transfer"
     },
     {
 
@@ -761,7 +761,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of times the link is reset during a data transfer"
     },
     {
 
@@ -773,7 +773,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Total count of LBAs written."
     },
     {
 
@@ -785,7 +785,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Total count of LBAs written."
     },
     {
 
@@ -797,7 +797,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The upper 5 bytes of the 12-byte total number of LBAs read from the device."
     },
     {
 
@@ -809,7 +809,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The upper 5 bytes of the 12-byte total number of LBAs read from the device."
     },
     {
 
@@ -821,7 +821,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of errors while reading from a disk"
     },
     {
 
@@ -833,7 +833,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of errors while reading from a disk"
     },
     {
 
@@ -845,7 +845,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "he Minimum Spares Remaining attribute indicates the number of remaining spare blocks as a percentage of the total number of spare blocks available."
     },
     {
       "id": "minimumSparesRemaining_FixedAsset",
@@ -856,7 +856,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "he Minimum Spares Remaining attribute indicates the number of remaining spare blocks as a percentage of the total number of spare blocks available."
     },
     {
       "id": "newlyAddedBadFlashNormalized_FixedAsset",
@@ -867,7 +867,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The Newly Added Bad Flash Block attribute indicates the total number of bad flash blocks the drive detected since it was first initialized in manufacturing"
     },
     {
       "id": "newlyAddedBadFlash_FixedAsset",
@@ -878,7 +878,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "The Newly Added Bad Flash Block attribute indicates the total number of bad flash blocks the drive detected since it was first initialized in manufacturing."
     },
     {
       "id": "freeFallProtectionNormalized_FixedAsset",
@@ -889,7 +889,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of Free Fall Events detected"
     },
     {
       "id": "freeFallProtection_FixedAsset",
@@ -900,7 +900,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of Free Fall Events detected"
     },
     {
       "id": "smart255Normalized_FixedAsset",
@@ -933,7 +933,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Overall (general) throughput performance of a hard disk drive. If the value of this attribute is decreasing there is a high probability that there is a problem with the disk."
     },
     {
       "id": "throughput_FixedAsset",
@@ -944,7 +944,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Overall (general) throughput performance of a hard disk drive. If the value of this attribute is decreasing there is a high probability that there is a problem with the disk."
     },
     {
       "id": "spinUpNormalized_FixedAsset",
@@ -955,7 +955,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Average time of spindle spin up (from zero RPM to fully operational [milliseconds])."
     },
     {
       "id": "spinUp_FixedAsset",
@@ -966,7 +966,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Average time of spindle spin up (from zero RPM to fully operational [milliseconds])."
     },
     {
       "id": "startStopCountNormalized_FixedAsset",
@@ -977,7 +977,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "A tally of spindle start/stop cycles. The spindle turns on, and hence the count is increased, both when the hard disk is turned on after having before been turned entirely off (disconnected from power source) and when the hard disk returns from having previously been put to sleep mode"
     },
     {
       "id": "startStopCount_FixedAsset",
@@ -988,7 +988,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "A tally of spindle start/stop cycles. The spindle turns on, and hence the count is increased, both when the hard disk is turned on after having before been turned entirely off (disconnected from power source) and when the hard disk returns from having previously been put to sleep mode"
     },
     {
       "id": "reallocatedSectorsNormalized_FixedAsset",
@@ -999,7 +999,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of reallocated sectors. The raw value normally represents a count of the bad sectors that have been found and remapped."
     },
     {
       "id": "reallocatedSectors_FixedAsset",
@@ -1010,7 +1010,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of reallocated sectors. The raw value normally represents a count of the bad sectors that have been found and remapped."
     },
     {
       "id": "seekErrorNormalized_FixedAsset",
@@ -1021,7 +1021,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Rate of seek errors of the magnetic heads. If there is a partial failure in the mechanical positioning system, then seek errors will arise. Such a failure may be due to numerous factors, such as damage to a servo, or thermal widening of the hard disk."
     },
     {
       "id": "seekError_FixedAsset",
@@ -1032,7 +1032,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Rate of seek errors of the magnetic heads. If there is a partial failure in the mechanical positioning system, then seek errors will arise. Such a failure may be due to numerous factors, such as damage to a servo, or thermal widening of the hard disk."
     },
     {
       "id": "seekTimeNormalized_FixedAsset",
@@ -1043,7 +1043,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Average performance of seek operations of the magnetic heads. If this attribute is decreasing, it is a sign of problems in the mechanical subsystem."
     },
     {
       "id": "seekTime_FixedAsset",
@@ -1054,7 +1054,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Average performance of seek operations of the magnetic heads. If this attribute is decreasing, it is a sign of problems in the mechanical subsystem."
     },
     {
       "id": "powerOnNormalized_FixedAsset",
@@ -1065,7 +1065,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of hours in power-on state. The raw value of this attribute shows total count of hours (or minutes, or seconds, depending on manufacturer) in power-on state."
     },
     {
       "id": "powerOn_FixedAsset",
@@ -1076,7 +1076,7 @@
         "moduleName": "structure",
         "typeName": "FixedAsset"
       },
-      "description": ""
+      "description": "Count of hours in power-on state. The raw value of this attribute shows total count of hours (or minutes, or seconds, depending on manufacturer) in power-on state."
     }
   ]
 }
