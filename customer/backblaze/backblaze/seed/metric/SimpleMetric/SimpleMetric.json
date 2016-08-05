@@ -5,1078 +5,922 @@
     {
       "id": "capacity_FixedAsset",
       "name": "capacity",
-      "path": "measurements.(measurementType == 'capacity')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.capacity))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
       "id": "failure_FixedAsset",
       "name": "failure",
-      "path": "measurements.(measurementType == 'failure')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.failure))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
       "id": "spinRetryNormalized_FixedAsset",
       "name": "spinRetryNormalized",
-      "path": "measurements.(measurementType == 'spinRetryNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.spinRetryNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
       "id": "spinRetry_FixedAsset",
       "name": "spinRetry",
-      "path": "measurements.(measurementType == 'spinRetry')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.spinRetry))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
       "id": "calibrationRetryNormalized_FixedAsset",
       "name": "calibrationRetryNormalized",
-      "path": "measurements.(measurementType == 'calibrationRetryNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.calibrationRetryNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
       "id": "calibrationRetry_FixedAsset",
       "name": "calibrationRetry",
-      "path": "measurements.(measurementType == 'calibrationRetry')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.calibrationRetry))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
       "id": "powerCycleNormalized_FixedAsset",
       "name": "powerCycleNormalized",
-      "path": "measurements.(measurementType == 'powerCycleNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.powerCycleNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "powerCycle_FixedAsset",
       "name": "powerCycle",
-      "path": "measurements.(measurementType == 'powerCycle')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.powerCycle))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "softReadNormalized_FixedAsset",
       "name": "softReadNormalized",
-      "path": "measurements.(measurementType == 'softReadNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.softReadNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "softRead_FixedAsset",
       "name": "softRead",
-      "path": "measurements.(measurementType == 'softRead')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.softRead))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "smart15Normalized_FixedAsset",
       "name": "smart15Normalized",
-      "path": "measurements.(measurementType == 'smart15Normalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.smart15Normalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "smart15_FixedAsset",
       "name": "smart15",
-      "path": "measurements.(measurementType == 'smart15')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.smart15))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "runtimeBadBlockNormalized_FixedAsset",
       "name": "runtimeBadBlockNormalized",
-      "path": "measurements.(measurementType == 'runtimeBadBlockNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.runtimeBadBlockNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "runtimeBadBlock_FixedAsset",
       "name": "runtimeBadBlock",
-      "path": "measurements.(measurementType == 'runtimeBadBlock')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.runtimeBadBlock))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "endToEndErrorNormalized_FixedAsset",
       "name": "endToEndErrorNormalized",
-      "path": "measurements.(measurementType == 'endToEndErrorNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.endToEndErrorNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "This attribute is a part of Hewlett-Packard's SMART IV technology, as well as part of other vendors' IO Error Detection and Correction schemas, and it contains a count of parity errors which occur in the data path to the media via the drive's cache RAM"
+      }
     },
     {
-
       "id": "endToEndError_FixedAsset",
       "name": "endToEndError",
-      "path": "measurements.(measurementType == 'endToEndError')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.endToEndError))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "This attribute is a part of Hewlett-Packard's SMART IV technology, as well as part of other vendors' IO Error Detection and Correction schemas, and it contains a count of parity errors which occur in the data path to the media via the drive's cache RAM"
+      }
     },
     {
-
       "id": "uncorrectableErrorsNormalized_FixedAsset",
       "name": "uncorrectableErrorsNormalized",
-      "path": "measurements.(measurementType == 'uncorrectableErrorsNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.uncorrectableErrorsNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of errors that could not be recovered using hardware ECC"
+      }
     },
     {
-
       "id": "uncorrectableErrors_FixedAsset",
       "name": "uncorrectableErrors",
-      "path": "measurements.(measurementType == 'uncorrectableErrors')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.uncorrectableErrors))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of errors that could not be recovered using hardware ECC"
+      }
     },
     {
-
       "id": "commandTimeoutNormalized_FixedAsset",
       "name": "commandTimeoutNormalized",
-      "path": "measurements.(measurementType == 'commandTimeoutNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.commandTimeoutNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of aborted operations due to HDD timeout. "
+      }
     },
     {
-
       "id": "commandTimeout_FixedAsset",
       "name": "commandTimeout",
-      "path": "measurements.(measurementType == 'commandTimeout')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.commandTimeout))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of aborted operations due to HDD timeout. "
+      }
     },
     {
-
       "id": "highFlyWritesNormalized_FixedAsset",
       "name": "highFlyWritesNormalized",
-      "path": "measurements.(measurementType == 'highFlyWritesNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.highFlyWritesNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "HDD manufacturers implement a flying height sensor that attempts to provide additional protections for write operations by detecting when a recording head is flying outside its normal operating range."
+      }
     },
     {
-
       "id": "highFlyWrites_FixedAsset",
       "name": "highFlyWrites",
-      "path": "measurements.(measurementType == 'highFlyWrites')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.highFlyWrites))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "HDD manufacturers implement a flying height sensor that attempts to provide additional protections for write operations by detecting when a recording head is flying outside its normal operating range."
+      }
     },
     {
-
       "id": "airflowTempNormalized_FixedAsset",
       "name": "airflowTempNormalized",
-      "path": "measurements.(measurementType == 'airflowTempNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.airflowTempNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Airflow temperature on Western Digital HDs"
+      }
     },
     {
-
       "id": "airflowTemp_FixedAsset",
       "name": "airflowTemp",
-      "path": "measurements.(measurementType == 'airflowTemp')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.airflowTemp))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Airflow temperature on Western Digital HDs"
+      }
     },
     {
-
       "id": "gSenseErrorNormalized_FixedAsset",
       "name": "gSenseErrorNormalized",
-      "path": "measurements.(measurementType == 'gSenseErrorNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.gSenseErrorNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of errors resulting from externally induced shock & vibration."
+      }
     },
     {
-
       "id": "gSenseError_FixedAsset",
       "name": "gSenseError",
-      "path": "measurements.(measurementType == 'gSenseError')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.gSenseError))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of errors resulting from externally induced shock & vibration."
+      }
     },
     {
-
       "id": "powerOffCountNormalized_FixedAsset",
       "name": "powerOffCountNormalized",
-      "path": "measurements.(measurementType == 'powerOffCountNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.powerOffCountNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Number of power-off or emergency retract cycles."
+      }
     },
     {
-
       "id": "powerOffCount_FixedAsset",
       "name": "powerOffCount",
-      "path": "measurements.(measurementType == 'powerOffCount')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.powerOffCount))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Number of power-off or emergency retract cycles."
+      }
     },
     {
-
       "id": "loadCycleCountNormalized_FixedAsset",
       "name": "loadCycleCountNormalized",
-      "path": "measurements.(measurementType == 'loadCycleCountNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadCycleCountNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of load/unload cycles into head landing zone position"
+      }
     },
     {
-
       "id": "loadCycleCount_FixedAsset",
       "name": "loadCycleCount",
-      "path": "measurements.(measurementType == 'loadCycleCount')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadCycleCount))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of load/unload cycles into head landing zone position"
+      }
     },
     {
-
       "id": "temperatureNormalized_FixedAsset",
       "name": "temperatureNormalized",
-      "path": "measurements.(measurementType == 'temperatureNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.temperatureNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Current internal temperature."
+      }
     },
     {
-
       "id": "temperature_FixedAsset",
       "name": "temperature",
-      "path": "measurements.(measurementType == 'temperature')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.temperature))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Current internal temperature."
+      }
     },
     {
-
       "id": "eccRecoveredNormalized_FixedAsset",
       "name": "eccRecoveredNormalized",
-      "path": "measurements.(measurementType == 'eccRecoveredNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.eccRecoveredNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The raw value has different structure for different vendors and is often not meaningful as a decimal number."
+      }
     },
     {
-
       "id": "eccRecovered_FixedAsset",
       "name": "eccRecovered",
-      "path": "measurements.(measurementType == 'eccRecovered')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.eccRecovered))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The raw value has different structure for different vendors and is often not meaningful as a decimal number."
+      }
     },
     {
-
       "id": "reallocationEventCountNormalized_FixedAsset",
       "name": "reallocationEventCountNormalized",
-      "path": "measurements.(measurementType == 'reallocationEventCountNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.reallocationEventCountNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of remap operations. "
+      }
     },
     {
-
       "id": "reallocationEventCount_FixedAsset",
       "name": "reallocationEventCount",
-      "path": "measurements.(measurementType == 'reallocationEventCount')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.reallocationEventCount))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of remap operations. "
+      }
     },
     {
-
       "id": "currentPendingSectorNormalized_FixedAsset",
       "name": "currentPendingSectorNormalized",
-      "path": "measurements.(measurementType == 'currentPendingSectorNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.currentPendingSectorNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of unstable sectors (waiting to be remapped, because of unrecoverable read errors). "
+      }
     },
     {
-
       "id": "currentPendingSector_FixedAsset",
       "name": "currentPendingSector",
-      "path": "measurements.(measurementType == 'currentPendingSector')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.currentPendingSector))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of unstable sectors (waiting to be remapped, because of unrecoverable read errors). "
+      }
     },
     {
-
       "id": "uncorrectableSectorCountNormalized_FixedAsset",
       "name": "uncorrectableSectorCountNormalized",
-      "path": "measurements.(measurementType == 'uncorrectableSectorCountNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.uncorrectableSectorCountNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The total count of uncorrectable errors when reading/writing a sector. A rise in the value of this attribute indicates defects of the disk surface and/or problems in the mechanical subsystem."
+      }
     },
     {
-
       "id": "uncorrectableSectorCount_FixedAsset",
       "name": "uncorrectableSectorCount",
-      "path": "measurements.(measurementType == 'uncorrectableSectorCount')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.uncorrectableSectorCount))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The total count of uncorrectable errors when reading/writing a sector. A rise in the value of this attribute indicates defects of the disk surface and/or problems in the mechanical subsystem."
+      }
     },
     {
-
       "id": "dmaCrcErrorNormalized_FixedAsset",
       "name": "dmaCrcErrorNormalized",
-      "path": "measurements.(measurementType == 'dmaCrcErrorNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.dmaCrcErrorNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of errors in data transfer via the interface cable as determined by ICRC (Interface Cyclic Redundancy Check)."
+      }
     },
     {
-
       "id": "dmaCrcError_FixedAsset",
       "name": "dmaCrcError",
-      "path": "measurements.(measurementType == 'dmaCrcError')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.dmaCrcError))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of errors in data transfer via the interface cable as determined by ICRC (Interface Cyclic Redundancy Check)."
+      }
     },
     {
-
       "id": "readErrorRateNormalized_FixedAsset",
       "name": "readErrorRateNormalized",
-      "path": "measurements.(measurementType == 'readErrorRateNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.readErrorRateNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Stores data related to the rate of hardware read errors that occurred when reading data from a disk surface."
+      }
     },
     {
-
       "id": "readErrorRate_FixedAsset",
       "name": "readErrorRate",
-      "path": "measurements.(measurementType == 'readErrorRate')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.readErrorRate))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Stores data related to the rate of hardware read errors that occurred when reading data from a disk surface."
+      }
     },
     {
-
       "id": "multiZoneErrorNormalized_FixedAsset",
       "name": "multiZoneErrorNormalized",
-      "path": "measurements.(measurementType == 'multiZoneErrorNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.multiZoneErrorNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of errors found when writing a sector. The higher the value, the worse the disk's mechanical condition is."
+      }
     },
     {
-
       "id": "multiZoneError_FixedAsset",
       "name": "multiZoneError",
-      "path": "measurements.(measurementType == 'multiZoneError')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.multiZoneError))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The count of errors found when writing a sector. The higher the value, the worse the disk's mechanical condition is."
+      }
     },
     {
-
       "id": "softErrorNormalized_FixedAsset",
       "name": "softErrorNormalized",
-      "path": "measurements.(measurementType == 'softErrorNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.softErrorNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "softError_FixedAsset",
       "name": "softError",
-      "path": "measurements.(measurementType == 'softError')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.softError))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "diskShiftNormalized_FixedAsset",
       "name": "diskShiftNormalized",
-      "path": "measurements.(measurementType == 'diskShiftNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.diskShiftNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Time spent operating under data load (movement of magnetic head armature)."
+      }
     },
     {
-
       "id": "diskShift_FixedAsset",
       "name": "diskShift",
-      "path": "measurements.(measurementType == 'diskShift')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.diskShift))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Time spent operating under data load (movement of magnetic head armature)."
+      }
     },
     {
-
       "id": "loadedHoursNormalized_FixedAsset",
       "name": "loadedHoursNormalized",
-      "path": "measurements.(measurementType == 'loadedHoursNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadedHoursNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Time spent operating under data load (movement of magnetic head armature)."
+      }
     },
     {
-
       "id": "loadedHours_FixedAsset",
       "name": "loadedHours",
-      "path": "measurements.(measurementType == 'loadedHours')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadedHours))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of times head changes position."
+      }
     },
     {
-
       "id": "loadUnloadRetryNormalized_FixedAsset",
       "name": "loadUnloadRetryNormalized",
-      "path": "measurements.(measurementType == 'loadUnloadRetryNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadUnloadRetryNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of times head changes position."
+      }
     },
     {
-
       "id": "loadUnloadRetry_FixedAsset",
       "name": "loadUnloadRetry",
-      "path": "measurements.(measurementType == 'loadUnloadRetry')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadUnloadRetry))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
-
       "id": "loadFrictionNormalized_FixedAsset",
       "name": "loadFrictionNormalized",
-      "path": "measurements.(measurementType == 'loadFrictionNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadFrictionNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Resistance caused by friction in mechanical parts while operating"
+      }
     },
     {
-
       "id": "loadFriction_FixedAsset",
       "name": "loadFriction",
-      "path": "measurements.(measurementType == 'loadFriction')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadFriction))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Resistance caused by friction in mechanical parts while operating"
+      }
     },
     {
-
       "id": "loadUnloadCycleNormalized_FixedAsset",
       "name": "loadUnloadCycleNormalized",
-      "path": "measurements.(measurementType == 'loadUnloadCycleNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadUnloadCycleNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Total count of load cycles["
+      }
     },
     {
-
       "id": "loadUnloadCycle_FixedAsset",
       "name": "loadUnloadCycle",
-      "path": "measurements.(measurementType == 'loadUnloadCycle')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadUnloadCycle))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Total count of load cycles["
+      }
     },
     {
-
       "id": "loadInTimeNormalized_FixedAsset",
       "name": "loadInTimeNormalized",
-      "path": "measurements.(measurementType == 'loadInTimeNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadInTimeNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Total time of loading on the magnetic heads actuator (time not spent in parking area)."
+      }
     },
     {
-
       "id": "loadInTime_FixedAsset",
       "name": "loadInTime",
-      "path": "measurements.(measurementType == 'loadInTime')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.loadInTime))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Total time of loading on the magnetic heads actuator (time not spent in parking area)."
+      }
     },
     {
-
       "id": "heliumLevelNormalized_FixedAsset",
       "name": "heliumLevelNormalized",
-      "path": "measurements.(measurementType == 'heliumLevelNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.heliumLevelNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Specific to He8 drives from HGST. This value measures the helium inside of the drive specific to this manufacturer"
+      }
     },
     {
-
       "id": "heliumLevel_FixedAsset",
       "name": "heliumLevel",
-      "path": "measurements.(measurementType == 'heliumLevel')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.heliumLevel))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Specific to He8 drives from HGST. This value measures the helium inside of the drive specific to this manufacturer"
+      }
     },
     {
-
       "id": "transferErrorRateNormalized_FixedAsset",
       "name": "transferErrorRateNormalized",
-      "path": "measurements.(measurementType == 'transferErrorRateNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.transferErrorRateNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of times the link is reset during a data transfer"
+      }
     },
     {
-
       "id": "transferErrorRate_FixedAsset",
       "name": "transferErrorRate",
-      "path": "measurements.(measurementType == 'transferErrorRate')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.transferErrorRate))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of times the link is reset during a data transfer"
+      }
     },
     {
-
       "id": "totalLBAWrittenNormalized_FixedAsset",
       "name": "totalLBAWrittenNormalized",
-      "path": "measurements.(measurementType == 'totalLBAWrittenNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.totalLBAWrittenNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Total count of LBAs written."
+      }
     },
     {
-
       "id": "totalLBAWritten_FixedAsset",
       "name": "totalLBAWritten",
-      "path": "measurements.(measurementType == 'totalLBAWritten')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.totalLBAWritten))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Total count of LBAs written."
+      }
     },
     {
-
       "id": "totalLBAReadNormalized_FixedAsset",
       "name": "totalLBAReadNormalized",
-      "path": "measurements.(measurementType == 'totalLBAReadNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.totalLBAReadNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The upper 5 bytes of the 12-byte total number of LBAs read from the device."
+      }
     },
     {
-
       "id": "totalLBARead_FixedAsset",
       "name": "totalLBARead",
-      "path": "measurements.(measurementType == 'totalLBARead')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.totalLBARead))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The upper 5 bytes of the 12-byte total number of LBAs read from the device."
+      }
     },
     {
-
       "id": "readErrorRetryNormalized_FixedAsset",
       "name": "readErrorRetryNormalized",
-      "path": "measurements.(measurementType == 'readErrorRetryNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.readErrorRetryNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of errors while reading from a disk"
+      }
     },
     {
-
       "id": "readErrorRetry_FixedAsset",
       "name": "readErrorRetry",
-      "path": "measurements.(measurementType == 'readErrorRetry')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.readErrorRetry))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of errors while reading from a disk"
+      }
     },
     {
-
       "id": "minimumSparesRemainingNormalized_FixedAsset",
       "name": "minimumSparesRemainingNormalized",
-      "path": "measurements.(measurementType == 'minimumSparesRemainingNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.minimumSparesRemainingNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "he Minimum Spares Remaining attribute indicates the number of remaining spare blocks as a percentage of the total number of spare blocks available."
+      }
     },
     {
       "id": "minimumSparesRemaining_FixedAsset",
       "name": "minimumSparesRemaining",
-      "path": "measurements.(measurementType == 'minimumSparesRemaining')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.minimumSparesRemaining))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "he Minimum Spares Remaining attribute indicates the number of remaining spare blocks as a percentage of the total number of spare blocks available."
+      }
     },
     {
       "id": "newlyAddedBadFlashNormalized_FixedAsset",
       "name": "newlyAddedBadFlashNormalized",
-      "path": "measurements.(measurementType == 'newlyAddedBadFlashNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.newlyAddedBadFlashNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The Newly Added Bad Flash Block attribute indicates the total number of bad flash blocks the drive detected since it was first initialized in manufacturing"
+      }
     },
     {
       "id": "newlyAddedBadFlash_FixedAsset",
       "name": "newlyAddedBadFlash",
-      "path": "measurements.(measurementType == 'newlyAddedBadFlash')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.newlyAddedBadFlash))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "The Newly Added Bad Flash Block attribute indicates the total number of bad flash blocks the drive detected since it was first initialized in manufacturing."
+      }
     },
     {
       "id": "freeFallProtectionNormalized_FixedAsset",
       "name": "freeFallProtectionNormalized",
-      "path": "measurements.(measurementType == 'freeFallProtectionNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.freeFallProtectionNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of Free Fall Events detected"
+      }
     },
     {
       "id": "freeFallProtection_FixedAsset",
       "name": "freeFallProtection",
-      "path": "measurements.(measurementType == 'freeFallProtection')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.freeFallProtection))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of Free Fall Events detected"
+      }
     },
     {
       "id": "smart255Normalized_FixedAsset",
       "name": "smart255Normalized",
-      "path": "measurements.(measurementType == 'smart255Normalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.smart255Normalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
       "id": "smart255_FixedAsset",
       "name": "smart255",
-      "path": "measurements.(measurementType == 'smart255')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.smart255))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": ""
+      }
     },
     {
       "id": "throughputNormalized_FixedAsset",
       "name": "throughputNormalized",
-      "path": "measurements.(measurementType == 'throughputNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.throughputNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Overall (general) throughput performance of a hard disk drive. If the value of this attribute is decreasing there is a high probability that there is a problem with the disk."
+      }
     },
     {
       "id": "throughput_FixedAsset",
       "name": "throughput",
-      "path": "measurements.(measurementType == 'throughput')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.throughput))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Overall (general) throughput performance of a hard disk drive. If the value of this attribute is decreasing there is a high probability that there is a problem with the disk."
+      }
     },
     {
       "id": "spinUpNormalized_FixedAsset",
       "name": "spinUpNormalized",
-      "path": "measurements.(measurementType == 'spinUpNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.spinUpNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Average time of spindle spin up (from zero RPM to fully operational [milliseconds])."
+      }
     },
     {
       "id": "spinUp_FixedAsset",
       "name": "spinUp",
-      "path": "measurements.(measurementType == 'spinUp')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.spinUp))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Average time of spindle spin up (from zero RPM to fully operational [milliseconds])."
+      }
     },
     {
       "id": "startStopCountNormalized_FixedAsset",
       "name": "startStopCountNormalized",
-      "path": "measurements.(measurementType == 'startStopCountNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.startStopCountNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "A tally of spindle start/stop cycles. The spindle turns on, and hence the count is increased, both when the hard disk is turned on after having before been turned entirely off (disconnected from power source) and when the hard disk returns from having previously been put to sleep mode"
+      }
     },
     {
       "id": "startStopCount_FixedAsset",
       "name": "startStopCount",
-      "path": "measurements.(measurementType == 'startStopCount')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.startStopCount))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "A tally of spindle start/stop cycles. The spindle turns on, and hence the count is increased, both when the hard disk is turned on after having before been turned entirely off (disconnected from power source) and when the hard disk returns from having previously been put to sleep mode"
+      }
     },
     {
       "id": "reallocatedSectorsNormalized_FixedAsset",
       "name": "reallocatedSectorsNormalized",
-      "path": "measurements.(measurementType == 'reallocatedSectorsNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.reallocatedSectorsNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of reallocated sectors. The raw value normally represents a count of the bad sectors that have been found and remapped."
+      }
     },
     {
       "id": "reallocatedSectors_FixedAsset",
       "name": "reallocatedSectors",
-      "path": "measurements.(measurementType == 'reallocatedSectors')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.reallocatedSectors))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of reallocated sectors. The raw value normally represents a count of the bad sectors that have been found and remapped."
+      }
     },
     {
       "id": "seekErrorNormalized_FixedAsset",
       "name": "seekErrorNormalized",
-      "path": "measurements.(measurementType == 'seekErrorNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.seekErrorNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Rate of seek errors of the magnetic heads. If there is a partial failure in the mechanical positioning system, then seek errors will arise. Such a failure may be due to numerous factors, such as damage to a servo, or thermal widening of the hard disk."
+      }
     },
     {
       "id": "seekError_FixedAsset",
       "name": "seekError",
-      "path": "measurements.(measurementType == 'seekError')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.seekError))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Rate of seek errors of the magnetic heads. If there is a partial failure in the mechanical positioning system, then seek errors will arise. Such a failure may be due to numerous factors, such as damage to a servo, or thermal widening of the hard disk."
+      }
     },
     {
       "id": "seekTimeNormalized_FixedAsset",
       "name": "seekTimeNormalized",
-      "path": "measurements.(measurementType == 'seekTimeNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.seekTimeNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Average performance of seek operations of the magnetic heads. If this attribute is decreasing, it is a sign of problems in the mechanical subsystem."
+      }
     },
     {
       "id": "seekTime_FixedAsset",
       "name": "seekTime",
-      "path": "measurements.(measurementType == 'seekTime')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.seekTime))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Average performance of seek operations of the magnetic heads. If this attribute is decreasing, it is a sign of problems in the mechanical subsystem."
+      }
     },
     {
       "id": "powerOnNormalized_FixedAsset",
       "name": "powerOnNormalized",
-      "path": "measurements.(measurementType == 'powerOnNormalized')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.powerOnNormalized))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of hours in power-on state. The raw value of this attribute shows total count of hours (or minutes, or seconds, depending on manufacturer) in power-on state."
+      }
     },
     {
       "id": "powerOn_FixedAsset",
       "name": "powerOn",
-      "path": "measurements.(measurementType == 'powerOn')",
-      "expression": "sum(sum(normalized.data.quantity))",
+      "path": "measurements",
+      "expression": "sum(sum(normalized.data.powerOn))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
-      },
-      "description": "Count of hours in power-on state. The raw value of this attribute shows total count of hours (or minutes, or seconds, depending on manufacturer) in power-on state."
+      }
     }
   ]
 }

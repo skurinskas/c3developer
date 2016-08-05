@@ -5,6 +5,402 @@ entity module backBlaze_Structure remix structure  {
       model           : string
   }
 
+    entity type BackBlazeMeasurementSeries extends BasePhysicalMeasurementSeries mixes TimeseriesHeader<BackBlazeMeasurement>  type key 'BBMS'
+
+@db(compactType=true,
+      datastore='cassandra',
+      partitionKeyField='parent',
+      persistenceOrder='start',
+      persistDuplicates=false,
+      shortId=true,
+      shortIdReservationRange=100000)
+  entity type BackBlazeMeasurement mixes TimeseriesDataPoint<BackBlazeMeasurementSeries> {
+
+   /**
+    * Time well was running in the last 24 hrs
+    * units: Hours, example value: 17
+    */
+    @timeseriesField
+    capacity : double
+
+   /**
+    * Average cycle time per day (start to start pump) -- preprocess to standard time formats
+    * units: Hours:Min:Sec:Subsec, example value: 00:52:00:00
+    */
+    @timeseriesField
+    failure : double
+
+   /**
+    * Set time for well to shut down between cycles -- preprocess to standard time formats
+    * units: Hours:Min:Sec:Subsec, example value: 00:20:00:00
+    */
+    @timeseriesField
+    readErrorRate : double
+
+   /**
+    * Position limit percent (for setpoint)
+    * units: percent/fraction, example value:
+    */
+    @timeseriesField(treatment='rate')
+    readErrorRateNormalized : double
+
+   /**
+    * Load limit percent (for setpoint)
+    * units: percent/fraction, example value:
+    */
+    @timeseriesField(treatment='rate')
+    throughput : double
+
+   /**
+    * Length that the rod moves up and down.  Characteristic of rod pump. Measurement
+    * units: Inches, example value: 144
+    */
+    @timeseriesField(treatment='rate')
+    throughputNormalized : double
+
+   /**
+    * Number of full cycles that the pump makes in a minute Measurement
+    * units: Strokes/min, example value: 7
+    */
+    @timeseriesField(treatment='rate')
+    spinUp : double
+
+   /**
+    * Diameter of the downhole pump (diameter is changed based on period of WAG cycle)
+    * units: Inches (diameter), example value: 2
+    */
+    @timeseriesField(treatment='rate')
+    spinUpNormalized : double
+
+   /**
+    * Annulus (between casing and tubing) pressure @ surface
+    * units: PSI, example value: 150
+    */
+    @timeseriesField(treatment='rate')
+    startStopCount : double
+
+   /**
+    * Annulus temperature @ surface - No data
+    * units: Fahrenheit, example value: 0
+    */
+    @timeseriesField(treatment='rate')
+    startStopCountNormalized : double
+
+   /**
+    * Flow line pressure; Flow line = surface pipe through which oil or gas travels from a well to processing equipment or to storage.
+    * units: PSI, example value: 150
+    */
+    @timeseriesField(treatment='rate')
+    reallocatedSectors : double
+
+   /**
+    * Flow line temperature; Flow line = surface pipe through which oil or gas travels from a well to processing equipment or to storage.
+    * units: Fahrenheit, example value: 70
+    */
+    @timeseriesField(treatment='rate')
+    reallocatedSectorsNormalized : double
+
+   /**
+    * Number of full cycles (on/off/on) of POC. (is this a duplicate of AVG_CYCLE_TIME?)
+    * units: Cycles per day, example value: 1
+    */
+    @timeseriesField(treatment='rate')
+    seekError : double
+
+   /**
+    * Duration of the last cycle recorded.
+    * units: Seconds, example value: 14509
+    */
+    @timeseriesField(treatment='rate')
+    seekErrorNormalized : double
+
+   /**
+    * Min load on polishing rod in last 24 hrs
+    * units: Lbs, example value: 6803
+    */
+    @timeseriesField(treatment='rate')
+    seekTime : double
+
+   /**
+    * Max load on polishing rod in last 24 hrs
+    * units: Lbs, example value: 21312
+    */
+    @timeseriesField(treatment='rate')
+    seekTimeNormalized : double
+
+   /**
+    * Total fluid per day (oil + water) - based on runtime & well test;  allocated to well based on measurement at battery
+    * units: Barrels/day, example value: 251
+    */
+    @timeseriesField(treatment='rate')
+    powerOn : double
+
+    @timeseriesField(treatment='rate')
+    powerOnNormalized : double
+
+   /**
+    * Drop down menu of comments that the POC generates
+    * units: NA, example value: OXYOPS POC HISTORY LOAD-DENVERCITY
+    */
+    comments : string
+
+   /**
+    * Estimated fluid above pump (FAP) calculated based on current dynamometer card
+    * units: Feet, example value:
+    */
+    @timeseriesField(treatment='rate')
+    spinRetry : double
+
+   /**
+    * Estimated fluid above pump (FAP) calculated based on full dynamometer card
+    * units: Feet, example value:
+    */
+    @timeseriesField(treatment='rate')
+    spinRetryNormalized : double
+
+   /**
+    * Estimated fluid above pump (FAP) calculated based on POC dynamometer card (last OFF of the day)
+    * units: Feet, example value:
+    */
+    @timeseriesField(treatment='rate')
+    calibrationRetry : double
+
+   /**
+    * NA - probably not applicable
+    * units: Barrels, example value:
+    */
+    @timeseriesField
+    calibrationRetryNormalized : double
+
+   /**
+    * This is an estimate of the daily waterCut based on this pump's latest WellTest and the latest battery measurements
+    * units: percent/fraction, example value:
+    */
+    @timeseriesField(treatment='rate')
+    powerCycle : double
+
+   /**
+    * K = pump constant ( P = K x S x SPM) = Barrels/day = K x stroke length (in) x stroke/min
+    * units: Area, example value:
+    */
+    @timeseriesField(treatment='rate')
+    powerCycleNormalized : double
+
+   /**
+    * Base runtime - desired runtime per day
+    * units: Hrs, example value:
+    */
+    @timeseriesField(treatment='rate')
+    softRead : double
+
+    @timeseriesField(treatment='rate')
+    softReadNormalized : double
+
+
+    @timeseriesField(treatment='rate')
+    smart15 : double
+
+    @timeseriesField(treatment='rate')
+    smart15Normalized : double
+
+    @timeseriesField(treatment='rate')
+    heliumLevel : double
+
+    @timeseriesField(treatment='rate')
+    heliumLevelNormalized : double
+
+    @timeseriesField(treatment='rate')
+    runtimeBadBlock : double
+
+    @timeseriesField(treatment='rate')
+    runtimeBadBlockNormalized : double
+
+    @timeseriesField(treatment='rate')
+    endToEndError : double
+
+    @timeseriesField(treatment='rate')
+    endToEndErrorNormalized : double
+
+    @timeseriesField(treatment='rate')
+    uncorrectableErrors : double
+
+    @timeseriesField(treatment='rate')
+    uncorrectableErrorsNormalized : double
+
+    @timeseriesField(treatment='rate')
+    commandTimeout : double
+
+    @timeseriesField(treatment='rate')
+    commandTimeoutNormalized : double
+
+    @timeseriesField(treatment='rate')
+    highFlyWrites : double
+
+    @timeseriesField(treatment='rate')
+    highFlyWritesNormalized : double
+
+    @timeseriesField(treatment='rate')
+    airflowTemp : double
+
+    @timeseriesField(treatment='rate')
+    airflowTempNormalized : double
+
+    @timeseriesField(treatment='rate')
+    gSenseError : double
+
+    @timeseriesField(treatment='rate')
+    gSenseErrorNormalized : double
+
+    @timeseriesField(treatment='rate')
+    powerOffCount : double
+
+    @timeseriesField(treatment='rate')
+    powerOffCountNormalized : double
+
+    @timeseriesField(treatment='rate')
+    loadCycleCount : double
+
+    @timeseriesField(treatment='rate')
+    loadCycleCountNormalized : double
+
+    @timeseriesField(treatment='rate')
+    temperature : double
+
+    @timeseriesField(treatment='rate')
+    temperatureNormalized : double
+
+    @timeseriesField(treatment='rate')
+    eccRecovered : double
+
+    @timeseriesField(treatment='rate')
+    eccRecoveredNormalized : double
+
+    @timeseriesField(treatment='rate')
+    reallocationEventCount : double
+
+    @timeseriesField(treatment='rate')
+    reallocationEventCountNormalized : double
+
+    @timeseriesField(treatment='rate')
+    currentPendingSector : double
+
+    @timeseriesField(treatment='rate')
+    currentPendingSectorNormalized : double
+
+    @timeseriesField(treatment='rate')
+    uncorrectableSectorCount : double
+
+    @timeseriesField(treatment='rate')
+    uncorrectableSectorCountNormalized : double
+
+    @timeseriesField(treatment='rate')
+    multiZoneError : double
+
+    @timeseriesField(treatment='rate')
+    multiZoneErrorNormalized : double
+
+    @timeseriesField(treatment='rate')
+    softError : double
+
+    @timeseriesField(treatment='rate')
+    softErrorNormalized : double
+
+    @timeseriesField(treatment='rate')
+    diskShift : double
+
+    @timeseriesField(treatment='rate')
+    diskShiftNormalized : double
+
+    @timeseriesField(treatment='rate')
+    loadedHours : double
+
+    @timeseriesField(treatment='rate')
+    loadedHoursNormalized : double
+
+
+
+    @timeseriesField(treatment='rate')
+    loadUnloadRetry : double
+
+    @timeseriesField(treatment='rate')
+    loadUnloadRetryNormalized : double
+
+    @timeseriesField(treatment='rate')
+    loadFriction : double
+
+    @timeseriesField(treatment='rate')
+    loadFrictionNormalized : double
+
+    @timeseriesField(treatment='rate')
+    loadUnloadCycle : double
+
+    @timeseriesField(treatment='rate')
+    loadUnloadCycleNormalized : double
+
+    @timeseriesField(treatment='rate')
+    loadInTime : double
+
+    @timeseriesField(treatment='rate')
+    loadInTimeNormalized : double
+
+    @timeseriesField(treatment='rate')
+    transferErrorRate : double
+
+    @timeseriesField(treatment='rate')
+    transferErrorRateNormalized : double
+
+    @timeseriesField(treatment='rate')
+    totalLBAWritten : double
+
+    @timeseriesField(treatment='rate')
+    totalLBAWrittenNormalized : double
+
+    @timeseriesField(treatment='rate')
+    totalLBARead : double
+
+    @timeseriesField(treatment='rate')
+    totalLBAReadNormalized : double
+
+    @timeseriesField(treatment='rate')
+    readErrorRetry : double
+
+    @timeseriesField(treatment='rate')
+    readErrorRetryNormalized : double
+
+    @timeseriesField(treatment='rate')
+    minimumSparesRemaining : double
+
+    @timeseriesField(treatment='rate')
+    minimumSparesRemainingNormalized : double
+
+    @timeseriesField(treatment='rate')
+    newlyAddedBadFlash : double
+
+    @timeseriesField(treatment='rate')
+    newlyAddedBadFlashNormalized : double
+
+    @timeseriesField(treatment='rate')
+    freeFallProtection : double
+
+    @timeseriesField(treatment='rate')
+    freeFallProtectionNormalized : double
+
+    @timeseriesField(treatment='rate')
+    smart255 : double
+
+    @timeseriesField(treatment='rate')
+    smart255Normalized : double
+
+    @timeseriesField(treatment='rate')
+    dmaCrcError : double
+
+    @timeseriesField(treatment='rate')
+    dmaCrcErrorNormalized : double
+
+
+  }
+
+
   entity type ColumnToMetricMapping schema name 'CMM'
 
 }
