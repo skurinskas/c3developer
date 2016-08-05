@@ -14,6 +14,23 @@ ui module backblaze {
         "closeButtonText": "",
         "actionButtonAction": "",
         "actionButtonText": "",
+        "data": {
+            "record": {
+                "c3function": "fetch",
+                "responseSelector": "response.objs",
+                "responseTransform": {
+                    "firstItem": true
+                },
+                "c3arguments": {
+                    "spec": {
+                        "filter": "id =='{{ params.id }}'"
+                    }
+                },
+                "cache": false,
+                "c3module": "structure",
+                "c3type": "FixedAsset"
+            }
+        },
         "components": [
             {
                 "id": "TabPanel",
@@ -72,6 +89,7 @@ ui module backblaze {
                         "name": "Chart",
                         "box": false,
                         "title": "Trends",
+                        "autoLoadData": true,
                         "dynamicDateRange": false,
                         "startDate": "2013-01-01T08:00:00.000Z",
                         "endDate": "2013-03-01T08:00:00.000Z",
@@ -100,20 +118,7 @@ ui module backblaze {
                         },
                         "legend": "false",
                         "data": {
-                            "record": {
-                                "c3function": "fetch",
-                                "responseSelector": "response.objs",
-                                "responseTransform": {
-                                    "firstItem": true
-                                },
-                                "c3arguments": {
-                                    "spec": {
-                                        "filter": "id =='{{ params.id }}'"
-                                    }
-                                },
-                                "c3module": "structure",
-                                "c3type": "FixedAsset"
-                            }
+                            "record": "record"
                         }
                     }
                 ]
