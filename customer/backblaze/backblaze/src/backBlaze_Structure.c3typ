@@ -3,6 +3,12 @@ entity module backBlaze_Structure remix structure  {
   entity type FixedAsset {
       serialNumber    : string
       model           : string
+
+      /*
+       * State of the asset - if null, in good shape.  If failed, then the asset has failed.
+       */
+      status          : string
+      failureDate     : datetime
   }
 
     entity type BackBlazeMeasurementSeries extends BasePhysicalMeasurementSeries mixes TimeseriesHeader<BackBlazeMeasurement>  type key 'BBMS'
@@ -399,7 +405,6 @@ entity module backBlaze_Structure remix structure  {
 
 
   }
-
 
   entity type ColumnToMetricMapping schema name 'CMM'
 

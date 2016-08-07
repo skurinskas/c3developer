@@ -12,17 +12,18 @@ module backblazeCanonicalTransform remix canonicalTransform {
 
   @canonicalTransform (condition="exists(date)")
   type TransformBackBlazeCanonicalToPhysicalMeasurementSeries mixes BackBlazeMeasurementSeries transforms CanonicalBackblaze {
-    id                : ~ expression "serial_number"
+    id                : ~ expression "serial_number" 
     asset             : ~ expression {id: "serial_number"}
-    treatment         : ~ expression "rate"
+    treatment         : ~ expression "'rate'"
+    interval          : ~ expression "'DAY'"
     meta              : ~ expression {sourceSystem: "'BackBlaze'"}
     
   }
 
   @canonicalTransform (condition="exists(date)")
   type TransformBackBlazeCanonicalToMeasurement mixes BackBlazeMeasurement transforms CanonicalBackblaze {
-    start                     : ~ expression "dateTime(date,'yyyy-mm-dd')"
-    end                       : ~ expression "dateTime(date,'yyyy-mm-dd') + period(1,'DAY')"
+    start                     : ~ expression "dateTime(date,'yyyy-MM-dd')"
+    end                       : ~ expression "dateTime(date,'yyyy-MM-dd') + period(1,'DAY')"
     parent                    : ~ expression {id: "serial_number"}
     capacity                  : ~ expression "capacity_bytes"
     failure: ~ expression "failure"

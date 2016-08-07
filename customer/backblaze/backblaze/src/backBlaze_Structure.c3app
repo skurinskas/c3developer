@@ -1,0 +1,8 @@
+app module backBlaze_Structure remix structure  {
+    import mapr
+
+	type RefreshAnalytics extends MapReduce<FixedAsset, string, int, Void> type key 'HDRFA'{
+    	map : ~ {@refreshAnalytics@} js server
+  }
+  
+}

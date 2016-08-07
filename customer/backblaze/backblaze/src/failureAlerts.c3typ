@@ -1,0 +1,27 @@
+/*
+ * Copyright 2009-2016 C3 IoT (http://www.c3iot.com).  All Rights Reserved.
+ * This material, including without limitation any software, is the confidential trade secret
+ * and proprietary information of C3 IoT and its licensors.  Reproduction, use and distribution
+ * of this material in any form is strictly prohibited except as set forth in a written
+ * license agreement with C3 IoT and/or its authorized distributors.
+ */
+entity module failureAlerts schema name "FALRT" {
+   import analyticsContainer
+   import analytic
+   import structure
+   import units
+
+   abstract type ThresholdAlert<T> {
+      source : T
+      date   : datetime
+      alert  : string
+      description    :  string
+      subject : string
+
+      measuredValue: ExactDimension
+      threshold: ExactDimension
+   }
+
+   entity type FixedAssetThresholdAlert mixes ThresholdAlert<FixedAsset> schema name "FAALRT"
+
+}

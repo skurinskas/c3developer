@@ -6,7 +6,7 @@
       "id": "capacity_FixedAsset",
       "name": "capacity",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.capacity))",
+      "expression": "avg(eval('DAY', avg(normalized.data.capacity)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -16,7 +16,7 @@
       "id": "failure_FixedAsset",
       "name": "failure",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.failure))",
+      "expression": "avg(eval('DAY', avg(normalized.data.failure)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -26,7 +26,7 @@
       "id": "spinRetryNormalized_FixedAsset",
       "name": "spinRetryNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.spinRetryNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.spinRetryNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -36,7 +36,7 @@
       "id": "spinRetry_FixedAsset",
       "name": "spinRetry",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.spinRetry))",
+      "expression": "avg(eval('DAY', avg(normalized.data.spinRetry)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -46,7 +46,7 @@
       "id": "calibrationRetryNormalized_FixedAsset",
       "name": "calibrationRetryNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.calibrationRetryNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.calibrationRetryNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -56,7 +56,7 @@
       "id": "calibrationRetry_FixedAsset",
       "name": "calibrationRetry",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.calibrationRetry))",
+      "expression": "avg(eval('DAY', avg(normalized.data.calibrationRetry)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -66,7 +66,7 @@
       "id": "powerCycleNormalized_FixedAsset",
       "name": "powerCycleNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.powerCycleNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.powerCycleNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -76,7 +76,7 @@
       "id": "powerCycle_FixedAsset",
       "name": "powerCycle",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.powerCycle))",
+      "expression": "avg(eval('DAY', avg(normalized.data.powerCycle)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -86,7 +86,7 @@
       "id": "softReadNormalized_FixedAsset",
       "name": "softReadNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.softReadNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.softReadNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -96,7 +96,7 @@
       "id": "softRead_FixedAsset",
       "name": "softRead",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.softRead))",
+      "expression": "avg(eval('DAY', avg(normalized.data.softRead)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -106,7 +106,7 @@
       "id": "smart15Normalized_FixedAsset",
       "name": "smart15Normalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.smart15Normalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.smart15Normalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -116,7 +116,7 @@
       "id": "smart15_FixedAsset",
       "name": "smart15",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.smart15))",
+      "expression": "avg(eval('DAY', avg(normalized.data.smart15)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -126,7 +126,7 @@
       "id": "runtimeBadBlockNormalized_FixedAsset",
       "name": "runtimeBadBlockNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.runtimeBadBlockNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.runtimeBadBlockNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -136,7 +136,7 @@
       "id": "runtimeBadBlock_FixedAsset",
       "name": "runtimeBadBlock",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.runtimeBadBlock))",
+      "expression": "avg(eval('DAY', avg(normalized.data.runtimeBadBlock)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -146,7 +146,7 @@
       "id": "endToEndErrorNormalized_FixedAsset",
       "name": "endToEndErrorNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.endToEndErrorNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.endToEndErrorNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -156,7 +156,7 @@
       "id": "endToEndError_FixedAsset",
       "name": "endToEndError",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.endToEndError))",
+      "expression": "avg(eval('DAY', avg(normalized.data.endToEndError)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -166,7 +166,7 @@
       "id": "uncorrectableErrorsNormalized_FixedAsset",
       "name": "uncorrectableErrorsNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.uncorrectableErrorsNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.uncorrectableErrorsNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -176,7 +176,7 @@
       "id": "uncorrectableErrors_FixedAsset",
       "name": "uncorrectableErrors",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.uncorrectableErrors))",
+      "expression": "avg(eval('DAY', avg(normalized.data.uncorrectableErrors)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -186,7 +186,7 @@
       "id": "commandTimeoutNormalized_FixedAsset",
       "name": "commandTimeoutNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.commandTimeoutNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.commandTimeoutNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -196,7 +196,7 @@
       "id": "commandTimeout_FixedAsset",
       "name": "commandTimeout",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.commandTimeout))",
+      "expression": "avg(eval('DAY', avg(normalized.data.commandTimeout)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -206,7 +206,7 @@
       "id": "highFlyWritesNormalized_FixedAsset",
       "name": "highFlyWritesNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.highFlyWritesNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.highFlyWritesNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -216,7 +216,7 @@
       "id": "highFlyWrites_FixedAsset",
       "name": "highFlyWrites",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.highFlyWrites))",
+      "expression": "avg(eval('DAY', avg(normalized.data.highFlyWrites)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -226,7 +226,7 @@
       "id": "airflowTempNormalized_FixedAsset",
       "name": "airflowTempNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.airflowTempNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.airflowTempNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -236,7 +236,7 @@
       "id": "airflowTemp_FixedAsset",
       "name": "airflowTemp",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.airflowTemp))",
+      "expression": "avg(eval('DAY', avg(normalized.data.airflowTemp)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -246,7 +246,7 @@
       "id": "gSenseErrorNormalized_FixedAsset",
       "name": "gSenseErrorNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.gSenseErrorNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.gSenseErrorNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -256,7 +256,7 @@
       "id": "gSenseError_FixedAsset",
       "name": "gSenseError",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.gSenseError))",
+      "expression": "avg(eval('DAY', avg(normalized.data.gSenseError)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -266,7 +266,7 @@
       "id": "powerOffCountNormalized_FixedAsset",
       "name": "powerOffCountNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.powerOffCountNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.powerOffCountNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -276,7 +276,7 @@
       "id": "powerOffCount_FixedAsset",
       "name": "powerOffCount",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.powerOffCount))",
+      "expression": "avg(eval('DAY', avg(normalized.data.powerOffCount)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -286,7 +286,7 @@
       "id": "loadCycleCountNormalized_FixedAsset",
       "name": "loadCycleCountNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadCycleCountNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadCycleCountNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -296,7 +296,7 @@
       "id": "loadCycleCount_FixedAsset",
       "name": "loadCycleCount",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadCycleCount))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadCycleCount)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -306,7 +306,7 @@
       "id": "temperatureNormalized_FixedAsset",
       "name": "temperatureNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.temperatureNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.temperatureNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -316,7 +316,7 @@
       "id": "temperature_FixedAsset",
       "name": "temperature",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.temperature))",
+      "expression": "avg(eval('DAY', avg(normalized.data.temperature)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -326,7 +326,7 @@
       "id": "eccRecoveredNormalized_FixedAsset",
       "name": "eccRecoveredNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.eccRecoveredNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.eccRecoveredNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -336,7 +336,7 @@
       "id": "eccRecovered_FixedAsset",
       "name": "eccRecovered",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.eccRecovered))",
+      "expression": "avg(eval('DAY', avg(normalized.data.eccRecovered)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -346,7 +346,7 @@
       "id": "reallocationEventCountNormalized_FixedAsset",
       "name": "reallocationEventCountNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.reallocationEventCountNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.reallocationEventCountNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -356,7 +356,7 @@
       "id": "reallocationEventCount_FixedAsset",
       "name": "reallocationEventCount",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.reallocationEventCount))",
+      "expression": "avg(eval('DAY', avg(normalized.data.reallocationEventCount)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -366,7 +366,7 @@
       "id": "currentPendingSectorNormalized_FixedAsset",
       "name": "currentPendingSectorNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.currentPendingSectorNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.currentPendingSectorNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -376,7 +376,7 @@
       "id": "currentPendingSector_FixedAsset",
       "name": "currentPendingSector",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.currentPendingSector))",
+      "expression": "avg(eval('DAY', avg(normalized.data.currentPendingSector)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -386,7 +386,7 @@
       "id": "uncorrectableSectorCountNormalized_FixedAsset",
       "name": "uncorrectableSectorCountNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.uncorrectableSectorCountNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.uncorrectableSectorCountNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -396,7 +396,7 @@
       "id": "uncorrectableSectorCount_FixedAsset",
       "name": "uncorrectableSectorCount",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.uncorrectableSectorCount))",
+      "expression": "avg(eval('DAY', avg(normalized.data.uncorrectableSectorCount)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -406,7 +406,7 @@
       "id": "dmaCrcErrorNormalized_FixedAsset",
       "name": "dmaCrcErrorNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.dmaCrcErrorNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.dmaCrcErrorNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -416,7 +416,7 @@
       "id": "dmaCrcError_FixedAsset",
       "name": "dmaCrcError",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.dmaCrcError))",
+      "expression": "avg(eval('DAY', avg(normalized.data.dmaCrcError)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -426,7 +426,7 @@
       "id": "readErrorRateNormalized_FixedAsset",
       "name": "readErrorRateNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.readErrorRateNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.readErrorRateNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -436,7 +436,7 @@
       "id": "readErrorRate_FixedAsset",
       "name": "readErrorRate",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.readErrorRate))",
+      "expression": "avg(eval('DAY', avg(normalized.data.readErrorRate)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -446,7 +446,7 @@
       "id": "multiZoneErrorNormalized_FixedAsset",
       "name": "multiZoneErrorNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.multiZoneErrorNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.multiZoneErrorNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -456,7 +456,7 @@
       "id": "multiZoneError_FixedAsset",
       "name": "multiZoneError",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.multiZoneError))",
+      "expression": "avg(eval('DAY', avg(normalized.data.multiZoneError)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -466,7 +466,7 @@
       "id": "softErrorNormalized_FixedAsset",
       "name": "softErrorNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.softErrorNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.softErrorNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -476,7 +476,7 @@
       "id": "softError_FixedAsset",
       "name": "softError",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.softError))",
+      "expression": "avg(eval('DAY', avg(normalized.data.softError)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -486,7 +486,7 @@
       "id": "diskShiftNormalized_FixedAsset",
       "name": "diskShiftNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.diskShiftNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.diskShiftNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -496,7 +496,7 @@
       "id": "diskShift_FixedAsset",
       "name": "diskShift",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.diskShift))",
+      "expression": "avg(eval('DAY', avg(normalized.data.diskShift)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -506,7 +506,7 @@
       "id": "loadedHoursNormalized_FixedAsset",
       "name": "loadedHoursNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadedHoursNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadedHoursNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -516,7 +516,7 @@
       "id": "loadedHours_FixedAsset",
       "name": "loadedHours",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadedHours))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadedHours)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -526,7 +526,7 @@
       "id": "loadUnloadRetryNormalized_FixedAsset",
       "name": "loadUnloadRetryNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadUnloadRetryNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadUnloadRetryNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -536,7 +536,7 @@
       "id": "loadUnloadRetry_FixedAsset",
       "name": "loadUnloadRetry",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadUnloadRetry))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadUnloadRetry)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -546,7 +546,7 @@
       "id": "loadFrictionNormalized_FixedAsset",
       "name": "loadFrictionNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadFrictionNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadFrictionNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -556,7 +556,7 @@
       "id": "loadFriction_FixedAsset",
       "name": "loadFriction",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadFriction))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadFriction)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -566,7 +566,7 @@
       "id": "loadUnloadCycleNormalized_FixedAsset",
       "name": "loadUnloadCycleNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadUnloadCycleNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadUnloadCycleNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -576,7 +576,7 @@
       "id": "loadUnloadCycle_FixedAsset",
       "name": "loadUnloadCycle",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadUnloadCycle))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadUnloadCycle)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -586,7 +586,7 @@
       "id": "loadInTimeNormalized_FixedAsset",
       "name": "loadInTimeNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadInTimeNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadInTimeNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -596,7 +596,7 @@
       "id": "loadInTime_FixedAsset",
       "name": "loadInTime",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.loadInTime))",
+      "expression": "avg(eval('DAY', avg(normalized.data.loadInTime)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -606,7 +606,7 @@
       "id": "heliumLevelNormalized_FixedAsset",
       "name": "heliumLevelNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.heliumLevelNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.heliumLevelNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -616,7 +616,7 @@
       "id": "heliumLevel_FixedAsset",
       "name": "heliumLevel",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.heliumLevel))",
+      "expression": "avg(eval('DAY', avg(normalized.data.heliumLevel)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -626,7 +626,7 @@
       "id": "transferErrorRateNormalized_FixedAsset",
       "name": "transferErrorRateNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.transferErrorRateNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.transferErrorRateNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -636,7 +636,7 @@
       "id": "transferErrorRate_FixedAsset",
       "name": "transferErrorRate",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.transferErrorRate))",
+      "expression": "avg(eval('DAY', avg(normalized.data.transferErrorRate)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -646,7 +646,7 @@
       "id": "totalLBAWrittenNormalized_FixedAsset",
       "name": "totalLBAWrittenNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.totalLBAWrittenNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.totalLBAWrittenNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -656,7 +656,7 @@
       "id": "totalLBAWritten_FixedAsset",
       "name": "totalLBAWritten",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.totalLBAWritten))",
+      "expression": "avg(eval('DAY', avg(normalized.data.totalLBAWritten)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -666,7 +666,7 @@
       "id": "totalLBAReadNormalized_FixedAsset",
       "name": "totalLBAReadNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.totalLBAReadNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.totalLBAReadNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -676,7 +676,7 @@
       "id": "totalLBARead_FixedAsset",
       "name": "totalLBARead",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.totalLBARead))",
+      "expression": "avg(eval('DAY', avg(normalized.data.totalLBARead)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -686,7 +686,7 @@
       "id": "readErrorRetryNormalized_FixedAsset",
       "name": "readErrorRetryNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.readErrorRetryNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.readErrorRetryNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -696,7 +696,7 @@
       "id": "readErrorRetry_FixedAsset",
       "name": "readErrorRetry",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.readErrorRetry))",
+      "expression": "avg(eval('DAY', avg(normalized.data.readErrorRetry)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -706,7 +706,7 @@
       "id": "minimumSparesRemainingNormalized_FixedAsset",
       "name": "minimumSparesRemainingNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.minimumSparesRemainingNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.minimumSparesRemainingNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -716,7 +716,7 @@
       "id": "minimumSparesRemaining_FixedAsset",
       "name": "minimumSparesRemaining",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.minimumSparesRemaining))",
+      "expression": "avg(eval('DAY', avg(normalized.data.minimumSparesRemaining)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -726,7 +726,7 @@
       "id": "newlyAddedBadFlashNormalized_FixedAsset",
       "name": "newlyAddedBadFlashNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.newlyAddedBadFlashNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.newlyAddedBadFlashNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -736,7 +736,7 @@
       "id": "newlyAddedBadFlash_FixedAsset",
       "name": "newlyAddedBadFlash",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.newlyAddedBadFlash))",
+      "expression": "avg(eval('DAY', avg(normalized.data.newlyAddedBadFlash)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -746,7 +746,7 @@
       "id": "freeFallProtectionNormalized_FixedAsset",
       "name": "freeFallProtectionNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.freeFallProtectionNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.freeFallProtectionNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -756,7 +756,7 @@
       "id": "freeFallProtection_FixedAsset",
       "name": "freeFallProtection",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.freeFallProtection))",
+      "expression": "avg(eval('DAY', avg(normalized.data.freeFallProtection)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -766,7 +766,7 @@
       "id": "smart255Normalized_FixedAsset",
       "name": "smart255Normalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.smart255Normalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.smart255Normalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -776,7 +776,7 @@
       "id": "smart255_FixedAsset",
       "name": "smart255",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.smart255))",
+      "expression": "avg(eval('DAY', avg(normalized.data.smart255)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -786,7 +786,7 @@
       "id": "throughputNormalized_FixedAsset",
       "name": "throughputNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.throughputNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.throughputNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -796,7 +796,7 @@
       "id": "throughput_FixedAsset",
       "name": "throughput",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.throughput))",
+      "expression": "avg(eval('DAY', avg(normalized.data.throughput)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -806,7 +806,7 @@
       "id": "spinUpNormalized_FixedAsset",
       "name": "spinUpNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.spinUpNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.spinUpNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -816,7 +816,7 @@
       "id": "spinUp_FixedAsset",
       "name": "spinUp",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.spinUp))",
+      "expression": "avg(eval('DAY', avg(normalized.data.spinUp)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -826,7 +826,7 @@
       "id": "startStopCountNormalized_FixedAsset",
       "name": "startStopCountNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.startStopCountNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.startStopCountNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -836,7 +836,7 @@
       "id": "startStopCount_FixedAsset",
       "name": "startStopCount",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.startStopCount))",
+      "expression": "avg(eval('DAY', avg(normalized.data.startStopCount)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -846,7 +846,7 @@
       "id": "reallocatedSectorsNormalized_FixedAsset",
       "name": "reallocatedSectorsNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.reallocatedSectorsNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.reallocatedSectorsNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -856,7 +856,7 @@
       "id": "reallocatedSectors_FixedAsset",
       "name": "reallocatedSectors",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.reallocatedSectors))",
+      "expression": "avg(eval('DAY', avg(normalized.data.reallocatedSectors)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -866,7 +866,7 @@
       "id": "seekErrorNormalized_FixedAsset",
       "name": "seekErrorNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.seekErrorNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.seekErrorNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -876,7 +876,7 @@
       "id": "seekError_FixedAsset",
       "name": "seekError",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.seekError))",
+      "expression": "avg(eval('DAY', avg(normalized.data.seekError)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -886,7 +886,7 @@
       "id": "seekTimeNormalized_FixedAsset",
       "name": "seekTimeNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.seekTimeNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.seekTimeNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -896,7 +896,7 @@
       "id": "seekTime_FixedAsset",
       "name": "seekTime",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.seekTime))",
+      "expression": "avg(eval('DAY', avg(normalized.data.seekTime)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -906,7 +906,7 @@
       "id": "powerOnNormalized_FixedAsset",
       "name": "powerOnNormalized",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.powerOnNormalized))",
+      "expression": "avg(eval('DAY', avg(normalized.data.powerOnNormalized)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
@@ -916,7 +916,7 @@
       "id": "powerOn_FixedAsset",
       "name": "powerOn",
       "path": "measurements",
-      "expression": "sum(sum(normalized.data.powerOn))",
+      "expression": "avg(eval('DAY', avg(normalized.data.powerOn)))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"
