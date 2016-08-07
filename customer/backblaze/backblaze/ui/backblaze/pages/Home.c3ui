@@ -2,11 +2,379 @@ ui module backblaze {
     page Home {
         "name": "Home",
         "id": "backblaze.Home",
-        "template": "c3ui.Dashboard2x2",
+        "template": "backblaze.Home",
         "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
         "title": "Home",
         "url": "home",
         "components": [
+            {
+                "id": "ModelFilter",
+                "component": "field.Select",
+                "renderTo": "#ModelFilter",
+                "multiple": true,
+                "opts": [
+                      {
+                        "id": "ST4000DM000",
+                        "text": "ST4000DM000"
+                      },
+                      {
+                        "id": "HGST HMS5C4040BLE640",
+                        "text": "HGST HMS5C4040BLE640"
+                      },
+                      {
+                        "id": "HGST HMS5C4040ALE640",
+                        "text": "HGST HMS5C4040ALE640"
+                      },
+                      {
+                        "id": "Hitachi HDS722020ALA330",
+                        "text": "Hitachi HDS722020ALA330"
+                      },
+                      {
+                        "id": "ST3000DM001",
+                        "text": "ST3000DM001"
+                      },
+                      {
+                        "id": "Hitachi HDS5C3030ALA630",
+                        "text": "Hitachi HDS5C3030ALA630"
+                      },
+                      {
+                        "id": "ST8000DM002",
+                        "text": "ST8000DM002"
+                      },
+                      {
+                        "id": "Hitachi HDS5C4040ALE630",
+                        "text": "Hitachi HDS5C4040ALE630"
+                      },
+                      {
+                        "id": "ST31500541AS",
+                        "text": "ST31500541AS"
+                      },
+                      {
+                        "id": "ST6000DX000",
+                        "text": "ST6000DX000"
+                      },
+                      {
+                        "id": "WDC WD30EFRX",
+                        "text": "WDC WD30EFRX"
+                      },
+                      {
+                        "id": "Hitachi HDS723030ALA640",
+                        "text": "Hitachi HDS723030ALA640"
+                      },
+                      {
+                        "id": "ST500LM012 HN",
+                        "text": "ST500LM012 HN"
+                      },
+                      {
+                        "id": "ST31500341AS",
+                        "text": "ST31500341AS"
+                      },
+                      {
+                        "id": "WDC WD10EADS",
+                        "text": "WDC WD10EADS"
+                      },
+                      {
+                        "id": "WDC WD30EZRX",
+                        "text": "WDC WD30EZRX"
+                      },
+                      {
+                        "id": "WDC WD60EFRX",
+                        "text": "WDC WD60EFRX"
+                      },
+                      {
+                        "id": "ST32000542AS",
+                        "text": "ST32000542AS"
+                      },
+                      {
+                        "id": "ST33000651AS",
+                        "text": "ST33000651AS"
+                      },
+                      {
+                        "id": "WDC WD5000LPVX",
+                        "text": "WDC WD5000LPVX"
+                      },
+                      {
+                        "id": "ST4000DX000",
+                        "text": "ST4000DX000"
+                      },
+                      {
+                        "id": "WDC WD20EFRX",
+                        "text": "WDC WD20EFRX"
+                      },
+                      {
+                        "id": "TOSHIBA MD04ABA400V",
+                        "text": "TOSHIBA MD04ABA400V"
+                      },
+                      {
+                        "id": "WDC WD1600AAJS",
+                        "text": "WDC WD1600AAJS"
+                      },
+                      {
+                        "id": "ST1500DL003",
+                        "text": "ST1500DL003"
+                      },
+                      {
+                        "id": "WDC WD10EACS",
+                        "text": "WDC WD10EACS"
+                      },
+                      {
+                        "id": "ST320LT007",
+                        "text": "ST320LT007"
+                      },
+                      {
+                        "id": "HGST HDS5C4040ALE630",
+                        "text": "HGST HDS5C4040ALE630"
+                      },
+                      {
+                        "id": "ST3160316AS",
+                        "text": "ST3160316AS"
+                      },
+                      {
+                        "id": "ST9250315AS",
+                        "text": "ST9250315AS"
+                      },
+                      {
+                        "id": "TOSHIBA DT01ACA300",
+                        "text": "TOSHIBA DT01ACA300"
+                      },
+                      {
+                        "id": "WDC WD800BB",
+                        "text": "WDC WD800BB"
+                      },
+                      {
+                        "id": "ST3160318AS",
+                        "text": "ST3160318AS"
+                      },
+                      {
+                        "id": "WDC WD40EFRX",
+                        "text": "WDC WD40EFRX"
+                      },
+                      {
+                        "id": "TOSHIBA MD04ABA500V",
+                        "text": "TOSHIBA MD04ABA500V"
+                      },
+                      {
+                        "id": "HGST HUH728080ALE600",
+                        "text": "HGST HUH728080ALE600"
+                      },
+                      {
+                        "id": "HGST HDS724040ALE640",
+                        "text": "HGST HDS724040ALE640"
+                      },
+                      {
+                        "id": "ST250LM004 HN",
+                        "text": "ST250LM004 HN"
+                      },
+                      {
+                        "id": "WDC WD800AAJS",
+                        "text": "WDC WD800AAJS"
+                      },
+                      {
+                        "id": "WDC WD10EADX",
+                        "text": "WDC WD10EADX"
+                      },
+                      {
+                        "id": "WDC WD5000LPCX",
+                        "text": "WDC WD5000LPCX"
+                      },
+                      {
+                        "id": "ST9320325AS",
+                        "text": "ST9320325AS"
+                      },
+                      {
+                        "id": "WDC WD5000BPKT",
+                        "text": "WDC WD5000BPKT"
+                      },
+                      {
+                        "id": "WDC WD800AAJB",
+                        "text": "WDC WD800AAJB"
+                      },
+                      {
+                        "id": "TOSHIBA MQ01ABF050",
+                        "text": "TOSHIBA MQ01ABF050"
+                      },
+                      {
+                        "id": "WDC WD800JB",
+                        "text": "WDC WD800JB"
+                      },
+                      {
+                        "id": "ST320005XXXX",
+                        "text": "ST320005XXXX"
+                      },
+                      {
+                        "id": "WDC WD30EZRS",
+                        "text": "WDC WD30EZRS"
+                      },
+                      {
+                        "id": "ST2000DL003",
+                        "text": "ST2000DL003"
+                      },
+                      {
+                        "id": "Hitachi HDT721010SLA360",
+                        "text": "Hitachi HDT721010SLA360"
+                      },
+                      {
+                        "id": "WDC WD3200BEKX",
+                        "text": "WDC WD3200BEKX"
+                      },
+                      {
+                        "id": "SAMSUNG HD103UJ",
+                        "text": "SAMSUNG HD103UJ"
+                      },
+                      {
+                        "id": "ST2000DL001",
+                        "text": "ST2000DL001"
+                      },
+                      {
+                        "id": "Hitachi HDS723020BLA642",
+                        "text": "Hitachi HDS723020BLA642"
+                      },
+                      {
+                        "id": "ST2000VN000",
+                        "text": "ST2000VN000"
+                      },
+                      {
+                        "id": "Hitachi HDS723030BLE640",
+                        "text": "Hitachi HDS723030BLE640"
+                      },
+                      {
+                        "id": "WDC WD1600AAJB",
+                        "text": "WDC WD1600AAJB"
+                      },
+                      {
+                        "id": "WDC WD2500BPVT",
+                        "text": "WDC WD2500BPVT"
+                      },
+                      {
+                        "id": "ST250LT007",
+                        "text": "ST250LT007"
+                      },
+                      {
+                        "id": "ST2000DM001",
+                        "text": "ST2000DM001"
+                      },
+                      {
+                        "id": "WDC WD3200AAJS",
+                        "text": "WDC WD3200AAJS"
+                      },
+                      {
+                        "id": "WDC WD5002ABYS",
+                        "text": "WDC WD5002ABYS"
+                      },
+                      {
+                        "id": "WDC WD10EARS",
+                        "text": "WDC WD10EARS"
+                      },
+                      {
+                        "id": "ST1500DM003",
+                        "text": "ST1500DM003"
+                      },
+                      {
+                        "id": "SAMSUNG HD154UI",
+                        "text": "SAMSUNG HD154UI"
+                      },
+                      {
+                        "id": "WDC WD1600BPVT",
+                        "text": "WDC WD1600BPVT"
+                      },
+                      {
+                        "id": "WDC WD15EARS",
+                        "text": "WDC WD15EARS"
+                      },
+                      {
+                        "id": "WDC WD3200AAJB",
+                        "text": "WDC WD3200AAJB"
+                      },
+                      {
+                        "id": "WDC WD2500AAJS",
+                        "text": "WDC WD2500AAJS"
+                      },
+                      {
+                        "id": "WDC WD10EARX",
+                        "text": "WDC WD10EARX"
+                      },
+                      {
+                        "id": "Hitachi HDS724040ALE640",
+                        "text": "Hitachi HDS724040ALE640"
+                      },
+                      {
+                        "id": "WDC WD3200LPVX",
+                        "text": "WDC WD3200LPVX"
+                      },
+                      {
+                        "id": "WDC WD1001FALS",
+                        "text": "WDC WD1001FALS"
+                      },
+                      {
+                        "id": "ST1500DL001",
+                        "text": "ST1500DL001"
+                      },
+                      {
+                        "id": "WDC WD2500AAJB",
+                        "text": "WDC WD2500AAJB"
+                      },
+                      {
+                        "id": "WDC WD800LB",
+                        "text": "WDC WD800LB"
+                      },
+                      {
+                        "id": "ST4000DX002",
+                        "text": "ST4000DX002"
+                      },
+                      {
+                        "id": "WDC WD5003ABYX",
+                        "text": "WDC WD5003ABYX"
+                      },
+                      {
+                        "id": "WDC WD5000AAJS",
+                        "text": "WDC WD5000AAJS"
+                      },
+                      {
+                        "id": "ST3500320AS",
+                        "text": "ST3500320AS"
+                      },
+                      {
+                        "id": "WDC WD2500JB",
+                        "text": "WDC WD2500JB"
+                      },
+                      {
+                        "id": "Hitachi HDS5C3030BLE630",
+                        "text": "Hitachi HDS5C3030BLE630"
+                      },
+                      {
+                        "id": "WDC WD2500BEVT",
+                        "text": "WDC WD2500BEVT"
+                      },
+                      {
+                        "id": "WDC WD10EALS",
+                        "text": "WDC WD10EALS"
+                      },
+                      {
+                        "id": "ST1000LM024 HN",
+                        "text": "ST1000LM024 HN"
+                      },
+                      {
+                        "id": "Hitachi HDT725025VLA380",
+                        "text": "Hitachi HDT725025VLA380"
+                      },
+                      {
+                        "id": "WDC WD3200AAKS",
+                        "text": "WDC WD3200AAKS"
+                      },
+                      {
+                        "id": "WDC WD15EADS",
+                        "text": "WDC WD15EADS"
+                      },
+                      {
+                        "id": "WDC WD800JD",
+                        "text": "WDC WD800JD"
+                      },
+                      {
+                        "id": "WDC WD3200BEKT",
+                        "text": "WDC WD3200BEKT"
+                      }
+                    ]
+            },
             {
                 "id": "Grid",
                 "component": "KendoGrid",
@@ -36,7 +404,193 @@ ui module backblaze {
                         "label": "Model"
                     }
                 ]
+            },
+            {
+                "id": "PieChart",
+                "component": "highchart.PieChart",
+                "icon": "bar-chart",
+                "name": "PieChart",
+                "box": true,
+                "title": "HD by Model ",
+                "renderTo": "#TopRight",
+                "height": 388,
+                "data": {
+                    "collection": "backblaze.HDModelBreakdown"
+                },
+                "chartType": "wheel",
+                "segmentLabelOptions": true,
+                "segmentLabelShowValue": true,
+                "showPercentage": true,
+                "showTooltip": true,
+                "showLegend": false,
+                "hoverHalo": true
+            },
+            {
+                "id": "ModelTrends",
+                "component": "oxy.OilWellFailureHistoryChart",
+                "renderTo": "#BottomLeft",
+                "box": true,
+                "boxHeight": 435,
+                "title": "Trends",
+                "enablePriorPeriod": false,
+                "enableExportChart": false,
+                "dynamicDateRange": false,
+                "startDate": "2014-01-01",
+                "endDate": "2016-01-01",
+                "defaultInterval": "MONTH",
+                "axisProperties": {
+                    "failures": {
+                        "axisMin" : 0
+                    }
+                },
+                "data": {
+                    "record": {
+                        "id": "asfasd",
+                        "c3function": "fetch",
+                        "c3arguments": {
+                            "spec": {
+                                "id": "1",
+                                "limit": "1",
+                                    "filter": "",
+                                    "include": "id"
+                            }
+                        },
+                        "data": {"id": "asfasd"},
+                        "c3type": "FixedAsset",
+                        "c3module": "structure",
+                        "responseSelector": "response.objs"
+                    }
+                },
+                "series": [
+                    {
+                        "id": "m1",
+                        "isTimeseries": true,
+                        "name": "HD Temperature",
+                        "color": "#f0a63a",
+                        "chartType": "line",
+                        "axis": "Multi Dimensional (see tooltip)",
+                        "tooltipGroup": "group1",
+                        "unit": "F",
+                        "data": {
+                            "c3type": "FixedAsset",
+                            "c3function": "rollupMetric",
+                            "c3arguments": {
+                                "spec": {
+                                    "expressions": ["temperature"],
+                                    "filter": "exists(id)",
+                                    "limit": 500,
+                                    "rollupFunc": "AVG"
+                                }
+                            },
+                            "responseSelector": "response",
+                            "responseTransform": null,
+                            "collection": false
+                        }
+                    },
+                    {
+                        "id": "m2",
+                        "isTimeseries": true,
+                        "name": "Power Cycle",
+                        "color": "#0090B2",
+                        "chartType": "line",
+                        "axis": "Multi Dimensional (see tooltip)",
+                        "tooltipGroup": "group1",
+                        "unit": "cycle",
+                        "data": {
+                            "c3type": "FixedAsset",
+                            "c3function": "rollupMetric",
+                            "c3arguments": {
+                                "spec": {
+                                    "expressions": ["powerCycle"],
+                                    "filter": "exists(id)",
+                                    "limit": 500,
+                                    "rollupFunc": "AVG"
+                                }
+                            },
+                            "responseSelector": "response",
+                            "responseTransform": null,
+                            "collection": false
+                        }
+                    },
+                    {
+                        "id": "m3",
+                        "isTimeseries": true,
+                        "name": "Seek Error",
+                        "color": "#9FCB2B",
+                        "chartType": "line",
+                        "axis": "Seek Error",
+                        "tooltipGroup": "group2",
+                        "unit": "error",
+                        "data": {
+                            "c3type": "FixedAsset",
+                            "c3function": "rollupMetric",
+                            "c3arguments": {
+                                "spec": {
+                                    "expressions": ["seekError"],
+                                    "filter": "exists(id)",
+                                    "limit": 500,
+                                    "rollupFunc": "SUM"
+                                }
+                            },
+                            "responseSelector": "response",
+                            "responseTransform": null,
+                            "collection": false
+                        }
+                    }
+                ],
+                "legendGroups": [
+                    {
+                        "id": "legend",
+                        "name": "Series",
+                        "series": [
+                            "m1",
+                            "m2",
+                            "m3"
+                        ]
+                    }
+                ],
+                "markerSymbol": "",
+                "intervalOptions": [
+                    {
+                        "text": "Month",
+                        "id": "MONTH"
+                    }
+                ]
             }
-        ]
+        ],
+        "behavior": {
+            "ModelFilter": {
+                "change": {
+                    "type": "UpdateDataSourceFromSelect",
+                    "dataSources": [
+                        {
+                            "id": "backblaze.HardDrives",
+                            "path": "model"
+                        }
+                    ],
+                    "charts": [
+                        {
+                            "id": "ModelTrends",
+                            "path": "model"
+                        }
+                    ]
+                },
+                "clear": {
+                    "type": "UpdateDataSourceFromSelect",
+                    "dataSources": [
+                        {
+                            "id": "backblaze.HardDrives",
+                            "path": "model"
+                        }
+                    ],
+                    "charts": [
+                        {
+                            "id": "ModelTrends",
+                            "path": "model"
+                        }
+                    ]
+                }
+            }
+        }
     }
 }

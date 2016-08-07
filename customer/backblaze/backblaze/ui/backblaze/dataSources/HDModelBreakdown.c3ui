@@ -1,0 +1,28 @@
+ui module backblaze {
+    dataSource HDModelBreakdown {
+        "collection": true,
+        "c3function": "evaluate",
+        "c3arguments": {
+            "spec": {
+                "limit": "25",
+                "group": "model",
+                "order": "descending(count())",
+                "projection": "model, count()"
+            }
+        },
+        "c3type": "FixedAsset",
+        "c3module": "structure",
+        "name": "HDModelBreakdown",
+        "responseSelector": "response",
+        "record": false,
+        "responseTransform": {
+            "combine": false,
+            "rootProperty": false,
+            "firstItem": false,
+            "order": false,
+            "tuples": false,
+            "fields": false
+        },
+        "id": "backblaze.HDModelBreakdown"
+    }
+}

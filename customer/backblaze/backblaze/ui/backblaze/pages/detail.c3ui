@@ -92,23 +92,41 @@ ui module backblaze {
                         "autoLoadData": true,
                         "dynamicDateRange": false,
                         "startDate": "2013-01-01T08:00:00.000Z",
-                        "endDate": "2013-03-01T08:00:00.000Z",
+                        "legend": "grouped",
+                        "endDate": "2016-01-01T08:00:00.000Z",
                         "userMetricConfigs": [
                             {
-                                "id": "metric-series-0",
+                                "id": "metric-series-1",
                                 "info": {
-                                    "id": "capacity"
+                                    "id": "temperature"
                                 },
                                 "chartConfig": {
-                                    "name": "capacity",
-                                    "color": "#0e90b0",
-                                    "type": "column",
+                                    "name": "temperature",
+                                    "color": "#1d30d9",
+                                    "type": "line",
                                     "stack": "1",
                                     "index": 0
                                 },
                                 "metric": {
-                                    "grain": "MONTH",
-                                    "id": "capacity"
+                                    "grain": "DAY",
+                                    "id": "temperature"
+                                }
+                            },
+                            {
+                                "id": "metric-series-11",
+                                "info": {
+                                    "id": "powerCycle"
+                                },
+                                "chartConfig": {
+                                    "name": "powerCycle",
+                                    "color": "#b00e18",
+                                    "type": "line",
+                                    "stack": "1",
+                                    "index": 0
+                                },
+                                "metric": {
+                                    "grain": "DAY",
+                                    "id": "powerCycle"
                                 }
                             }
                         ],
@@ -116,9 +134,21 @@ ui module backblaze {
                             "c3Type": "FixedAsset",
                             "c3Module": "structure"
                         },
-                        "legend": "false",
                         "data": {
-                            "record": "record"
+                            "record": {
+                                "c3module": "structure",
+                                "c3type": "FixedAsset",
+                                "c3function": "fetch",
+                                "responseSelector": "response.objs",
+                                "responseTransform": {
+                                    "firstItem": true
+                                },
+                                "c3arguments": {
+                                    "spec": {
+                                        "filter": "id =='{{ params.id }}'"
+                                    }
+                                }
+                            }
                         }
                     }
                 ]
