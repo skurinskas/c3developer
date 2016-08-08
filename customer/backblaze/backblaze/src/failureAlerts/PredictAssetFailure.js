@@ -45,9 +45,6 @@ function upsertPredictionResults(asset, dates, predictionData){
         id: asset.id,
         parent: asset
     })
-    
-    log.info("datesss = " + JSON.stringify(dates));
-    log.info("predictionData = " + JSON.stringify(predictionData));
 
     var scores = HardDriveFailureScore.array()
     _.each(_.zip(dates, predictionData), function (pair, i) {
@@ -88,9 +85,6 @@ function extractDataFromDFE(inputs) {
             data = data.concat(input[fieldName].data());
         })
     })
-    log.info("dataset_data = " + JSON.stringify(data))
-    log.info("dataset_columns = " + JSON.stringify(expressions))
-    log.info("dataset_index = " + JSON.stringify(index))
     return {
         dataset : TBD_MachineLearningDataSet.make({
             columns: expressions,
