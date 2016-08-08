@@ -1,0 +1,21 @@
+{
+  "module": "metric",
+  "type": "SimpleMetric",
+  "data": [
+    {
+      "id": "FailureScore_FixedAsset",
+      "name": "FailureScore",
+      "path":"failureScores",
+      "tsDecl":{
+        "value": "value",
+        "start": "start",
+        "treatment": "PREVIOUS",
+        "data": "data"
+      },
+      "srcType": {
+        "moduleName": "structure",
+        "typeName": "FixedAsset"
+      }
+    }
+  ]
+}

@@ -26,16 +26,16 @@ app module failureAlerts {
 
 
    // failure classifier
-   @DFE(period="DAY", grain="DAY", metric="powerOn")
+   @DFE(period="Day", interval="Day", metric="powerOn")
    type PowerOn mixes TSDataFlowEvent<FixedAsset>
 
-   @DFE(period="DAY", grain="DAY", metric="seekError")
+   @DFE(period="Day", interval="Day", metric="seekError")
    type SeekError mixes TSDataFlowEvent<FixedAsset>
 
-   @DFE(period="DAY", grain="DAY", metric="seekErrorNormalized")
+   @DFE(period="Day", interval="Day", metric="seekErrorNormalized")
    type SeekErrorNormalized mixes TSDataFlowEvent<FixedAsset>
 
-   @DFE(period="DAY", grain="DAY")
+   @DFE(period="Day", interval="Day", threshold=1)
    type PredictAssetFailureInput mixes CompoundDataFlowEvent<FixedAsset> {
      powerOn: PowerOn
      seekError: SeekError
@@ -44,5 +44,8 @@ app module failureAlerts {
 
    type PredictAssetFailure mixes Analytic<PredictAssetFailureInput, Void> {
       processSource  : ~ {@PredictAssetFailure@} js server
+
+      loadContextAll : final ~ {@PredictAssetFailure@} js server
+
    }
 }

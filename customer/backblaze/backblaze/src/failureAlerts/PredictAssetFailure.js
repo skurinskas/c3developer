@@ -26,10 +26,8 @@ function loadContextAll() {
 }
 
 function processSource(asset, inputs, context) {
-    log.info("Processing asset="+asset.id);
-    log.info(JSON.stringify(inputs));
-
-
+    //log.info("Processing asset="+asset.id);
+    
     var input = inputs.at(inputs.size() - 1);
     var start = input.start,
         end = input.end;
@@ -48,9 +46,13 @@ function processSource(asset, inputs, context) {
 
 function upsertPredictionResults(asset, dates, predictionData){
     var header = HardDriveFailureScoreHistory.merge({
-        id: asset.id
+        id: asset.id,
+        parent: asset
     })
     
+    log.info("datesss = " + JSON.stringify(dates));
+    log.info("predictionData = " + JSON.stringify(predictionData));
+
     var scores = HardDriveFailureScore.array()
     _.each(_.zip(dates, predictionData), function (pair, i) {
         var inputTimestamp = pair[0];
@@ -102,13 +104,9 @@ function extractDataFromDFE(inputs) {
 }
 
 function getDates(inputs, inputDFEFieldTypes){
-    var n;
     var dates = DateTime.array();
 
     inputs.each(function(input) {
-      if (n !== undefined) {
-        return;
-      }
       var dfe;
       _.each(inputDFEFieldTypes, function(fieldType) {
         if (dfe !== undefined) {
@@ -122,11 +120,9 @@ function getDates(inputs, inputDFEFieldTypes){
       });
 
       if (dfe && dfe.data().length) {
-        n = dfe.data().length;
-        dates = dfe.dates();
+        dates.push(dfe.dates()[0]);
       }
     });
-
     return dates;
 } 
     

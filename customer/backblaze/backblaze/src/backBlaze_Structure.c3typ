@@ -18,6 +18,7 @@ entity module backBlaze_Structure remix structure  {
   @db(compactType=true,
     datastore='cassandra',
     partitionKeyField='parent',
+    persistenceOrder='start',
     persistDuplicates=false,
     shortId=true,
     shortIdReservationRange=10000,
