@@ -3,6 +3,8 @@ entity module backBlaze_Structure remix structure  {
   entity type FixedAsset {
       serialNumber    : string
       model           : string
+      manufacturer    : string
+      driveSize       : double
 
       /*
        * State of the asset - if null, in good shape.  If failed, then the asset has failed.

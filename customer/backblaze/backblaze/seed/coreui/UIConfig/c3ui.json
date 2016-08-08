@@ -11,9 +11,9 @@
         "hideSections": "false"
       },
       {
-        "id": "eq",
-        "package": "eq",
-        "bundle": "eq"
+        "id": "backblaze",
+        "package": "skurinsk",
+        "bundle": "skurinsk"
       }
     ],
     "environments": [
