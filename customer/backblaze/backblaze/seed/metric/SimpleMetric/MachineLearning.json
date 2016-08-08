@@ -6,12 +6,7 @@
       "id": "FailureScore_FixedAsset",
       "name": "FailureScore",
       "path":"failureScores",
-      "tsDecl":{
-        "value": "value",
-        "start": "start",
-        "treatment": "PREVIOUS",
-        "data": "data"
-      },
+      "expression":"avg(avg(normalized.data.value))",
       "srcType": {
         "moduleName": "structure",
         "typeName": "FixedAsset"

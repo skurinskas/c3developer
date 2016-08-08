@@ -28,10 +28,6 @@ function loadContextAll() {
 function processSource(asset, inputs, context) {
     //log.info("Processing asset="+asset.id);
     
-    var input = inputs.at(inputs.size() - 1);
-    var start = input.start,
-        end = input.end;
-
     var extract = extractDataFromDFE(inputs);
     var dataset = extract.dataset
     var dates = extract.dates
@@ -92,13 +88,15 @@ function extractDataFromDFE(inputs) {
             data = data.concat(input[fieldName].data());
         })
     })
-
+    log.info("dataset_data = " + JSON.stringify(data))
+    log.info("dataset_columns = " + JSON.stringify(expressions))
+    log.info("dataset_index = " + JSON.stringify(index))
     return {
         dataset : TBD_MachineLearningDataSet.make({
             columns: expressions,
             data: data,
             index: index,
-            orient: "column" }),
+            orient: "row" }),
         dates : dates }
 
 }
