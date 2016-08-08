@@ -62,6 +62,14 @@ function upsertPredictionResults(asset, dates, predictionData){
     HardDriveFailureScore.upsertBatch(scores);
 }
 
+function zeroArray(length) {
+    var res = Double.array();
+    for(var i=0; i<length; i++){
+        res.push(0)
+    }
+    return res
+}
+
 function extractDataFromDFE(inputs) {
     var data = Double.array();
     var index = Str.array();
@@ -75,14 +83,20 @@ function extractDataFromDFE(inputs) {
     dates.each(function (date, i) {
         index.push(date.serialize())
     })
+    var length = dates.size();
+    var zeros = zeroArray(length);
 
 
     inputs.each(function (input) {
     
         _.map(inputDFEFieldTypes, function (fieldType) {
             var fieldName = fieldType.fieldName();
-            
-            data = data.concat(input[fieldName].data());
+            if (input[fieldName] !== undefined){
+                data = data.concat(zeros)
+            } else {
+                data = data.concat(input[fieldName].data());
+            }
+
         })
     })
     return {
