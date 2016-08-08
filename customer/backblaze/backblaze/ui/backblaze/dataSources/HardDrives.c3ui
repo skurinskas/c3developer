@@ -4,7 +4,8 @@ ui module backblaze {
         "c3function": "fetch",
         "c3arguments": {
             "spec": {
-                "limit": "25"
+                "limit": "25",
+                "filter": "exists(failureDate)"
             }
         },
         "cache": false,
