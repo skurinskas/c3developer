@@ -32,7 +32,7 @@ function processSource(asset, inputs, context) {
     var start = input.start,
         end = input.end;
 
-    var extract = extractDataFromDFE(inputs, inputDFEFieldTypes);
+    var extract = extractDataFromDFE(inputs);
     var dataset = extract.dataset
     var dates = extract.dates
 
@@ -65,7 +65,7 @@ function upsertPredictionResults(asset, dates, predictionData){
     HardDriveFailureScore.upsertBatch(scores);
 }
 
-function extractDataFromDFE(inputs, inputDFEFieldTypes) {
+function extractDataFromDFE(inputs) {
     var data = Double.array();
     var index = Str.array();
 
