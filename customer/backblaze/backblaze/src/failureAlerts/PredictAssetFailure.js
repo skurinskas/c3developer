@@ -27,6 +27,8 @@ function loadContextAll() {
 
 function processSource(asset, inputs, context) {
     log.info("Processing asset="+asset.id);
+    log.info(JSON.stringify(inputs));
+
 
     var input = inputs.at(inputs.size() - 1);
     var start = input.start,
@@ -37,7 +39,7 @@ function processSource(asset, inputs, context) {
     var dates = extract.dates
 
     // Prediction using DS model
-    var predictionDataset = pythonModel.predict(dataset);
+    var predictionDataset = context.predict(dataset);
     var predictionData = predictionDataset.extractColumns(["1.0"]).data;
 
     upsertPredictionResults(asset, dates, predictionData)
@@ -68,7 +70,6 @@ function upsertPredictionResults(asset, dates, predictionData){
 function extractDataFromDFE(inputs) {
     var data = Double.array();
     var index = Str.array();
-
     var inputDFEFieldTypes = getInputDFEFieldTypes();
     var expressions = getExpressions(inputDFEFieldTypes);
 
@@ -79,9 +80,15 @@ function extractDataFromDFE(inputs) {
     dates.each(function (date, i) {
         index.push(date.serialize())
     })
-    _.map(inputDFEFieldTypes, function (fieldType) {
-        var fieldName = fieldType.fieldName();
-        data = data.concat(input[fieldName]);
+
+
+    inputs.each(function (input) {
+    
+        _.map(inputDFEFieldTypes, function (fieldType) {
+            var fieldName = fieldType.fieldName();
+            
+            data = data.concat(input[fieldName].data());
+        })
     })
 
     return {

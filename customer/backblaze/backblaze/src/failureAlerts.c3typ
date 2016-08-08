@@ -12,21 +12,8 @@ entity module failureAlerts schema name "FALRT" {
    import units
    import pythonMachineLearning
 
-   abstract type ThresholdAlert<T> {
-      source : T
-      date   : datetime
-      alert  : string
-      description    :  string
-      subject : string
 
-      measuredValue: ExactDimension
-      threshold: ExactDimension
-   }
-
-   entity type FixedAssetThresholdAlert mixes ThresholdAlert<FixedAsset> schema name "FAALRT"
-
-
-   entity type HardDriveFailureClassifier mixes PythonMachineLearningClassifier schema name "HDDFLCL"
+   entity type HardDriveFailureClassifier mixes PythonMachineLearningClassifier 
 
 
 

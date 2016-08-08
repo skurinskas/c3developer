@@ -12,7 +12,7 @@ entity module backBlaze_Structure remix structure  {
       status          : string
       failureDate     : datetime
 
-      failureScores   : HardDriveFailureScoreHistory (parent)
+      failureScores   : [HardDriveFailureScoreHistory] (parent)
   }
 
   @db(compactType=true,
@@ -22,7 +22,7 @@ entity module backBlaze_Structure remix structure  {
     shortId=true,
     shortIdReservationRange=10000,
     unique=["parent,start"])
-  entity type HardDriveFailureScore TimedDataPoint<HardDriveFailureScoreHistory>{
+  entity type HardDriveFailureScore mixes TimedDataPoint<HardDriveFailureScoreHistory> {
       @timeseriesField(treatment='rate')
       value : double
   }
