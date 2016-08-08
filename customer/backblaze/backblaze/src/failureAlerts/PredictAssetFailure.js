@@ -8,23 +8,11 @@
  * @author Scott
  */
 
-var log = C3.logger("FailureAlert");
+var log = C3.logger("skurinsk.PredictAssetFailure");
 
 function process(input) {
-  var alertType, f;
-  
-  // if the hard drive has failed, update the status and failureDate fields to indicate
-  // that a failure has occurred.
-  if (input.fail.data().at(0) > 0) {
-    var fa = FixedAsset.make({
-     id: input.source.id,
-     status: "Failed",
-     failureDate: input.start
-    })
 
-    FixedAsset.merge(fa);
-  }
 }
 
 
-//@ sourceURL=AssetFailureAlert.js
+//@ sourceURL=PredictAssetFailure.js

@@ -13,6 +13,10 @@ c3Import("metadata", "metric");
 
 var logger = C3.logger("skurinsk.RefreshAnalytics");
 
+/*
+ * MapReduce job to refresh the failure status for fixed assets.  This only should be run
+ * after the initial load is complete
+ */
 function map(batch, objs, job) {
 
   var start = "2014-04-01";

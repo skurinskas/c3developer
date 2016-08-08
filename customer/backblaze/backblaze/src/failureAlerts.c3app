@@ -23,4 +23,26 @@ app module failureAlerts {
    type AssetFailureAlert mixes Analytic<AssetFailureInput, Void> {
       process  : ~ {@AssetFailureAlert@} js server
    }
+
+
+   // failure classifier
+   @DFE(period="DAY", grain="DAY", metric="powerOn")
+   type PowerOn mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="DAY", grain="DAY", metric="seekError")
+   type SeekError mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="DAY", grain="DAY", metric="seekErrorNormalized")
+   type SeekErrorNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="DAY", grain="DAY")
+   type PredictAssetFailureInput mixes CompoundDataFlowEvent<FixedAsset> {
+     powerOn: PowerOn
+     seekError: SeekError
+     seekErrorNormalized: SeekErrorNormalized
+   }
+
+   type PredictAssetFailure mixes Analytic<PredictAssetFailureInput, Void> {
+      process  : ~ {@PredictAssetFailure@} js server
+   }
 }
