@@ -4,10 +4,11 @@ ui module backblaze {
         "c3function": "evaluate",
         "c3arguments": {
             "spec": {
-                "limit": "25",
+                "limit": "10",
                 "group": "model",
                 "order": "descending(count())",
-                "projection": "model, count()"
+                "projection": "model, count()",
+                "filter": "exists(failureDate)"
             }
         },
         "c3type": "FixedAsset",

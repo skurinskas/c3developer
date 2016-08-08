@@ -91,12 +91,30 @@ ui module backblaze {
                         "title": "Trends",
                         "autoLoadData": true,
                         "dynamicDateRange": false,
-                        "startDate": "2013-01-01T08:00:00.000Z",
+                        "startDate": "2013-10-01",
                         "legend": "grouped",
-                        "endDate": "2016-01-01T08:00:00.000Z",
+                        "endDate": "2016-05-01",
                         "userMetricConfigs": [
                             {
-                                "id": "metric-series-1",
+                                "id": "metric-series-00",
+                                "info": {
+                                    "id": "failure"
+                                },
+                                "chartConfig": {
+                                    "name": "failure",
+                                    "color": "#FF1100",
+                                    "type": "line",
+                                    "unitId": "count",
+                                    "marker": true,
+                                    "index": 5
+                                },
+                                "metric": {
+                                    "grain": "DAY",
+                                    "id": "failure == 1 ? 0 : dumbGaps"
+                                }
+                            },
+                            {
+                                "id": "metric-series-0",
                                 "info": {
                                     "id": "temperature"
                                 },
@@ -104,7 +122,7 @@ ui module backblaze {
                                     "name": "temperature",
                                     "color": "#1d30d9",
                                     "type": "line",
-                                    "stack": "1",
+                                    "unitId": "degrees_celcius",
                                     "index": 0
                                 },
                                 "metric": {
@@ -113,20 +131,80 @@ ui module backblaze {
                                 }
                             },
                             {
-                                "id": "metric-series-11",
+                                "id": "metric-series-1",
                                 "info": {
                                     "id": "powerCycle"
                                 },
                                 "chartConfig": {
+                                    "unitId": "cycle",
                                     "name": "powerCycle",
                                     "color": "#b00e18",
                                     "type": "line",
-                                    "stack": "1",
                                     "index": 0
                                 },
                                 "metric": {
                                     "grain": "DAY",
                                     "id": "powerCycle"
+                                }
+                            },
+                            {
+                                "id": "metric-series-2",
+                                "info": {
+                                    "id": "reallocationEventCount"
+                                },
+                                "chartConfig": {
+                                    "unitId": "count",
+                                    "legendGroup": "Counts",
+                                    "name": "Counts",
+                                    "color": "#058DC7",
+                                    "visible": "false",
+                                    "type": "line",
+                                    "marker": true,
+                                    "index": 0
+                                },
+                                "metric": {
+                                    "grain": "DAY",
+                                    "id": "reallocationEventCount"
+                                }
+                            },
+                            {
+                                "id": "metric-series-3",
+                                "info": {
+                                    "id": "uncorrectableSectorCount"
+                                },
+                                "chartConfig": {
+                                    "unitId": "count",
+                                    "legendGroup": "Counts",
+                                    "name": "uncorrectableSectorCount",
+                                    "color": "#50B432",
+                                    "type": "line",
+                                    "visible": "false",
+                                    "marker": true,
+                                    "index": 0
+                                },
+                                "metric": {
+                                    "grain": "DAY",
+                                    "id": "uncorrectableSectorCount"
+                                }
+                            },
+                            {
+                                "id": "metric-series-4",
+                                "info": {
+                                    "id": "seekError"
+                                },
+                                "chartConfig": {
+                                    "unitId": "count",
+                                    "legendGroup": "Counts",
+                                    "name": "seekError",
+                                    "color": "#24CBE5",
+                                    "type": "line",
+                                    "visible": "false",
+                                    "marker": true,
+                                    "index": 0
+                                },
+                                "metric": {
+                                    "grain": "DAY",
+                                    "id": "seekError"
                                 }
                             }
                         ],

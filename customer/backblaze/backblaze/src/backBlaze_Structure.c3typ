@@ -13,6 +13,8 @@ entity module backBlaze_Structure remix structure  {
       failureDate     : datetime
 
       failureScores   : [HardDriveFailureScoreHistory] (parent)
+      //need this field for 'failureFast' metric
+      self            : [FixedAsset] (id)
   }
 
   @db(compactType=true,

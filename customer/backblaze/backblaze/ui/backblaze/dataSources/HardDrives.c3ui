@@ -7,6 +7,7 @@ ui module backblaze {
                 "limit": "25"
             }
         },
+        "cache": false,
         "c3type": "FixedAsset",
         "c3module": "structure",
         "name": "HardDrives",
