@@ -24,22 +24,124 @@ app module failureAlerts {
       process  : ~ {@AssetFailureAlert@} js server
    }
 
+   @DFE(period="Day", interval="Day", metric="currentPendingSector")
+   type CurrentPendingSector mixes TSDataFlowEvent<FixedAsset>
 
-   // failure classifier
    @DFE(period="Day", interval="Day", metric="powerOn")
    type PowerOn mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="totalLBARead")
+   type TotalLBARead mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="totalLBAWritten")
+   type TotalLBAWritten mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="loadCycleCount")
+   type LoadCycleCount mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="transferErrorRate")
+   type TransferErrorRate mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="powerOffCount")
+   type PowerOffCount mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="uncorrectableSectorCount")
+   type UncorrectableSectorCount mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="powerCycle")
+   type PowerCycle mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="uncorrectableErrorsNormalized")
+   type UncorrectableErrorsNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="reallocatedSectors")
+   type ReallocatedSectors mixes TSDataFlowEvent<FixedAsset>
 
    @DFE(period="Day", interval="Day", metric="seekError")
    type SeekError mixes TSDataFlowEvent<FixedAsset>
 
+   @DFE(period="Day", interval="Day", metric="uncorrectableErrors")
+   type UncorrectableErrors mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="endToEndErrorNormalized")
+   type EndToEndErrorNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="dmaCrcError")
+   type DmaCrcError mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="highFlyWrites")
+   type HighFlyWrites mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="airflowTempNormalized")
+   type AirflowTempNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="startStopCount")
+   type StartStopCount mixes TSDataFlowEvent<FixedAsset>
+
    @DFE(period="Day", interval="Day", metric="seekErrorNormalized")
    type SeekErrorNormalized mixes TSDataFlowEvent<FixedAsset>
 
+   @DFE(period="Day", interval="Day", metric="endToEndError")
+   type EndToEndError mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="highFlyWritesNormalized")
+   type HighFlyWritesNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="runtimeBadBlockNormalized")
+   type RuntimeBadBlockNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="spinUpNormalized")
+   type SpinUpNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="loadCycleCountNormalized")
+   type LoadCycleCountNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="runtimeBadBlock")
+   type RuntimeBadBlock mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="powerOnNormalized")
+   type PowerOnNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="commandTimeout")
+   type CommandTimeout mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="temperatureNormalized")
+   type TemperatureNormalized mixes TSDataFlowEvent<FixedAsset>
+
+   @DFE(period="Day", interval="Day", metric="temperature")
+   type Temperature mixes TSDataFlowEvent<FixedAsset>
+
    @DFE(period="Day", interval="Day", threshold=1)
    type PredictAssetFailureInput mixes CompoundDataFlowEvent<FixedAsset> {
-     powerOn: PowerOn
-     seekError: SeekError
-     seekErrorNormalized: SeekErrorNormalized
+     currentPendingSector : CurrentPendingSector
+     powerOn : PowerOn
+     totalLBARead : TotalLBARead
+     totalLBAWritten : TotalLBAWritten
+     loadCycleCount : LoadCycleCount
+     transferErrorRate : TransferErrorRate
+     powerOffCount : PowerOffCount
+     uncorrectableSectorCount : UncorrectableSectorCount
+     powerCycle : PowerCycle
+     uncorrectableErrorsNormalized : UncorrectableErrorsNormalized
+     reallocatedSectors : ReallocatedSectors
+     seekError : SeekError
+     uncorrectableErrors : UncorrectableErrors
+     endToEndErrorNormalized : EndToEndErrorNormalized
+     dmaCrcError : DmaCrcError
+     highFlyWrites : HighFlyWrites
+     airflowTempNormalized : AirflowTempNormalized
+     startStopCount : StartStopCount
+     seekErrorNormalized : SeekErrorNormalized
+     endToEndError : EndToEndError
+     highFlyWritesNormalized : HighFlyWritesNormalized
+     runtimeBadBlockNormalized : RuntimeBadBlockNormalized
+     spinUpNormalized : SpinUpNormalized
+     loadCycleCountNormalized : LoadCycleCountNormalized
+     runtimeBadBlock : RuntimeBadBlock
+     powerOnNormalized : PowerOnNormalized
+     commandTimeout : CommandTimeout
+     temperatureNormalized : TemperatureNormalized
+     temperature : Temperature
    }
 
    type PredictAssetFailure mixes Analytic<PredictAssetFailureInput, Void> {
