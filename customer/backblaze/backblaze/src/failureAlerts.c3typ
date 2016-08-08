@@ -10,6 +10,7 @@ entity module failureAlerts schema name "FALRT" {
    import analytic
    import structure
    import units
+   import pythonMachineLearning
 
    abstract type ThresholdAlert<T> {
       source : T
@@ -23,5 +24,10 @@ entity module failureAlerts schema name "FALRT" {
    }
 
    entity type FixedAssetThresholdAlert mixes ThresholdAlert<FixedAsset> schema name "FAALRT"
+
+
+   entity type HardDriveFailureClassifier mixes PythonMachineLearningClassifier schema name "HDDFLCL"
+
+
 
 }

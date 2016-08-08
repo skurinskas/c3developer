@@ -11,11 +11,29 @@ entity module backBlaze_Structure remix structure  {
        */
       status          : string
       failureDate     : datetime
+
+      failureScores   : HardDriveFailureScoreHistory (parent)
   }
 
-    entity type BackBlazeMeasurementSeries extends BasePhysicalMeasurementSeries mixes TimeseriesHeader<BackBlazeMeasurement>  type key 'BBMS'
+  @db(compactType=true,
+    datastore='cassandra',
+    partitionKeyField='parent',
+    persistDuplicates=false,
+    shortId=true,
+    shortIdReservationRange=10000,
+    unique=["parent,start"])
+  entity type HardDriveFailureScore TimedDataPoint<HardDriveFailureScoreHistory>{
+      @timeseriesField(treatment='rate')
+      value : double
+  }
 
-@db(compactType=true,
+  entity type HardDriveFailureScoreHistory mixes TimedDataHeader<HardDriveFailureScore> schema name 'HDDFSH' {
+      parent: FixedAsset
+  }
+
+  entity type BackBlazeMeasurementSeries extends BasePhysicalMeasurementSeries mixes TimeseriesHeader<BackBlazeMeasurement> type key 'BBMS'
+
+  @db(compactType=true,
       datastore='cassandra',
       partitionKeyField='parent',
       persistenceOrder='start',

@@ -43,6 +43,6 @@ app module failureAlerts {
    }
 
    type PredictAssetFailure mixes Analytic<PredictAssetFailureInput, Void> {
-      process  : ~ {@PredictAssetFailure@} js server
+      processSource  : ~ {@PredictAssetFailure@} js server
    }
 }
