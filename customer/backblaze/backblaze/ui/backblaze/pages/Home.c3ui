@@ -577,7 +577,7 @@ ui module backblaze {
                             "c3arguments": {
                                 "spec": {
                                     "expressions": [
-                                        "failure"
+                                        "failureFast"
                                     ],
                                     "filter": "exists(failureDate)",
                                     "limit": 4000,

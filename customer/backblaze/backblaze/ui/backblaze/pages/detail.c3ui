@@ -101,7 +101,7 @@ ui module backblaze {
                                     "id": "failure"
                                 },
                                 "chartConfig": {
-                                    "name": "failure",
+                                    "name": "Failure Event",
                                     "color": "#FF1100",
                                     "type": "line",
                                     "unitId": "count",
@@ -119,7 +119,7 @@ ui module backblaze {
                                     "id": "temperature"
                                 },
                                 "chartConfig": {
-                                    "name": "temperature",
+                                    "name": "Temperature",
                                     "color": "#1d30d9",
                                     "type": "line",
                                     "unitId": "degrees_celcius",
@@ -205,6 +205,24 @@ ui module backblaze {
                                 "metric": {
                                     "grain": "DAY",
                                     "id": "seekError"
+                                }
+                            },
+                            {
+                                "id": "metric-series-5",
+                                "info": {
+                                    "id": "FailureScore"
+                                },
+                                "chartConfig": {
+                                    "unitId": "percent",
+                                    "name": "Failure Score",
+                                    "color": "#FF1100",
+                                    "type": "line",
+                                    "visible": "false",
+                                    "index": 0
+                                },
+                                "metric": {
+                                    "grain": "DAY",
+                                    "id": "100 * FailureScore"
                                 }
                             }
                         ],

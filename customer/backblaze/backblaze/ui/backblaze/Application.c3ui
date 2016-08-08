@@ -1,7 +1,7 @@
 ui module backblaze {
     application backblaze {
         "name": "backblaze",
-        "humanName": "Backlaze",
+        "humanName": "Backblaze",
         "bundle": "backblaze",
         "showDesignerComponents": true,
         "url": "backblaze",
