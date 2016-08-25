@@ -8,7 +8,6 @@
  * @author Scott
  */
 
-c3Import("tbd_machineLearning")
 var log = C3.logger("skurinsk.PredictAssetFailure");
 
 
@@ -27,15 +26,20 @@ function loadContextAll() {
 
 function processSource(asset, inputs, context) {
     //log.info("Processing asset="+asset.id);
+    //log.info("inputsss = " + JSON.stringify(inputs));
     
     var extract = extractDataFromDFE(inputs);
-    var dataset = extract.dataset
-    var dates = extract.dates
+
+    log.info("extractsss = " + JSON.stringify(extract));
+    var dataset = extract.dataset;
+    var dates = extract.dates;
 
     // Prediction using DS model
     var predictionDataset = context.predict(dataset);
-    var predictionData = predictionDataset.extractColumns(["1.0"]).data;
 
+    log.info("predictionDataset = " + JSON.stringify(predictionDataset));
+    var predictionData = predictionDataset.extractColumns(["1.0"]).data;
+log.info("predictionData = " + JSON.stringify(predictionDataset));
     upsertPredictionResults(asset, dates, predictionData)
 
 }
@@ -100,12 +104,12 @@ function extractDataFromDFE(inputs) {
         })
     })
     return {
-        dataset : TBD_MachineLearningDataSet.make({
+        dataset : Dataset.make({
             columns: expressions,
             data: data,
             index: index,
             orient: "row" }),
-        dates : dates }
+            dates : dates }
 
 }
 
