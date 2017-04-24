@@ -1,0 +1,6 @@
+{
+  "name": "amex",
+  "description": "testing",
+  "author": "Scott",
+  "dependencies": ["tools", "platformAdmin", "userAdmin","machineLearning"]
+}
