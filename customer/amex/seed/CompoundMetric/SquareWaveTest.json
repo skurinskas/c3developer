@@ -1,0 +1,1 @@
+{"type":"CompoundMetric","id":"SquareWaveTest","version":1,"name":"SquareWaveTest","meta":{"created":"2017-04-24T20:12:16Z","updated":"2017-04-24T20:12:16Z","timestamp":"2017-04-24T20:12:16Z"},"expression":"squareWave('DAY', 2, 3)"}
