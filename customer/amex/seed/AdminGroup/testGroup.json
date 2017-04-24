@@ -1,1 +1,1 @@
-{"type":"AdminGroup","id":"testGroup","name":"MyTestGroup"}
+{"type":"AdminGroup","roles":[{"id":"testRole"}],"id":"testGroup","name":"MyTestGroup"}
