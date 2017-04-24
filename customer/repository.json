@@ -1,0 +1,6 @@
+{
+  "name": "customer",
+  "version": "7.4.0",
+  "description": "Application Packages",
+  "dependencies": { "base" : "7.4.0" }
+}
