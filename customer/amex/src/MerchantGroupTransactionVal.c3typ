@@ -1,1 +1,1 @@
-type MerchantGroupTransactionVal
+type MerchantGroupTransactionVal schema name 'FOO'
