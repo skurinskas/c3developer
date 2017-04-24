@@ -1,1 +1,1 @@
-{"type":"Role","id":"testRole","name":"TestRole"}
+{"type":"Role","permissions":[{"access":"allow","typeName":"Merchant"}],"id":"testRole","name":"TestRole"}
