@@ -12,7 +12,7 @@ type EvalMetricSpec mixes MetricSpecBase {
   expression: string
 
   /**
-   * new string field
+   * test string field
    */
-  newStringField: string
+  testStringField: string
 }
