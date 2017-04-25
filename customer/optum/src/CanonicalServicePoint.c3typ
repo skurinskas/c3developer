@@ -1,0 +1,14 @@
+// Represents the logical point where a service is delivered at a customer site.
+type CanonicalServicePoint mixes Canonical<CanonicalServicePoint> {
+  
+  servicePointId:  !string
+  activationDate:  datetime
+  terminationDate: datetime
+  status:          string
+  facilityId:      string
+
+  /**
+   * test
+   */
+  newStringField: string
+}
