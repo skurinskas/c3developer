@@ -11,4 +11,9 @@ type CanonicalServicePoint mixes Canonical<CanonicalServicePoint> {
    * test
    */
   newStringField: string
+
+  /**
+   * test integer field
+   */
+  newIntField: int
 }
