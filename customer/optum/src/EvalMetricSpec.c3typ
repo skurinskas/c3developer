@@ -1,0 +1,18 @@
+// Specification for evaluating multiple sources / metrics
+type EvalMetricSpec mixes MetricSpecBase {
+  
+  /**
+   * Id for the source for the source type
+   */
+  id: string
+
+  /**
+   * Specify the expression that you want to evaluate. Could be a Simple / Compound Metrics or a combination
+   */
+  expression: string
+
+  /**
+   * new string field
+   */
+  newStringField: string
+}
