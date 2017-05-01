@@ -1,3 +1,4 @@
+@db(datastore='cassandra', partitionKeyField='merchant', persistenceOrder='transactionDate', compactType=true)
 entity type MerchantTransaction schema name 'MERTRAN' {
   
   /**
