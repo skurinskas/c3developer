@@ -1,0 +1,10 @@
+entity type MerchantTransaction schema name 'MERTRAN' {
+  
+  /**
+   * Merchant associated with the transaction.
+   */
+  merchant: Merchant
+
+  transactionDate: datetime
+  amount:          ExactDimension
+}
