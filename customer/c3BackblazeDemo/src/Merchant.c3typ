@@ -1,1 +1,1 @@
-entity type Merchant
+entity type Merchant schema name 'MERCH'
