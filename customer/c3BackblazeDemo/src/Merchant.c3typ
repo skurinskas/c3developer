@@ -1,7 +1,1 @@
-entity type Merchant schema name 'MERC' {
-  
-  /**
-   * Merchant setup date
-   */
-  setupDate: datetime
-}
+entity type Merchant
