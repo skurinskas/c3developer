@@ -1,12 +1,10 @@
-@db(datastore='cassandra', partitionKeyField='merchant', persistenceOrder='transactionDate', compactType=true)
-entity type MerchantTransaction schema name 'MERTRAN' {
+@db(datastore='cassandra',
+    partitionKeyField='merchant',
+    persistenceOrder='transactionDate',
+    compactType=true,
+    shortIdReservationRange=10000)
+entity type MerchantTransaction schema name 'MERCHTX' {
   
-  /**
-   * Merchant associated with the transaction.
-   */
-  merchant: Merchant
-
+  merchant:        Merchant
   transactionDate: datetime
-  amount:          ExactDimension
-  transactionId:   string
 }
