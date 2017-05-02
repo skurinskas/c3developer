@@ -1,1 +1,17 @@
-entity type Merchant schema name 'MERCH'
+entity type Merchant schema name 'MERCH' {
+  
+  /**
+   * sample function call
+   */
+  helloWorld: function(): string js server
+
+  /**
+   * Merchant setup date
+   */
+  setupDate: datetime
+
+  /**
+   * test
+   */
+  test: function(): string js server
+}
