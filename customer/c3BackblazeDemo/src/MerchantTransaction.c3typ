@@ -7,4 +7,5 @@ entity type MerchantTransaction schema name 'MERCHTX' {
   
   merchant:        Merchant
   transactionDate: datetime
+  transactions:    [MerchantTransaction](merchant, id)
 }
