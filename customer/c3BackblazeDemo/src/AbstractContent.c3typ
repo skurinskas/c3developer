@@ -1,0 +1,498 @@
+// Abstract representation of content.
+type AbstractContent<C: AbstractContent> mixes ContentMeta {
+  
+  /**
+   * Field to maintain state whether content metadata was read or not.
+   */
+  hasMetadata: boolean
+
+  /**
+   * @return true if this content can't be modified.
+   * @param {AbstractContent} this
+   */
+  @action(group='read')
+  isReadOnly: abstract inline member function(): boolean
+
+  /**
+   * @return true if this content is empty; i.e. contentLength <= 0.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  isEmpty: inline member function(spec: FileOperationSpec): boolean
+
+  /**
+   * Reads the content metadata if hasMetadata field is false otherwise simply returns current instance. If metadata
+   * handling is missing in the backing store then makes the best guess at it based on file extension from content
+   * location. Also sets hasMetadata flag so that consecutive calls are fast.
+   *
+   * If metadata can change after hasMetadata flag was set then make sure to first call clearMetadata.
+   *
+   * @see FileOperationSpec.peekForMetadata
+   *
+   * @return abstract content with metadata.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  readMetadata: abstract inline member function(spec: FileOperationSpec): !C
+
+  /**
+   * Best guess at missing metadata attributes. E.g. gets content length by reading the content; contentType and
+   * encoding from contentLocation; etc. It's recommended to call readMetadata before calling guessMetadata to avoid
+   * extra IO.
+   *
+   * @see FileOperationSpec.peekForMetadata
+   *
+   * @return abstract content with metadata.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  guessMetadata: inline member function(spec: FileOperationSpec): !C
+
+  /**
+   * Clears the content metadata; e.g. if it's known to be invalid.
+   * @param {AbstractContent} this
+   */
+  @action(group='write')
+  clearMetadata: inline member function(): !C
+
+  /**
+   * Clears the metadata related to encoded content; i.e.: contentLength, lastModified, lastModifiedBy, eTag,
+   * contentMD5 and contentSHA1 fields.
+   * @param {AbstractContent} this
+   */
+  @action(group='write')
+  clearContentMetadata: inline member function(): !C
+
+  /**
+   * @return clone of this content with metadata from provided input.
+   * @param {AbstractContent} this
+   * @param {ContentMeta} meta
+   */
+  @action(group='write')
+  withMetadata: inline member function(meta: ContentMeta): !C
+
+  /**
+   * @return clone of this content with only encoded content related metadata from provided input; i.e. lastModified,
+   *         contentLength and encoded content related hash values; basically meta attributes that would change after
+   *         updating encoded content.
+   * @param {AbstractContent} this
+   * @param {ContentMeta} meta
+   */
+  @action(group='write')
+  withContentMetadata: inline member function(meta: ContentMeta): !C
+
+  /**
+   * @return byte push stream to be used for writing raw encoded data into this content object. E.g. if
+   * contentEncoding is set expectation is that data is already encoded (compressed). It is highly recommended to use
+   * higher level apis instead.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  encodedPushStream: abstract member function(spec: FileOperationSpec): !Pair<C, BytePushStream>
+
+  /**
+   * @return byte push stream to be used for writing un-encoded data into this content object.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  pushStream: member function(spec: FileOperationSpec): !Pair<C, BytePushStream>
+
+  /**
+   * @return character push stream to be used for writing un-encoded data into this content object.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  charPushStream: member function(spec: FileOperationSpec): !Pair<C, CharPushStream>
+
+  /**
+   * Reads the raw (possibly compressed) content as byte stream. E.g. if contentEncoding is set then data is going
+   * to be encoded (compressed). It is highly recommended to use higher level apis instead.
+   *
+   * @return the content as byte stream.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  encodedStream: abstract member function(spec: FileOperationSpec): ByteStream
+
+  /**
+   * Reads the de-coded (uncompressed) content as byte stream.
+   *
+   * @see FileOperationSpec.peekForMetadata
+   *
+   * @return the content as byte stream.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  stream: member function(spec: FileOperationSpec): ByteStream
+
+  /**
+   * Reads the de-coded (uncompressed) content as character stream.
+   *
+   * @see FileOperationSpec.peekForMetadata
+   *
+   * @return the content as character stream.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  charStream: member function(spec: FileOperationSpec): CharStream
+
+  /**
+   * Reads the content. IMPORTANT to avoid using read with increasing offset to read content in blocks. It is strongly
+   * recommended to use stream based methods in such cases.
+   *
+   * @see FileOperationSpec.peekForMetadata
+   *
+   * @param offset
+   *           offset in bytes; defaults to 0.
+   * @param len
+   *           number of bytes to read; defaults to entire file size.
+   * @return the content.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  read: member function(offset: long int, len: int, spec: FileOperationSpec): binary
+
+  /**
+   * Reads the encoded content.
+   *
+   * @return the encoded content.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  readEncoded: member function(spec: FileOperationSpec): binary
+
+  /**
+   * Reads the content as string. IMPORTANT to avoid using readString with increasing offset to read full content in
+   * blocks. It is strongly recommended to use stream based methods in such cases.
+   *
+   * @see FileOperationSpec.peekForMetadata
+   *
+   * @param offset
+   *           offset in bytes defaults to 0
+   * @param len
+   *           maximum length of the string; defaults to entire file size.
+   * @return the content.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  readString: member function(offset: long int, len: int, spec: FileOperationSpec): string
+
+  /**
+   * Deserializes content from file into a single C3 Type instance. Throws exception if file contains more then one
+   * instance.
+   *
+   * @see FileObjsOperSpec.targetType
+   *
+   * @return single object or null if file is empty
+   * @param {AbstractContent} this
+   * @param {FileObjsOperSpec} spec
+   */
+  @action(group='read')
+  readObj: member function(spec: FileObjsOperSpec): Obj
+
+  /**
+   * Deserializes content from file into a list of C3 Type instances.
+   *
+   * @see FileObjsOperSpec.targetType
+   *
+   * @return list of objects
+   * @param {AbstractContent} this
+   * @param {FileObjsOperSpec} spec
+   */
+  @action(group='read')
+  readObjs: member function(spec: FileObjsOperSpec): stream<Obj>
+
+  /**
+   * Truncates file and replaces it's content with provided binary content.
+   *
+   * @param content
+   *           content that needs to be written
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  writeStream: member function(content: ByteStream, spec: FileOperationSpec): !C
+
+  /**
+   * Truncates file and replaces it's encoded content with provided binary content.
+   *
+   * @param content
+   *           encoded content that needs to be written
+   * @param {AbstractContent} this
+   * @param {ByteStream} encodedContent
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  writeEncodedStream: member function(encodedContent: ByteStream, spec: FileOperationSpec): !C
+
+  /**
+   * Truncates file and replaces it's content with provided binary content.
+   *
+   * @param content
+   *           content that needs to be written
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  write: member function(content: binary, spec: FileOperationSpec): !C
+
+  /**
+   * Truncates file and replaces it's encoded content with provided binary content.
+   *
+   * @param content
+   *           encoded content that needs to be written
+   * @param {AbstractContent} this
+   * @param {binary} encodedContent
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  writeEncoded: member function(encodedContent: binary, spec: FileOperationSpec): !C
+
+  /**
+   * Truncates file and replaces it's content with provided string.
+   *
+   * @param content
+   *           content that needs to be written
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  writeString: member function(content: string, spec: FileOperationSpec): !C
+
+  /**
+   * Serializes content from a single c3 objects into a file.
+   *
+   * @param obj
+   *          obj that needs to be written
+   * @param spec
+   *          file operation spec giving more information about how obj should be written
+   * @param {AbstractContent} this
+   */
+  @action(group='write')
+  writeObj: member function(obj: Obj, spec: FileObjsOperSpec): !C
+
+  /**
+   * Serializes content from a list of c3 objects into a file.
+   *
+   * @param objs
+   *          objs that need to be written
+   * @param spec
+   *          file operation spec giving more information about how objs should be written
+   * @return pair of update instance of this content and number of objs written
+   * @param {AbstractContent} this
+   */
+  @action(group='write')
+  writeObjs: member function(objs: stream<Obj>, spec: FileObjsOperSpec): !Pair<C, long int>
+
+  /**
+   * Serialization target type if this content is instance(s) of C3 type.
+   *
+   * @see FileObjsOperSpec.targetType
+   * @param {AbstractContent} this
+   * @param {FileObjsOperSpec} spec
+   */
+  @action(group='read')
+  contentC3Type: inline member function(spec: FileObjsOperSpec): TypeRef
+
+  /**
+   * If this content target type is Canonical type then transform content into corresponding C3 Type instances.
+   * Canonical Type is determined from content itself (via #contentC3Type).
+   * @param {AbstractContent} this
+   * @param {CanonicalTransformSpec} transformSpec
+   * @param {FileObjsOperSpec} spec
+   */
+  @action(group='read')
+  transformCanonical: member function(transformSpec: CanonicalTransformSpec,
+                                      spec: FileObjsOperSpec): CanonicalTransformResult
+
+  /**
+   * Checks if content type and encoding is matching the given values.
+   * @param {AbstractContent} this
+   * @param {string} contentType
+   * @param {string} contentEncoding
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  contentTypeAndEncodingMatch: inline member function(contentType: string,
+                                                      contentEncoding: string,
+                                                      spec: FileOperationSpec): boolean
+
+  /**
+   * Replaces the content type without modifying the content.
+   *
+   * @param contentType
+   *            new content type.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  replaceContentType: member function(contentType: !string, spec: FileOperationSpec): !C
+
+  /**
+   * Replaces the content encoding without modifying the content.
+   *
+   * @param contentEncoding
+   *            new content encoding.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  replaceContentEncoding: member function(contentEncoding: !string, spec: FileOperationSpec): !C
+
+  /**
+   * Replaces the content type and encoding without modifying the content.
+   *
+   * @param contentType
+   *            new content type.
+   * @param contentEncoding
+   *            new content encoding.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  replaceContentTypeAndEncoding: abstract member function(contentType: !string,
+                                                          contentEncoding: !string,
+                                                          spec: FileOperationSpec): !C
+
+  /**
+   * Rewrites existing content using the new content type. E.g. converts UTF-8 string to iso-8859-1.
+   *
+   * @param contentType
+   *            new content type.
+   * @param contentEncoding
+   *            new content encoding.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  transcode: member function(contentType: !string, contentEncoding: !string, spec: FileOperationSpec): !C
+
+  /**
+   * Copies content to a given target.
+   * @param {AbstractContent} this
+   * @param {AbstractContent} target
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='write')
+  copyContentTo: member function(target: !AbstractContent, spec: FileOperationSpec)
+
+  /**
+   * Compresses the given file content. Compressed file will have a different extension.
+   *
+   * @param contentEncoding
+   *            compression content encoding; default is gzip.
+   * @param {AbstractContent} this
+   * @param {FileCompressSpec} spec
+   */
+  @action(group='write')
+  compress: abstract member function(contentEncoding: string, spec: FileCompressSpec): !C
+
+  /**
+   * Uncompresses file. Removes compression specific extension.
+   * @param {AbstractContent} this
+   * @param {FileCompressSpec} spec
+   */
+  @action(group='write')
+  uncompress: abstract member function(spec: FileCompressSpec): !C
+
+  /**
+   * Creates a ZIP file from the given file content. Compressed file will have a .zip extension.
+   * @param {AbstractContent} this
+   * @param {FileCompressSpec} spec
+   */
+  @action(group='write')
+  zip: abstract member function(spec: FileCompressSpec): !C
+
+  /**
+   * Uncompresses first entry in a ZIP file.
+   * @param {AbstractContent} this
+   * @param {FileCompressSpec} spec
+   */
+  @action(group='write')
+  unzipFirst: abstract member function(spec: FileCompressSpec): !C
+
+  /**
+   * Truncates the given file and makes it empty.
+   * @param {AbstractContent} this
+   */
+  @action(group='write')
+  truncate: abstract member function(): !C
+
+  /**
+   * TODO : remove this and replace with generic hash function!
+   *
+   * Computes the cksum of the file (same as unix utility cksum)
+   * @param userEncodedContent
+   *           If true, the cksum will skill the decoding of the file
+   * @return the checksum of the file
+   * @param {AbstractContent} this
+   * @param {boolean} useEncodedContent
+   * @param {FileOperationSpec} spec
+   */
+  @deprecated
+  @action(group='read')
+  cksum: member function(useEncodedContent: boolean, spec: FileOperationSpec): !long int
+
+  /**
+   * return md5 from metadata if it exists otherwise compute from content and return.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  safeMd5: member function(spec: FileOperationSpec): !string
+
+  /**
+   * Reads this content as ContentValue.
+   * @param {AbstractContent} this
+   * @param {FileOperationSpec} spec
+   */
+  @action(group='read')
+  toContentValue: inline member function(spec: FileOperationSpec): !ContentValue
+
+  /**
+   * Render content as HTML if possible.
+   * @param {AbstractContent} this
+   */
+  @action(group='read')
+  renderer: inline member function(): HtmlRenderer js client
+
+  /**
+   * Encodes given string into a binary based on contentType and contentEncoding.
+   * @param {string} content
+   * @param {string} contentType
+   * @param {string} contentEncoding
+   */
+  @action(group='read')
+  encode: function(content: !string, contentType: string, contentEncoding: string): !binary
+
+  /**
+   * Decodes given binary into a string based on contentType and contentEncoding.
+   * @param {binary} content
+   * @param {string} contentType
+   * @param {string} contentEncoding
+   */
+  @action(group='read')
+  decode: function(content: !binary, contentType: string, contentEncoding: string): !string
+
+  /**
+   * @return URL for this content. Note that it is best to use this method instead of other optional fields like
+   * contentLocation or url (for other sub types). Throws error if URL is not available.
+   * @param {AbstractContent} this
+   */
+  @action(group='read')
+  safeUrl: abstract ~
+
+  strField: string
+}
