@@ -1,0 +1,5 @@
+type TestTest {
+  
+  boolField: boolean
+  strField:  string
+}
