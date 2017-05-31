@@ -1,0 +1,21 @@
+<div class="container-fluid c3-page c3-page-dashboard">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right">
+                {{ label({style: "padding-right: 10px"}) 'Filter by Model' }}
+                <div id="ModelFilter" style="display: inline-block; width: 500px;"></div>
+            </div>
+        </div>
+    </div><div class="row">
+<div class="c3-component-socket col-xs-6" id="Component1"></div>
+<div class="c3-component-socket col-xs-6" id="Component2"></div>
+</div>
+    <div class="row">
+        <div class="c3-component-socket col-xs-12 col-sm-6" data-box="true" id="TopLeft"></div>
+        <div class="c3-component-socket col-xs-12 col-sm-6" data-box="true" id="TopRight"></div>
+    </div>
+    <div class="row">
+        <div class="c3-component-socket col-xs-12 col-sm-12" data-box="true" id="BottomLeft" style="height: 400px;"></div>
+
+    </div>
+</div>
