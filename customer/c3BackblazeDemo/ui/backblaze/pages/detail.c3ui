@@ -163,27 +163,6 @@ ui module backblaze {
                                 }
                             }
                         }
-                    },
-                    {
-                        "id": "DefinitionList2",
-                        "component": "DefinitionList",
-                        "icon": "list",
-                        "name": "DefinitionList",
-                        "box": false,
-                        "title": "New Definition List",
-                        "cls": "dl-horizontal",
-                        "marginBottom": "0",
-                        "leftPadingDd": "20",
-                        "dtWidth": "85",
-                        "rows": [],
-                        "data": {
-                            "collection": ""
-                        },
-                        "align": "right",
-                        "tooltipAlign": "right",
-                        "noDataText": "",
-                        "ddMargin": "",
-                        "inline": false
                     }
                 ]
             }
