@@ -1,5 +1,5 @@
 <div class="container-fluid c3-page c3-page-dashboard"><div class="row">
-<div class="c3-component-socket col-xs-6" id="Component1"></div>
+
 <div class="c3-component-socket col-xs-6" id="Component2"></div>
 </div>
     <div class="row">
