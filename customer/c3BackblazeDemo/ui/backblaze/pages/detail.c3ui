@@ -1,0 +1,156 @@
+ui module backblaze {
+    page detail {
+        "name": "detail",
+        "id": "backblaze.detail",
+        "thumbnail": "template-thumbs/120/c3ui.Dashboard2x2.gif",
+        "template": "backblaze.detail",
+        "isModal": true,
+        "package": "backblaze",
+        "recordType": "",
+        "idSource": "params.id",
+        "title": "Detail",
+        "url": "detail",
+        "permissions": [
+            {
+                "typeName": "HardDrive",
+                "action": "evalMetrics"
+            }
+        ],
+        "data": {
+            "record": {
+                "c3function": "fetch",
+                "responseSelector": "objs",
+                "responseTransform": {
+                    "firstItem": true
+                },
+                "c3arguments": {
+                    "spec": {
+                        "filter": "id =='{{ params.id }}'"
+                    }
+                },
+                "cache": false,
+                "c3type": "HardDrive"
+            }
+        },
+        "components": [
+            {
+                "id": "TabPanel",
+                "component": "TabPanel",
+                "icon": "th-list",
+                "name": "TabPanel",
+                "box": false,
+                "format": "pills",
+                "title": "New TabPanel",
+                "renderTo": "#TopLeft",
+                "height": 451,
+                "components": [
+                    {
+                        "id": "DefinitionList",
+                        "component": "DefinitionList",
+                        "icon": "list",
+                        "name": "DefinitionList",
+                        "box": false,
+                        "title": "Details",
+                        "cls": "dl-horizontal",
+                        "data": {
+                            "record": {
+                                "c3type": "HardDrive",
+                                "c3function": "fetch",
+                                "responseSelector": "objs",
+                                "responseTransform": {
+                                    "firstItem": true
+                                },
+                                "c3arguments": {
+                                    "spec": {
+                                        "filter": "id =='{{ params.id }}'"
+                                    }
+                                }
+                            }
+                        },
+                        "rows": [
+                            {
+                                "id": "id",
+                                "field": "id",
+                                "label": "Serial Num",
+                                "link": "/backblaze/detail/{{id}}",
+                                "width": "100px"
+                            },
+                            {
+                                "id": "manufacturer",
+                                "field": "manufacturer",
+                                "label": "Mfr"
+                            },
+                            {
+                                "id": "model",
+                                "field": "model",
+                                "label": "Model"
+                            },
+                            {
+                                "id": "status",
+                                "field": "status",
+                                "label": "Status"
+                            },
+                            {
+                                "id": "failureDate",
+                                "field": "failureDate",
+                                "label": "Failure Date"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "Chart",
+                        "component": "chart.MetricsChart",
+                        "icon": "bar-chart",
+                        "name": "Chart",
+                        "box": false,
+                        "title": "Trends",
+                        "autoLoadData": true,
+                        "dynamicDateRange": false,
+                        "startDate": "2013-10-01",
+                        "legend": "grouped",
+                        "endDate": "2016-05-01",
+                        "userMetricConfigs": [
+                            {
+                                "id": "metric-series-0",
+                                "info": {
+                                    "id": "temperature"
+                                },
+                                "chartConfig": {
+                                    "name": "Temperature",
+                                    "color": "#1d30d9",
+                                    "type": "line",
+                                    "unitId": "degrees_celcius",
+                                    "index": 0
+                                },
+                                "metric": {
+                                    "grain": "DAY",
+                                    "id": "temperature"
+                                }
+                            },
+                            {
+                                "id": "metric-series-1",
+                                "info": {
+                                    "id": "powerCycle"
+                                },
+                                "chartConfig": {
+                                    "unitId": "cycle",
+                                    "name": "powerCycle",
+                                    "color": "#b00e18",
+                                    "type": "line",
+                                    "index": 0
+                                },
+                                "metric": {
+                                    "grain": "DAY",
+                                    "id": "powerCycle"
+                                }
+                            }
+                        ],
+                        "currentType": {
+                            "c3Type": "HardDrive"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
