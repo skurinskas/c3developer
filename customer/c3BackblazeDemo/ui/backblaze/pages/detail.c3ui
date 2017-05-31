@@ -147,6 +147,21 @@ ui module backblaze {
                         ],
                         "currentType": {
                             "c3Type": "HardDrive"
+                        },
+                        "grain": "YEAR",
+                        "data": {
+                            "record": {
+                                "c3type": "HardDrive",
+                                "c3function": "fetch",
+                                "responseTransform": {
+                                    "firstItem": true
+                                },
+                                "c3arguments": {
+                                    "spec": {
+                                        "filter": "id =='{{ params.id }}'"
+                                    }
+                                }
+                            }
                         }
                     }
                 ]
