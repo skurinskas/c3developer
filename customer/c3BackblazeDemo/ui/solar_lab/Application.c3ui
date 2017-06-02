@@ -1,0 +1,15 @@
+ui module solar_lab {
+    application solar_lab {
+        "name": "solar_lab",
+        "humanName": "Training",
+        "showDesignerComponents": true,
+        "url": "training",
+        "id": "solar_lab",
+        "package": "c3BackblazeDemo",
+        "defaultPage": "Home",
+        "showMenu": true,
+        "hideNavigation": false,
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
+        "noneditable": false
+    }
+}
