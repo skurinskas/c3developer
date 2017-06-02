@@ -1,1 +1,1 @@
-{"type":"CompoundMetric","id":"Metric_test","version":3,"name":"Metric_test","unit":{},"expression":"CronQueuePending*10000","description":"metric for UI test"}
+{"type":"CompoundMetric","id":"Metric_test","version":4,"name":"Metric_test","unit":{},"expression":"CronQueuePending*100","description":"metric for UI test"}
