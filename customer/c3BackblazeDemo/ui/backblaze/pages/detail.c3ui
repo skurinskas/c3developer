@@ -3,7 +3,7 @@ ui module backblaze {
         "name": "detail",
         "id": "backblaze.detail",
         "thumbnail": "template-thumbs/120/c3ui.Dashboard2x2.gif",
-        "template": "c3ui.Dashboard2x2",
+        "template": "backblaze.detail",
         "isModal": true,
         "package": "backblaze",
         "recordType": "",
@@ -151,6 +151,10 @@ ui module backblaze {
                     }
                 ]
             }
-        ]
+        ],
+        "modalTitle": "",
+        "closeButtonText": "",
+        "actionButtonAction": "",
+        "actionButtonText": ""
     }
 }
