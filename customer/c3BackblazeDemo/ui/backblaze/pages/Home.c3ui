@@ -413,15 +413,6 @@ ui module backblaze {
                         "id": "manufacturer",
                         "field": "manufacturer",
                         "label": "Manufacturer"
-                    },
-                    {
-                        "id": "sparklineColumn",
-                        "colType": "sparkline",
-                        "sparkline": [
-                            {
-                                "field": ""
-                            }
-                        ]
                     }
                 ]
             },
