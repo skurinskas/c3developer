@@ -405,14 +405,14 @@ ui module backblaze {
                         "width": "100px"
                     },
                     {
-                        "id": "manufacturer",
-                        "field": "manufacturer",
-                        "label": "Manufacturer"
-                    },
-                    {
                         "id": "model",
                         "field": "model",
                         "label": "Model"
+                    },
+                    {
+                        "id": "manufacturer",
+                        "field": "manufacturer",
+                        "label": "Manufacturer"
                     }
                 ]
             },
