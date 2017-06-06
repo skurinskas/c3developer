@@ -1,1 +1,1 @@
-{"type":"Role","id":"testRole","name":"TestRole"}
+{"type":"Role","permissions":[{"access":"allow","typeName":"HardDrive","action":"get"}],"id":"testRole","name":"TestRole"}
