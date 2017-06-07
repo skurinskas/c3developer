@@ -6,4 +6,9 @@ entity type TestEntityType schema name 'TESTET' {
    * a string field
    */
   strField: string
+
+  /**
+   * integer field
+   */
+  intField: int
 }
