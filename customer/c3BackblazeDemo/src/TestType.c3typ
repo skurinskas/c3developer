@@ -1,4 +1,4 @@
-type TestType {
+type TestType mixes MetricEvaluatable schema name 'TESTT' {
   
   /**
    * String field
