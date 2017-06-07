@@ -1,4 +1,9 @@
 entity type TestEntityType schema name 'TESTET' {
   
   refArrayField: [HardDriveFailureScore](parent, id)
+
+  /**
+   * a string field
+   */
+  strField: string
 }
