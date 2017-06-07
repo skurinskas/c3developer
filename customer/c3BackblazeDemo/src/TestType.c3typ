@@ -1,4 +1,4 @@
-type TestType extends HardDrive mixes MetricEvaluatable type key 'TTS' {
+entity type TestType extends HardDrive mixes MetricEvaluatable type key 'TTS' {
   
   /**
    * String field
