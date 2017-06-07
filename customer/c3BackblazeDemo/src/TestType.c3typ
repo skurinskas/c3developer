@@ -1,0 +1,7 @@
+type TestType {
+  
+  /**
+   * String field
+   */
+  strField: string
+}
