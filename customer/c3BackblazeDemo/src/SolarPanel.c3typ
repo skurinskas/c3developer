@@ -3,4 +3,5 @@ entity type SolarPanel {
   serialNumber: string
   widthInches:  double
   lengthInches: double
+  building:     Building
 }
