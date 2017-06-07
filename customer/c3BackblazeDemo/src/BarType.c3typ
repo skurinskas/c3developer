@@ -1,1 +1,7 @@
-type BarType
+type BarType {
+  
+  /**
+   * ssss
+   */
+  doubleField: double
+}
