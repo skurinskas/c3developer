@@ -1,5 +1,5 @@
 entity type Building schema name 'BLDNG' {
   
   address:     string
-  solarPanels: [SolarPanel]
+  solarPanels: [SolarPanel](building, id)
 }
