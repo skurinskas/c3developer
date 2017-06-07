@@ -11,4 +11,9 @@ entity type TestEntityType schema name 'TESTET' {
    * integer field
    */
   intField: int
+
+  /**
+   * failure scores 
+   */
+  scores: [HardDriveFailureScore](parent, id)
 }
