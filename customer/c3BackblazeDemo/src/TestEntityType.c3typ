@@ -1,1 +1,1 @@
-entity type TestEntityType
+entity type TestEntityType schema name 'TESTET'
