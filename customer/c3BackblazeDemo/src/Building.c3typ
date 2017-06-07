@@ -12,4 +12,9 @@ entity type Building schema name 'BLDNG' {
    * string desc
    */
   foo: function(): string js server
+
+  /**
+   * fooooo stringeee
+   */
+  fooooo: function(): string js server
 }
