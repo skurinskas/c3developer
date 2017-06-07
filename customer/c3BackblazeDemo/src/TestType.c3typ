@@ -1,4 +1,4 @@
-type TestType mixes MetricEvaluatable schema name 'TESTT' {
+type TestType extends HardDrive mixes MetricEvaluatable type key 'TTS' {
   
   /**
    * String field
