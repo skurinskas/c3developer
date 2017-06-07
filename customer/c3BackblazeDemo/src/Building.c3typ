@@ -6,5 +6,10 @@ entity type Building schema name 'BLDNG' {
   /**
    * why is a description required?
    */
-  calculateTotalAreaSquareFeet: function(): double py server
+  calculateTotalAreaSquareFeet: function(): double js server
+
+  /**
+   * string desc
+   */
+  foo: function(): string js server
 }
