@@ -1,3 +1,3 @@
-function testest() {
+function typetype2() {
   
 }
