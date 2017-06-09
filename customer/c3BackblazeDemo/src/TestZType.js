@@ -13,3 +13,7 @@ function abc34() {
 function abc35() {
   
 }
+
+function b1() {
+  
+}
