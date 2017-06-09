@@ -1,0 +1,9 @@
+type HardDriveFailureAlert mixes Analytic<HardDriveFailureInput, Void> {
+  
+  /*
+   * function called to execute the analytic (transform)
+   * @param {HardDriveFailureInput} input
+   * @param {Obj} context
+   */
+  process: ~ inline js server
+}
