@@ -54,4 +54,9 @@ type TestZType {
    * asdf
    */
   abc34: function(): string js server
+
+  /**
+   * asdf
+   */
+  abc35: function(): string js server
 }
