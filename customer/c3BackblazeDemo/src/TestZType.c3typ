@@ -1,1 +1,7 @@
-type TestZType
+type TestZType {
+  
+  /**
+   * integer
+   */
+  intField: int
+}
