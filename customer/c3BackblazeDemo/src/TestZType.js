@@ -21,7 +21,3 @@ function b1() {
 function b2() {
   
 }
-
-function aa1() {
-  
-}
