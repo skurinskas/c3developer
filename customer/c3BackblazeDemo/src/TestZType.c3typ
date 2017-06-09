@@ -9,4 +9,9 @@ type TestZType {
    * string func
    */
   helloWorld: function(): string js server
+
+  /**
+   * sadsf
+   */
+  test2: function(): string js server
 }
