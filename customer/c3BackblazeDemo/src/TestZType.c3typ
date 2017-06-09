@@ -4,4 +4,9 @@ type TestZType {
    * integer
    */
   intField: int
+
+  /**
+   * string func
+   */
+  helloWorld: function(): string js server
 }
