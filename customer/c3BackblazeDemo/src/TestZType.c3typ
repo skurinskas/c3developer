@@ -14,4 +14,9 @@ type TestZType {
    * sadsf
    */
   test2: function(): string js server
+
+  /**
+   * edafds
+   */
+  test3: function(): string js server
 }
