@@ -64,4 +64,9 @@ type TestZType {
    * adsf
    */
   b1: function(): string js server
+
+  /**
+   * cadf
+   */
+  b2: function(): string js server
 }
