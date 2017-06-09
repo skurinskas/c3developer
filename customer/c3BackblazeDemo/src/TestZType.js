@@ -17,3 +17,7 @@ function abc35() {
 function b1() {
   
 }
+
+function b2() {
+  
+}
