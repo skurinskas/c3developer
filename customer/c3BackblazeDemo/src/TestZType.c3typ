@@ -89,4 +89,9 @@ type TestZType {
    * acd
    */
   aa4: function(): string js server
+
+  /**
+   * casdf
+   */
+  aa5: function(): string js server
 }
