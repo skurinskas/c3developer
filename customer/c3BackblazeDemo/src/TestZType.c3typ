@@ -84,4 +84,9 @@ type TestZType {
    * sadfc
    */
   aa3: function(): string js server
+
+  /**
+   * acd
+   */
+  aa4: function(): string js server
 }
