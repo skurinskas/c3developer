@@ -79,4 +79,9 @@ type TestZType {
    * alsdkf
    */
   aa2: function(): string js server
+
+  /**
+   * sadfc
+   */
+  aa3: function(): string js server
 }
