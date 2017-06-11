@@ -1,0 +1,15 @@
+ui module testApp2 {
+    application testApp2 {
+        "name": "testApp2",
+        "humanName": "testApp2",
+        "showDesignerComponents": true,
+        "url": "testApp2",
+        "id": "testApp2",
+        "package": "c3BackblazeDemo",
+        "defaultPage": "Home",
+        "showMenu": true,
+        "hideNavigation": false,
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
+        "noneditable": false
+    }
+}
