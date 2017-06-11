@@ -1,0 +1,10 @@
+ui module testApp {
+    page Home {
+        "id": "testApp.Home",
+        "name": "Home",
+        "template": "c3ui.Dashboard2x2",
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
+        "title": "Home",
+        "url": "home"
+    }
+}
