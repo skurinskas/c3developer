@@ -1,0 +1,24 @@
+ui module testApp {
+    dataSource Drives {
+        "collection": true,
+        "c3function": "fetch",
+        "c3arguments": {
+            "spec": {
+                "limit": "25"
+            }
+        },
+        "c3type": "HardDrive",
+        "name": "Drives",
+        "responseSelector": "objs",
+        "record": false,
+        "responseTransform": {
+            "combine": false,
+            "rootProperty": false,
+            "firstItem": false,
+            "order": false,
+            "tuples": false,
+            "fields": false
+        },
+        "id": "testApp.Drives"
+    }
+}
