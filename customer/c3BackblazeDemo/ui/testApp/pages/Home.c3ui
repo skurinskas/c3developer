@@ -5,43 +5,6 @@ ui module testApp {
         "template": "c3ui.Dashboard2x2",
         "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
         "title": "Home",
-        "url": "home",
-        "components": [
-            {
-                "id": "Grid",
-                "component": "KendoGrid",
-                "icon": "align-justify",
-                "name": "Grid",
-                "box": true,
-                "paginate": true,
-                "title": "New Grid",
-                "data": {
-                    "collection": "testApp.Drives"
-                },
-                "renderTo": "#TopRight",
-                "height": 618,
-                "titleUrl": "",
-                "aggregate": "",
-                "small": false,
-                "checkBoxes": false,
-                "columns": [
-                    {
-                        "id": "model",
-                        "field": "model",
-                        "label": "Model"
-                    },
-                    {
-                        "id": "manufacturer",
-                        "field": "manufacturer",
-                        "label": "Manufacturer"
-                    },
-                    {
-                        "id": "id",
-                        "field": "id",
-                        "label": "Id"
-                    }
-                ]
-            }
-        ]
+        "url": "home"
     }
 }
