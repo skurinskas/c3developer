@@ -4,4 +4,10 @@ type MyType {
    * description
    */
   helloWorld: function(): string js server
+
+  /**
+   * string
+   * @param {string} arg1
+   */
+  hw: function(arg1: string): string js server
 }
