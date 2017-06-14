@@ -1,0 +1,7 @@
+type MyType {
+  
+  /**
+   * description
+   */
+  helloWorld: function(): string js server
+}
