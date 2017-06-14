@@ -1,5 +1,3 @@
-function hw(arg1) {
-
-    return arg1;
-  
+function helloWorld() {
+  return "hello";
 }
