@@ -1,0 +1,18 @@
+ui module testApp {
+    page page2 {
+        "id": "testApp.page2",
+        "thumbnail": "template-thumbs/120/c3ui.SearchListDetail.gif",
+        "template": "c3ui.SearchListDetail",
+        "isModal": true,
+        "package": "c3BackblazeDemo",
+        "recordType": "",
+        "idSource": "params.id",
+        "name": "page2",
+        "title": "page3",
+        "url": "page2",
+        "modalTitle": "",
+        "closeButtonText": "",
+        "actionButtonAction": "",
+        "actionButtonText": ""
+    }
+}
