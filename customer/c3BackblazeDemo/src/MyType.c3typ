@@ -10,4 +10,9 @@ type MyType {
    * @param {string} arg1
    */
   helloWorld: function(arg1: string): string js server
+
+  /**
+   * kwjfklwejrt
+   */
+  helloWorld2: function(): string js server
 }
