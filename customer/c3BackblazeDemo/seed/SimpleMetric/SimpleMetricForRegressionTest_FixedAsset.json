@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"FixedAsset"},"path":"cfc12Services","tsDecl":{},"id":"SimpleMetricForRegressionTest_FixedAsset","name":"SimpleMetricForRegressionTest","expression":"sum(sum(normalized.data.consumption)*6)","description":"Regression test"}
