@@ -1,4 +1,3 @@
-function funcOne(arg1) {
-    return arg1;
-  
+function funcTwo() {
+  return "blad";
 }
