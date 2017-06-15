@@ -4,4 +4,10 @@ type MyType {
    * test field
    */
   strField: string
+
+  /**
+   * helloooo
+   * @param {string} arg1
+   */
+  helloWorld: function(arg1: string): string js server
 }
