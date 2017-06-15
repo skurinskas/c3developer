@@ -1,0 +1,18 @@
+// Hard Drives that have measurement information
+extendable entity type HardDrive mixes MetricEvaluatable schema name 'BBHD' {
+  
+  serialNumber: string
+  model:        string
+  manufacturer: string
+  driveSize:    double
+  measurements: [BackBlazeMeasurementSeries](asset)
+
+  // State of the asset - if null, in good shape.  If failed, then the asset has failed.
+  status: string
+
+  failureDate:   datetime
+  failureScores: [HardDriveFailureScoreHistory](parent)
+
+  // need this field for 'failureFast' metric
+  self: [HardDrive](id)
+}
