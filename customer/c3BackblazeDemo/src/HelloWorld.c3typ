@@ -1,1 +1,8 @@
-type HelloWorld
+type HelloWorld {
+  
+  /**
+   * one function
+   * @param {string} arg1
+   */
+  funcOne: function(arg1: string): string js server
+}
