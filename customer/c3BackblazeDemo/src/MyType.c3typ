@@ -1,1 +1,7 @@
-type MyType
+type MyType {
+  
+  /**
+   * test field
+   */
+  strField: string
+}
