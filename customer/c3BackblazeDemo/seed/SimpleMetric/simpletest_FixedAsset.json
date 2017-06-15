@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"FixedAsset"},"path":"cfc12Services","tsDecl":{},"id":"simpletest_FixedAsset","name":"simpletest","expression":"sum(sum(normalized.data.consumption)*5)","description":"simple"}
