@@ -5,4 +5,9 @@ type HelloWorld {
    * @param {string} arg1
    */
   funcOne: function(arg1: string): string js server
+
+  /**
+   * no input
+   */
+  funcTwo: function(): string js server
 }
