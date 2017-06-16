@@ -1,1 +1,1 @@
-type AirFlowDFE
+type AirFlowDFE mixes TSDataFlowEvent<AirFlowDFE>
