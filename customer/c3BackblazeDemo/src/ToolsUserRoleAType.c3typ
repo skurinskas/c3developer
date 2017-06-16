@@ -1,1 +1,2 @@
-entity type ToolsUserRoleAType
+// Test Type
+entity type ToolsUserRoleAType schema name 'TUT'
