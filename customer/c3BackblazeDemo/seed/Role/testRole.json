@@ -1,1 +1,1 @@
-{"type":"Role","id":"testRole","name":"TestRole"}
+{"type":"Role","actionConditions":[{"typeName":"HardDrive","action":"fetch","condition":"(1==1)"}],"id":"testRole","name":"TestRole"}
