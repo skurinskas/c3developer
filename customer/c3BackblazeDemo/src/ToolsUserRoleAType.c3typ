@@ -1,2 +1,2 @@
-// Test Type
-entity type ToolsUserRoleAType schema name 'TUT'
+// new type
+entity type ToolsUserRoleAType schema name 'TURT'
