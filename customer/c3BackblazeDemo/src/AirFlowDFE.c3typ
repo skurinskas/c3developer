@@ -1,1 +1,2 @@
+@dfe(interval='Day', period='Day', metric='airflowTempNormalized')
 type AirFlowDFE mixes TSDataFlowEvent<AirFlowDFE>
