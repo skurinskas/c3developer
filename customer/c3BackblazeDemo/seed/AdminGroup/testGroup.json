@@ -1,1 +1,1 @@
-{"type":"AdminGroup","roles":[{"id":"ConsoleAccessRole"}],"id":"testGroup","name":"TestGroup"}
+{"type":"AdminGroup","roles":[{"id":"ConsoleAccessRole"},{"id":"ReadOnlyRole"}],"id":"testGroup","name":"TestGroup"}
