@@ -1,1 +1,1 @@
-{"type":"SimpleMetric","srcType":{"typeName":"FixedAsset"},"path":"cfc12Services","tsDecl":{},"id":"test3_FixedAsset","name":"test3","expression":"sum(sum(normalized.data.consumption)*8)","description":"test3"}
+{"type":"SimpleMetric","srcType":{"typeName":"FixedAsset"},"path":"cfc12Services","id":"test3_FixedAsset","version":3,"name":"test3","unit":{},"expression":"sum(sum(normalized.data.consumption)*8)","description":"test3"}
