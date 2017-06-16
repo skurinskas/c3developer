@@ -1,0 +1,1 @@
+{"type":"CompoundMetric","id":"CompoundMetricForRegressionTest","name":"CompoundMetricForRegressionTest","expression":"CronQueuePending*2","description":"Regression test"}
