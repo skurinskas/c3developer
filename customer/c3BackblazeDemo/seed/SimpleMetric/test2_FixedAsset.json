@@ -1,1 +1,1 @@
-{"type":"SimpleMetric","srcType":{"typeName":"FixedAsset"},"path":"servicePoints","tsDecl":{},"id":"test2_FixedAsset","name":"test2","description":"test2"}
+{"type":"SimpleMetric","srcType":{"typeName":"FixedAsset"},"path":"servicePoints","id":"test2_FixedAsset","version":2,"name":"test2","unit":{},"expression":"sum(sum(normalized.data.consumption)*7)","description":"test2 3"}
