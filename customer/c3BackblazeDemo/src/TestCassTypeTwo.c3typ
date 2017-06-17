@@ -3,7 +3,7 @@
     persistenceOrder='start',
     persistDuplicates=false,
     compactType=true)
-entity type TestCassTypeTwo {
+entity type TestCassTypeTwo schema name 'TESTTWO' {
   
   start:  datetime
   parent: HardDrive
