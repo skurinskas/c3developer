@@ -1,2 +1,6 @@
 @db(datastore='cassandra', partitionKeyField='parent', persistenceOrder='start', persistDuplicates=false)
-entity type TestCassTypeTwo
+entity type TestCassTypeTwo {
+  
+  start:  datetime
+  parent: HardDrive
+}
