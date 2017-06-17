@@ -1,4 +1,8 @@
-@db(datastore='cassandra', partitionKeyField='parent', persistenceOrder='start', persistDuplicates=false)
+@db(datastore='cassandra',
+    partitionKeyField='parent',
+    persistenceOrder='start',
+    persistDuplicates=false,
+    compactType=true)
 entity type TestCassTypeTwo {
   
   start:  datetime
