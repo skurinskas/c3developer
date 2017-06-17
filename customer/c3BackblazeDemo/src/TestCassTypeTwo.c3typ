@@ -1,1 +1,2 @@
+@db(datastore='cassandra', partitionKeyField='parent', persistenceOrder='start', persistDuplicates=false)
 entity type TestCassTypeTwo
