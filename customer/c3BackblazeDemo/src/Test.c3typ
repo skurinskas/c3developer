@@ -1,9 +1,4 @@
-type Test {
+entity type Test {
   
-  intField: int
-
-  /**
-   * tete
-   */
-  helloWorld: function(): string js server
+  serialNumber: string
 }
