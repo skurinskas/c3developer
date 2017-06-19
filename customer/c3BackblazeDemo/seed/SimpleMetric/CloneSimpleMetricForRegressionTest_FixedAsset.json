@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"FixedAsset"},"path":"servicePoints","tsDecl":{},"id":"CloneSimpleMetricForRegressionTest_FixedAsset","version":1,"name":"CloneSimpleMetricForRegressionTest","description":"Clone regression test"}
