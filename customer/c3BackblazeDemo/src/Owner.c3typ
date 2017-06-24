@@ -1,4 +1,4 @@
-entity type Owner {
+entity type Owner schema name 'OWNR' {
   
   city: string
 }
