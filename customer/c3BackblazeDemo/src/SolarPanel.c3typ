@@ -1,7 +1,6 @@
-entity type SolarPanel {
+entity type SolarPanel schema name 'SOLAR' {
   
   serialNumber: string
-  widthInches:  double
-  lengthInches: double
-  building:     Building
+  width:        double
+  length:       double
 }
