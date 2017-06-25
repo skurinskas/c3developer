@@ -1,0 +1,1 @@
+entity type SolarPanelOwner mixes TimedIntervalRelation<Owner, SolarPanel> schema name 'SLRPNLOWNR'
