@@ -3,4 +3,5 @@ entity type SolarPanel schema name 'SOLAR' {
   serialNumber: string
   width:        double
   length:       double
+  building:     Building
 }
