@@ -1,20 +1,5 @@
 entity type Building schema name 'BLDNG' {
   
   address:     string
-  solarPanels: [SolarPanel](building, id)
-
-  /**
-   * why is a description required?
-   */
-  calculateTotalAreaSquareFeet: function(): double js server
-
-  /**
-   * string desc
-   */
-  foo: function(): string js server
-
-  /**
-   * fooooo stringeee
-   */
-  fooooo: function(): string js server
+  solarPanels: [Building]
 }
