@@ -1,7 +1,9 @@
 entity type SolarPanel schema name 'SOLAR' {
   
-  serialNumber: string
-  width:        double
-  length:       double
-  building:     Building
+  serialNumber:  string
+  width:         double
+  length:        double
+  building:      Building
+  ownerMappings: [SolarPanelOwner](to, id)
+  activeOwner:   Owner
 }
