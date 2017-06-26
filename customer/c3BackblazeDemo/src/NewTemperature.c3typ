@@ -1,0 +1,2 @@
+@dfe(interval='DAY', period='DAY', metric='temperature')
+type NewTemperature mixes TSDataFlowEvent<HardDrive>
