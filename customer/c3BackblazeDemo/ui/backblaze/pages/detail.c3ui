@@ -39,7 +39,7 @@ ui module backblaze {
                 "icon": "th-list",
                 "name": "TabPanel",
                 "box": false,
-                "format": "framed",
+                "format": "tabs",
                 "title": "New TabPanel",
                 "renderTo": "#TopLeft",
                 "height": 451,
@@ -147,29 +147,10 @@ ui module backblaze {
                         ],
                         "currentType": {
                             "c3Type": "HardDrive"
-                        },
-                        "grain": "YEAR",
-                        "data": {
-                            "record": {
-                                "c3type": "HardDrive",
-                                "c3function": "fetch",
-                                "responseTransform": {
-                                    "firstItem": true
-                                },
-                                "c3arguments": {
-                                    "spec": {
-                                        "filter": "id =='{{ params.id }}'"
-                                    }
-                                }
-                            }
                         }
                     }
                 ]
             }
-        ],
-        "modalTitle": "",
-        "closeButtonText": "",
-        "actionButtonAction": "",
-        "actionButtonText": ""
+        ]
     }
 }
