@@ -39,7 +39,7 @@ ui module backblaze {
                 "icon": "th-list",
                 "name": "TabPanel",
                 "box": false,
-                "format": "slides",
+                "format": "buttons",
                 "title": "New TabPanel",
                 "renderTo": "#TopLeft",
                 "height": 451,
