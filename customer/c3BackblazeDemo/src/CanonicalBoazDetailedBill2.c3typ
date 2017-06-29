@@ -1,0 +1,29 @@
+type CanonicalBoazDetailedBill2 {
+  
+  billStartDate:                       datetime
+  billEndDate:                         datetime
+  usageCharge:                         int
+  consumption:                         int
+  consumptionUOM:                      string
+  peakDemand:                          int
+  peakDemandUOM:                       int
+  reactiveDemand:                      int
+  reactiveDemandUOM:                   int
+  loadFactor:                          int
+  powerFactor:                         int
+  adjustment:                          int
+  tax:                                 int
+  fees:                                int
+  billNumber:                          string
+  serviceAgreementId:                  int
+  servicePointId:                      string
+  isEstimate:                          int
+  sourceSystem:                        string
+  timestamp:                           datetime
+  currentRatePlan:                     string
+  totalCharges:                        double
+  downloadTotalTaxesFeesCreditsCharge: int
+  downloadTotalEnergyServiceCharge:    double
+  billDate:                            datetime
+  serviceVoltageLevel:                 string
+}
