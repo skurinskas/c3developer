@@ -1,0 +1,1 @@
+{"type":"CompoundMetric","id":"testCM","name":"testCM","unit":{"id":"2ef365e3-6554-410e-ba0d-5d7a8fd183f4"},"expression":"identity(1)","description":"this is a test"}
