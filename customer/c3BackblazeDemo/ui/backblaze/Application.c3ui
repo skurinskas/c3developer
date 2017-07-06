@@ -10,6 +10,7 @@ ui module backblaze {
         "defaultPage": "Home",
         "showMenu": true,
         "hideNavigation": false,
-        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif"
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
+        "menu": []
     }
 }
