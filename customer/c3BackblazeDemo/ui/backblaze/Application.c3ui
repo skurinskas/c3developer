@@ -1,0 +1,15 @@
+ui module backblaze {
+    application backblaze {
+        "name": "backblaze",
+        "humanName": "Backblaze",
+        "bundle": "backblaze",
+        "showDesignerComponents": true,
+        "url": "backblaze",
+        "id": "backblaze.backblaze",
+        "package": "backblaze",
+        "defaultPage": "Home",
+        "showMenu": true,
+        "hideNavigation": false,
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif"
+    }
+}
