@@ -1,0 +1,18 @@
+ui module backblaze {
+    page JakePage {
+        "id": "backblaze.JakePage",
+        "thumbnail": "template-thumbs/120/c3ui.Dashboard3x2.gif",
+        "template": "c3ui.Dashboard3x2",
+        "isModal": true,
+        "package": "backblaze",
+        "recordType": "",
+        "idSource": "params.id",
+        "name": "JakePage",
+        "title": "Jake's page",
+        "url": "Jakes",
+        "modalTitle": "",
+        "closeButtonText": "",
+        "actionButtonAction": "",
+        "actionButtonText": ""
+    }
+}
