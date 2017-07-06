@@ -1,0 +1,31 @@
+<div class="container c3-page c3-page-dashboard">
+    {{ if title }}
+    <div class="row title">
+        <div class="col-xs-12">
+            {{ h1 title }}
+        </div>
+    </div>
+    {{ end }}
+    <div class="row">
+        <div class="col-xs-4"><div class="c3-component-socket" data-box="true" id="TopLeft"></div>
+            
+        </div>
+        <div class="col-xs-4">
+            <div class="c3-component-socket" data-box="true" id="TopMiddle"></div>
+        </div>
+        <div class="col-xs-4">
+            <div class="c3-component-socket" data-box="true" id="TopRight"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="c3-component-socket" data-box="true" id="BottomLeft"></div>
+        </div>
+        <div class="col-xs-4">
+            <div class="c3-component-socket" data-box="true" id="BottomMiddle"></div>
+        </div>
+        <div class="col-xs-4">
+            <div class="c3-component-socket" data-box="true" id="BottomRight"></div>
+        </div>
+    </div>
+</div>
