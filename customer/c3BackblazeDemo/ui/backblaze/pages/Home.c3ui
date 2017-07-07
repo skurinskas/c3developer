@@ -425,9 +425,9 @@ ui module backblaze {
                         "label": "Failure Date"
                     },
                     {
-                        "id": "serialNumber",
-                        "field": "serialNumber",
-                        "label": "Serial number"
+                        "id": "meta.created",
+                        "field": "meta.created",
+                        "label": "Created"
                     }
                 ]
             },
