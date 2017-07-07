@@ -423,6 +423,11 @@ ui module backblaze {
                         "id": "failureDate",
                         "field": "failureDate",
                         "label": "Failure Date"
+                    },
+                    {
+                        "id": "serialNumber",
+                        "field": "serialNumber",
+                        "label": "Serial number"
                     }
                 ]
             },
