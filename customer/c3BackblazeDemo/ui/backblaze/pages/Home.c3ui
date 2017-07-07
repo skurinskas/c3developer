@@ -446,7 +446,7 @@ ui module backblaze {
                 "showLegend": false,
                 "hoverHalo": true,
                 "colors": [
-                    "#114552",
+                    "#35aac7",
                     "#f4d464",
                     "#a0c93b",
                     "#f0a63a",
