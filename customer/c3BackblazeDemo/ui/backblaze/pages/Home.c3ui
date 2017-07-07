@@ -413,6 +413,16 @@ ui module backblaze {
                         "id": "manufacturer",
                         "field": "manufacturer",
                         "label": "Manufacturer"
+                    },
+                    {
+                        "id": "status",
+                        "field": "status",
+                        "label": "Status"
+                    },
+                    {
+                        "id": "failureDate",
+                        "field": "failureDate",
+                        "label": "Failure Date"
                     }
                 ]
             },
@@ -438,142 +448,165 @@ ui module backblaze {
             },
             {
                 "id": "ModelTrends",
-                "component": "oxy.OilWellFailureHistoryChart",
+                "component": "UsageAndEvents",
+                "icon": "bar-chart",
+                "name": "ModelTrends",
                 "renderTo": "#BottomLeft",
-                "box": true,
-                "boxHeight": 435,
                 "title": "Trends",
+                "box": true,
                 "enablePriorPeriod": false,
-                "enableExportChart": false,
-                "dynamicDateRange": false,
-                "enableCache": false,
-                "startDate": "2015-01-01",
-                "endDate": "2016-05-01",
-                "defaultInterval": "DAY",
-                "axisProperties": {
-                    "failures": {
-                        "axisMin": 0
+                "yAxisLimit": "2",
+                "expandEnabled": false,
+                "yAxisMin": 0,
+                "data": {
+                    "record": {
+                        "localData": true,
+                        "data": {
+                            "id": "something"
+                        }
                     }
                 },
                 "series": [
                     {
-                        "id": "m1",
-                        "isTimeseries": true,
-                        "name": "HD Temperature",
-                        "color": "#f0a63a",
-                        "chartType": "line",
-                        "axis": "Multi Dimensional (see tooltip)",
-                        "tooltipGroup": "group1",
-                        "unit": "F",
+                        "id": "temperature",
+                        "color": "#0090B2",
+                        "disabled": false,
+                        "name": "Avg. Temperature",
                         "data": {
                             "c3type": "HardDrive",
-                            "c3function": "rollupMetric",
+                            "c3function": "rollupMetrics",
                             "c3arguments": {
                                 "spec": {
                                     "expressions": [
                                         "temperature"
                                     ],
+                                    "rollupFunc": "AVG",
+                                    "interval": "DAY",
+                                    "start": "2016-01-01",
+                                    "end": "2016-12-31",
                                     "filter": "exists(id)",
-                                    "limit": 500,
-                                    "rollupFunc": "AVG"
+                                    "limit": "10"
                                 }
                             },
-                            "responseTransform": null,
+                            "responseSelector": "temperature",
                             "collection": false
-                        }
+                        },
+                        "isTimeseries": true,
+                        "unit": "",
+                        "chartType": "line",
+                        "tooltipGroup": "temperature",
+                        "axis": "Multi Dimensional (see tooltip)"
                     },
                     {
-                        "id": "m2",
-                        "isTimeseries": true,
-                        "name": "Power Cycle",
-                        "color": "#0090B2",
-                        "chartType": "line",
-                        "axis": "Multi Dimensional (see tooltip)",
-                        "tooltipGroup": "group1",
-                        "unit": "cycle",
+                        "id": "powerCycle",
+                        "color": "#e11100",
+                        "disabled": false,
+                        "name": "Avg Power Cycles",
                         "data": {
                             "c3type": "HardDrive",
-                            "c3function": "rollupMetric",
+                            "c3function": "rollupMetrics",
                             "c3arguments": {
                                 "spec": {
                                     "expressions": [
                                         "powerCycle"
                                     ],
+                                    "rollupFunc": "AVG",
+                                    "interval": "DAY",
+                                    "start": "2016-01-01",
+                                    "end": "2016-12-31",
                                     "filter": "exists(id)",
-                                    "limit": 500,
-                                    "rollupFunc": "AVG"
+                                    "limit": "10"
                                 }
                             },
-                            "responseTransform": null,
+                            "responseSelector": "powerCycle",
                             "collection": false
-                        }
+                        },
+                        "isTimeseries": true,
+                        "unit": "",
+                        "chartType": "line",
+                        "tooltipGroup": "temperature",
+                        "axis": "Multi Dimensional (see tooltip)"
                     },
                     {
-                        "id": "m3",
-                        "isTimeseries": true,
-                        "name": "Seek Error",
+                        "id": "loadCycleCount",
                         "color": "#9FCB2B",
-                        "chartType": "line",
-                        "axis": "Seek Error",
-                        "tooltipGroup": "group2",
-                        "unit": "error",
+                        "disabled": false,
+                        "name": "Avg Load Cycle Count",
                         "data": {
                             "c3type": "HardDrive",
-                            "c3function": "rollupMetric",
+                            "c3function": "rollupMetrics",
                             "c3arguments": {
                                 "spec": {
                                     "expressions": [
-                                        "seekError"
+                                        "loadCycleCount"
                                     ],
+                                    "rollupFunc": "AVG",
+                                    "interval": "DAY",
+                                    "start": "2016-01-01",
+                                    "end": "2016-12-31",
                                     "filter": "exists(id)",
-                                    "limit": 500,
-                                    "rollupFunc": "SUM"
+                                    "limit": "10"
                                 }
                             },
-                            "responseTransform": null,
+                            "responseSelector": "loadCycleCount",
                             "collection": false
-                        }
+                        },
+                        "isTimeseries": true,
+                        "unit": "",
+                        "chartType": "line",
+                        "tooltipGroup": "temperature",
+                        "axis": "Multi Dimensional (see tooltip)"
                     },
                     {
-                        "id": "m6",
-                        "isTimeseries": true,
-                        "name": "% of HDs On",
+                        "id": "throughput",
                         "color": "#000000",
-                        "chartType": "line",
-                        "axis": "Multi Dimensional (see tooltip)",
-                        "tooltipGroup": "group3",
-                        "unit": "%",
+                        "disabled": false,
+                        "name": "Avg Throughput",
                         "data": {
                             "c3type": "HardDrive",
-                            "c3function": "rollupMetric",
+                            "c3function": "rollupMetrics",
                             "c3arguments": {
                                 "spec": {
                                     "expressions": [
-                                        "100* exists(powerOn)"
+                                        "throughput"
                                     ],
+                                    "rollupFunc": "AVG",
+                                    "interval": "DAY",
+                                    "start": "2016-01-01",
+                                    "end": "2016-12-31",
                                     "filter": "exists(id)",
-                                    "limit": 1000,
-                                    "rollupFunc": "AVG"
+                                    "limit": "10"
                                 }
                             },
-                            "responseTransform": null,
+                            "responseSelector": "throughput",
                             "collection": false
-                        }
+                        },
+                        "isTimeseries": true,
+                        "unit": "",
+                        "chartType": "line",
+                        "tooltipGroup": "temperature",
+                        "axis": "Multi Dimensional (see tooltip)"
                     }
                 ],
+                "defaultInterval": "DAY",
+                "startDate": "2016-01-01",
+                "endDate": "2016-12-31",
                 "legendGroups": [
                     {
-                        "id": "legend",
-                        "name": "Series",
+                        "id": "temperature",
+                        "name": "Temperature",
                         "series": [
-                            "m1",
-                            "m2",
-                            "m3",
-                            "m6"
+                            "temperature",
+                            "powerCycle",
+                            "loadCycleCount",
+                            "throughput"
                         ]
                     }
                 ],
-                "markerSymbol": "",
+                "height": 400,
+                "legendType": "highcharts",
+                "analyticResults": false,
+                "boxHeight": 600,
                 "intervalOptions": [
                     {
                         "text": "Day",
