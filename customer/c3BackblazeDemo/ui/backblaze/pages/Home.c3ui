@@ -444,7 +444,20 @@ ui module backblaze {
                 "showPercentage": true,
                 "showTooltip": true,
                 "showLegend": false,
-                "hoverHalo": true
+                "hoverHalo": true,
+                "colors": [
+                    "#114552",
+                    "#f4d464",
+                    "#a0c93b",
+                    "#f0a63a",
+                    "#dcc5e6",
+                    "#a8e7f6",
+                    "#e6720c",
+                    "#cce68d",
+                    "#bf9ace",
+                    "#dc4712",
+                    "#0e90b0"
+                ]
             },
             {
                 "id": "ModelTrends",
