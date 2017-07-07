@@ -627,10 +627,11 @@ ui module backblaze {
                 "boxHeight": 600,
                 "intervalOptions": [
                     {
-                        "text": "Day",
+                        "text": "DAY",
                         "id": "DAY"
                     }
-                ]
+                ],
+                "enableLegendGroups": true
             }
         ],
         "behavior": {
