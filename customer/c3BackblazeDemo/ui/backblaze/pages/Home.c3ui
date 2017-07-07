@@ -431,7 +431,7 @@ ui module backblaze {
                 "component": "highchart.PieChart",
                 "icon": "bar-chart",
                 "name": "PieChart",
-                "box": true,
+                "box": false,
                 "title": "Hard Drives by Model",
                 "renderTo": "#TopRight",
                 "height": 388,
