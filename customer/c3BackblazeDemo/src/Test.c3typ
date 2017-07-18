@@ -1,4 +1,1 @@
-entity type Test {
-  
-  serialNumber: string
-}
+type Test mixes Canonical<AbstractContent>
