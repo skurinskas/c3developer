@@ -1,0 +1,9 @@
+entity type LeftType schema name 'LEFTTYPE' {
+  
+  rightHistory: [IntersectionType](from, id)
+
+  /**
+   * The current or active Right record
+   */
+  currentRight: RightType stored calc 'rightHistory.(not(end) || end > now()).to'
+}
