@@ -1,0 +1,1 @@
+{"type":"AdminGroup","roles":[{"id":"c3Tools.Role.ExMachina"},{"id":"ReadOnlyRole"},{"id":"EndUserRole"},{"id":"testRole"}],"id":"AdminGroup.ExMachinaUser","name":"AdminGroup.ExMachinaUser"}
