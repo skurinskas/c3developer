@@ -1,0 +1,5 @@
+// this is a test
+entity type AAAType schema name 'AAATY' {
+  
+  randomStringField: string
+}
