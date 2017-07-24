@@ -1,0 +1,7 @@
+remix type EvalMetricSpec mixes MetricSpecBase {
+  
+  /**
+   * random field
+   */
+  randomStringField: string
+}
