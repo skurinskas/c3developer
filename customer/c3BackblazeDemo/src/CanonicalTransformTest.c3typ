@@ -1,0 +1,1 @@
+type CanonicalTransformTest extends HardDrive transforms CanonicalBackblaze
