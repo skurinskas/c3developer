@@ -1,0 +1,30 @@
+remix entity type Organization extends Party
+                               mixes AclEnabled<Organization>, WeatherAware, MetricEvaluatable {
+  
+  /**
+   * Callback that is called from UpsertTask before objs are removed.  The implementer can perform validation or additional logic.
+   *
+   * @param objs
+   *           List of objs that are about to be removed.  By default the objs will be the complete original source
+   *           obj read from the db.  If fewer fields are desired (for better performance) a dependency annotation can
+   *           be specified (e.g. @dependency(include = "field1, field2..."). Then the objs will have at least those
+   *           requested fields.
+   * @return list of modified objs and any errors that were encountered.  If there were no errors the number and order
+   *         of objs must match the input.
+   */
+  beforeRemove: ~
+
+  /**
+   * Populates the acl entries for the specified Objs. The acl entries will be populated based on the
+   * {@link AclPrivilege} entries defined for the type.
+   *
+   * @param objs
+   *          List of objs to populate the acls for. If null, the acls for all entries will be populated.
+   */
+  populateAcl: ~
+
+  /**
+   * helloWorld function
+   */
+  helloWorld: function(): string js server
+}
