@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"HardDrive"},"tsDecl":{"data":"measurements","treatment":"INTEGRAL","start":"start"},"id":"TestMetric_HardDrive","name":"TestMetric","description":"this is a test"}
