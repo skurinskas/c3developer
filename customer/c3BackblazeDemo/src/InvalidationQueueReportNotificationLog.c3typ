@@ -1,0 +1,5 @@
+@db(unique=['alert,source,eventTimestamp'])
+type InvalidationQueueReportNotificationLog extends NotificationLog type key 'INVAL_NL' {
+  
+  source: InvalidationQueueReport
+}
