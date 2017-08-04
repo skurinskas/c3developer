@@ -1,0 +1,5 @@
+@DFE(interval='MONTH', period='1Minute', includeSpec='id')
+type InvalidationQueueReportMonth1MinuteAlertProcessorInput_AlertsEngine mixes CompoundDataFlowEvent<InvalidationQueueReport> {
+  
+  invalidationQueueReportCronQueueComputingActionsMonth1Minute_AlertsEngine: InvalidationQueueReportCronQueueComputingActionsMonth1Minute_AlertsEngine
+}
