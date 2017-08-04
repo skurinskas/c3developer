@@ -1,0 +1,2 @@
+@DFE(interval='MONTH', period='3Day', metric='CronQueueComputingActions')
+type InvalidationQueueReportCronQueueComputingActionsMonth3Day_AlertsEngine mixes TSDataFlowEvent<InvalidationQueueReport>
