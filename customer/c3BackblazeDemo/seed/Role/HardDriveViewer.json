@@ -1,1 +1,1 @@
-{"type":"Role","id":"HardDriveViewer","name":"Read-only Hard Drive Viewer Role"}
+{"type":"Role","permissions":[{"access":"allow","typeName":"HardDrive","action":"fetch"}],"id":"HardDriveViewer","name":"Read-only Hard Drive Viewer Role"}
