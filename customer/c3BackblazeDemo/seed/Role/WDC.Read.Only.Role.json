@@ -1,1 +1,1 @@
-{"type":"Role","id":"WDC.Read.Only.Role","name":"WDC Read Only Role"}
+{"type":"Role","permissions":[{"access":"allow","typeName":"HardDrive","action":"fetch"}],"id":"WDC.Read.Only.Role","name":"WDC Read Only Role"}
