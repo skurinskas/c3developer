@@ -1,1 +1,1 @@
-{"type":"AdminGroup","id":"wdc_read_only","name":"WDC Read-Only Group"}
+{"type":"AdminGroup","roles":[{"id":"HardDriveViewer"}],"id":"wdc_read_only","name":"WDC Read-Only Group"}
