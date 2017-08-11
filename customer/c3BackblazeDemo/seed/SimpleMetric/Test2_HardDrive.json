@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"HardDrive"},"id":"Test2_HardDrive","name":"Test2","expression":"identity(200)"}
