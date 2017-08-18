@@ -1,0 +1,2 @@
+@DFE(interval='HOUR', period='2Hour', metric='failure')
+type HardDrivefailureHour2Hour_AlertsEngine mixes TSDataFlowEvent<HardDrive>
