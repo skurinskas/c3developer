@@ -1,0 +1,5 @@
+@DFE(interval='HOUR', period='2Hour', includeSpec='id')
+type HardDriveHour2HourAlertProcessorInput_AlertsEngine mixes CompoundDataFlowEvent<HardDrive> {
+  
+  hardDrivefailureHour2Hour_AlertsEngine: HardDrivefailureHour2Hour_AlertsEngine
+}
