@@ -1,0 +1,5 @@
+@db(unique=['alert,source,eventTimestamp'])
+type HardDriveNotificationLog extends NotificationLog type key 'HARDD_NL' {
+  
+  source: HardDrive
+}
