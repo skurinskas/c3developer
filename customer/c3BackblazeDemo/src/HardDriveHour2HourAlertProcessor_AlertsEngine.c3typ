@@ -1,0 +1,1 @@
+type HardDriveHour2HourAlertProcessor_AlertsEngine mixes AlertProcessor<HardDriveHour2HourAlertProcessorInput_AlertsEngine, HardDriveNotificationLog, HardDrive>
