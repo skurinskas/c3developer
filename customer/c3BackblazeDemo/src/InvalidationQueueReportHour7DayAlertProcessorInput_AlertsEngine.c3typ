@@ -1,5 +1,109 @@
 @DFE(interval='HOUR', period='7Day', includeSpec='id')
 type InvalidationQueueReportHour7DayAlertProcessorInput_AlertsEngine mixes CompoundDataFlowEvent<InvalidationQueueReport> {
   
-  invalidationQueueReportBatchQueueUnreviewedFailedHour7Day_AlertsEngine: InvalidationQueueReportBatchQueueUnreviewedFailedHour7Day_AlertsEngine
+  // the source of the data for this event
+  source: ~
+
+  /**
+   * Optional constructor that will be called every time instance of this type is instantiated.
+   *
+   * Note that constructor introduces additional overhead so should only be implemented for low volume data.
+   */
+  @beta
+  constructor: private abstract function(fields: !map<string, Field>): !map<string, Field>
+
+  /**
+   * For types that support an abstract string-based representation, serialize can be defined to convert to that string
+   * representation and #fromString to re-construct the object from the string representation.
+   *
+   * Note that default implementation will throw NotImplemented exception.
+   *
+   * @see fromString
+   */
+  serialize: member function(): !string
+
+  /**
+   * Convert the internal object representation to a JSON object.
+   *
+   * @return JSON object representation
+   *
+   * @see fromJson
+   */
+  toJson: member function(): !json
+
+  /**
+   * Convert the internal object representation to a serialized JSON string.
+   *
+   * @return JSON object as string
+   */
+  toJsonString: member function(): !string
+
+  /**
+   * Convert the internal object representation to a serialized XML string.
+   *
+   * @return XML element as string
+   *
+   * @see fromXmlString
+   */
+  toXmlString: member function(): !string
+
+  /**
+   * Parse the string-based representation and reconstruct the corresponding object. This should only be defined for
+   * types which have such a representation, and which also implement #serialize.
+   *
+   * fromString is called on the type be deserialized and must reconstruct an Obj of the appropriate type (which may be
+   * a type that mixes in the type on which it is called). This means that the resulting object's type will be isA the
+   * called-on type, but perhaps not identical.
+   *
+   * Note that default implementation will throw NotImplemented exception.
+   *
+   * @see serialize
+   */
+  fromString: function(s: !string): !Obj
+
+  /**
+   * Load the JSON-based representation and reconstruct the corresponding object.
+   *
+   * fromJson is be called on the type be deserialized and must reconstruct an Obj of the appropriate type (which may be
+   * a type that mixes in the type on which it is called). This means that the resulting object's type will be isA the
+   * called-on type, but perhaps not identical. In particular, `Obj.fromJson` works for any actual type and will return
+   * an instance of the correct type.
+   *
+   * @see toJson
+   */
+  fromJson: function(json: !json): !Obj
+
+  /**
+   * Load the XML-based representation and reconstruct the corresponding object.
+   *
+   * fromXmlString is be called on the type be deserialized and must reconstruct an Obj of the appropriate type (which
+   * may be a type that mixes in the type on which it is called). This means that the resulting object's type will be
+   * isA the called type, but perhaps not identical. In particular, `Obj.fromXmlString` works for any actual type and
+   * will return an instance of the correct type.
+   *
+   * @see toXmlString
+   */
+  fromXmlString: function(xml: !string): !Obj
+
+  /**
+   * Produce a human-readable representation of the instance, useful for debugging. This can be overidden by types which
+   * have more or different primary info to display.
+   *
+   * Note that this is *not* used for serialization and may be an incomplete representation of the object. For
+   * serialization, use toJson instead.  If a type supports string serialization, it will implement the serialize and
+   * fromString methods.
+   *
+   * @see serialize
+   * @see toJson
+   */
+  toString: member function(): string
+
+  /**
+   * Evaluates given expression over this instance.
+   *
+   * TODO: PLAT-7964 Add bindings and options parameters to Obj.eval
+   *
+   * eval: member function(expr: !string serialized Expr, bindings: map<string, any>, options: ExprCompileOptions): any
+   */
+  eval: member function(expr: !string serialized Expr): any
 }
