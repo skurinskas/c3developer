@@ -1,0 +1,5 @@
+@DFE(interval='HOUR', period='7Day', includeSpec='id')
+type InvalidationQueueReportHour7DayAlertProcessorInput_AlertsEngine mixes CompoundDataFlowEvent<InvalidationQueueReport> {
+  
+  invalidationQueueReportBatchQueueUnreviewedFailedHour7Day_AlertsEngine: InvalidationQueueReportBatchQueueUnreviewedFailedHour7Day_AlertsEngine
+}
