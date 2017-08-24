@@ -1,5 +1,5 @@
 @DFE(interval='HOUR', period='1Day', includeSpec='id')
 type InvalidationQueueReportHour1DayAlertProcessorInput_AlertsEngine mixes CompoundDataFlowEvent<InvalidationQueueReport> {
   
-  invalidationQueueReportCalcFieldsQueuePendingHour1Day_AlertsEngine: InvalidationQueueReportCalcFieldsQueuePendingHour1Day_AlertsEngine
+  invalidationQueueReportCronQueuePendingHour1Day_AlertsEngine: InvalidationQueueReportCronQueuePendingHour1Day_AlertsEngine
 }
