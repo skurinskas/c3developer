@@ -1,0 +1,2 @@
+@DFE(interval='HOUR', period='1Day', metric='CalcFieldsQueuePending')
+type InvalidationQueueReportCalcFieldsQueuePendingHour1Day_AlertsEngine mixes TSDataFlowEvent<InvalidationQueueReport>
