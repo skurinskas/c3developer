@@ -1,0 +1,2 @@
+@DFE(interval='HOUR', period='1Day', metric='CronQueuePending')
+type InvalidationQueueReportCronQueuePendingHour1Day_AlertsEngine mixes TSDataFlowEvent<InvalidationQueueReport>
