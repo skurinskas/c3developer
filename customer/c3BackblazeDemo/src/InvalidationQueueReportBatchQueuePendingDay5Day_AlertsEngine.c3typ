@@ -1,2 +1,0 @@
-@DFE(interval='DAY', period='5Day', metric='BatchQueuePending')
-type InvalidationQueueReportBatchQueuePendingDay5Day_AlertsEngine mixes TSDataFlowEvent<InvalidationQueueReport>
