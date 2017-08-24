@@ -1,2 +1,0 @@
-@DFE(interval='HOUR', period='7Day', metric='BatchQueueUnreviewedFailed')
-type InvalidationQueueReportBatchQueueUnreviewedFailedHour7Day_AlertsEngine mixes TSDataFlowEvent<InvalidationQueueReport>
