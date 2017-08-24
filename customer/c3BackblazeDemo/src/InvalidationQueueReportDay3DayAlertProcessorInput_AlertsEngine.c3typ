@@ -1,0 +1,5 @@
+@DFE(interval='DAY', period='3Day', includeSpec='id')
+type InvalidationQueueReportDay3DayAlertProcessorInput_AlertsEngine mixes CompoundDataFlowEvent<InvalidationQueueReport> {
+  
+  invalidationQueueReportCronQueuePendingDay3Day_AlertsEngine: InvalidationQueueReportCronQueuePendingDay3Day_AlertsEngine
+}
