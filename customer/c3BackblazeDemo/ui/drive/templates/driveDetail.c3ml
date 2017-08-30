@@ -2,10 +2,7 @@
     <div class="row">
 
     </div><div class="row">
-<div class="c3-component-socket col-xs-6" id="Component1"></div>
-<div class="c3-component-socket col-xs-6" id="Component2"></div>
-</div><div class="row">
-<div class="c3-component-socket col-xs-12" id="Component3" style="height: 400px;"></div>
+<div class="c3-component-socket col-xs-12" id="Component1" style="height: 400px;"></div>
 
 </div>
 </div>
