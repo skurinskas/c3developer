@@ -61,6 +61,51 @@ ui module drive {
                         "label": "Drive size"
                     }
                 ]
+            },
+            {
+                "id": "HistogramChart",
+                "component": "chart.MetricsHistogram",
+                "icon": "bar-chart",
+                "name": "HistogramChart",
+                "box": true,
+                "title": "New Histogram",
+                "renderTo": "#TopRight",
+                "height": 618,
+                "data": {
+                    "itemsDataSource": "drive.drive"
+                },
+                "titleUrl": "",
+                "metricNameTitle": true,
+                "metricNameTooltip": true,
+                "chartingType": "count",
+                "binningType": "quantile",
+                "numberBins": "5",
+                "labelDecimals": "",
+                "numberPoints": "",
+                "worstPerformingLegendText": "",
+                "period": "",
+                "start": "",
+                "pointPath": "",
+                "pointWidth": "",
+                "nameField": "",
+                "countText": "",
+                "maxValueText": "",
+                "nameText": "",
+                "valueText": "",
+                "percentileText": "",
+                "drilldownBackText": "",
+                "noHistogramDataMessageText": "",
+                "noItemDataMessageText": "",
+                "errorDataMessageText": "",
+                "ignoreZeroValues": false,
+                "displayXAxisLegend": false,
+                "tooltipBeneathColumns": false,
+                "currentMomentEval": false,
+                "enableDrilldown": false,
+                "histogramMetric": {
+                    "metricName": "DayOfWeek",
+                    "metricTitle": "temperature"
+                }
             }
         ]
     }
