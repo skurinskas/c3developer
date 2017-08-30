@@ -1,0 +1,18 @@
+ui module drive {
+    page driveDetail {
+        "id": "drive.driveDetail",
+        "thumbnail": "template-thumbs/120/c3ui.BlankPage.gif",
+        "template": "c3ui.BlankPage",
+        "isModal": true,
+        "package": "c3BackblazeDemo",
+        "recordType": "",
+        "idSource": "params.id",
+        "name": "driveDetail",
+        "title": "Drive detail",
+        "url": "driveDetail",
+        "modalTitle": "",
+        "closeButtonText": "",
+        "actionButtonAction": "",
+        "actionButtonText": ""
+    }
+}
