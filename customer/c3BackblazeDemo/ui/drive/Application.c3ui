@@ -1,0 +1,15 @@
+ui module drive {
+    application drive {
+        "name": "drive",
+        "humanName": "drive",
+        "showDesignerComponents": true,
+        "url": "drive",
+        "id": "drive",
+        "package": "c3BackblazeDemo",
+        "defaultPage": "Home",
+        "showMenu": true,
+        "hideNavigation": false,
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
+        "noneditable": false
+    }
+}
