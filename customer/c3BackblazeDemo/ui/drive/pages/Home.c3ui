@@ -28,7 +28,8 @@ ui module drive {
                     {
                         "id": "id",
                         "field": "id",
-                        "label": "Id"
+                        "label": "Id",
+                        "link": "/drive/driveDetail"
                     },
                     {
                         "id": "manufacturer",
