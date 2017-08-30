@@ -5,6 +5,63 @@ ui module drive {
         "template": "c3ui.Dashboard2x2",
         "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
         "title": "Home",
-        "url": "home"
+        "url": "home",
+        "components": [
+            {
+                "id": "Grid",
+                "component": "KendoGrid",
+                "icon": "align-justify",
+                "name": "Grid",
+                "box": true,
+                "paginate": true,
+                "title": "New Grid",
+                "data": {
+                    "collection": "drive.drive"
+                },
+                "renderTo": "#TopLeft",
+                "height": 618,
+                "titleUrl": "",
+                "aggregate": "",
+                "small": false,
+                "checkBoxes": false,
+                "columns": [
+                    {
+                        "id": "id",
+                        "field": "id",
+                        "label": "Id"
+                    },
+                    {
+                        "id": "manufacturer",
+                        "field": "manufacturer",
+                        "label": "Manufacturer"
+                    },
+                    {
+                        "id": "model",
+                        "field": "model",
+                        "label": "Model"
+                    },
+                    {
+                        "id": "name",
+                        "field": "name",
+                        "label": "Name"
+                    },
+                    {
+                        "id": "serialNumber",
+                        "field": "serialNumber",
+                        "label": "Serial number"
+                    },
+                    {
+                        "id": "status",
+                        "field": "status",
+                        "label": "Status"
+                    },
+                    {
+                        "id": "driveSize",
+                        "field": "driveSize",
+                        "label": "Drive size"
+                    }
+                ]
+            }
+        ]
     }
 }
