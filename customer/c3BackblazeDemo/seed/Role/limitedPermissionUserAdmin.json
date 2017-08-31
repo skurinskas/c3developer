@@ -1,1 +1,1 @@
-{"type":"Role","permissions":[{"access":"deny","typeName":"Identity","actionGroup":"delete"}],"id":"limitedPermissionUserAdmin","name":"LimitedPermissionUserAdmin"}
+{"type":"Role","permissions":[{"access":"deny","typeName":"Identity","actionGroup":"delete"},{"access":"allow","actionGroup":"user-admin"}],"id":"limitedPermissionUserAdmin","name":"LimitedPermissionUserAdmin"}
