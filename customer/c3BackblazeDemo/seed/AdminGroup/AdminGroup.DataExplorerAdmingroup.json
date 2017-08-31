@@ -1,1 +1,1 @@
-{"type":"AdminGroup","id":"AdminGroup.DataExplorerAdmingroup","name":"Data Explorer Admin Group"}
+{"type":"AdminGroup","roles":[{"id":"dataExplorerAdminRole"}],"id":"AdminGroup.DataExplorerAdmingroup","name":"Data Explorer Admin Group"}
