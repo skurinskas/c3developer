@@ -1,0 +1,2 @@
+@DFE(interval='HOUR', period='1Minute', metric='HourOfDay')
+type HardDriveHourOfDayHour1Minute_AlertsEngine mixes TSDataFlowEvent<HardDrive>
