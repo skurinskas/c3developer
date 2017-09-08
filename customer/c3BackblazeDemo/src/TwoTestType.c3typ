@@ -1,0 +1,4 @@
+entity type TwoTestType schema name 'TTF' {
+  
+  TestFieldString: string
+}
