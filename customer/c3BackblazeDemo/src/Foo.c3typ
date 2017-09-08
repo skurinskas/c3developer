@@ -1,4 +1,7 @@
 type Foo {
   
+  /**
+   * int field
+   */
   intField: int
 }
