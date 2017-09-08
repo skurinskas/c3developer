@@ -1,0 +1,4 @@
+entity type BoazType schema name 'BoazSchema' {
+  
+  WhyNot: string
+}
