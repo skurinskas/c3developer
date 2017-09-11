@@ -1,7 +1,10 @@
 type Foo {
   
+  strField: string
+
   /**
-   * int field
+   * sample
+   * @param {string} arg1
    */
-  intField: int
+  helloWorld: function(arg1: string): string js server
 }
