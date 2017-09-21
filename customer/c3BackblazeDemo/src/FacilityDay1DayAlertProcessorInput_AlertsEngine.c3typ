@@ -1,0 +1,5 @@
+@DFE(interval='DAY', period='1Day', includeSpec='id')
+type FacilityDay1DayAlertProcessorInput_AlertsEngine mixes CompoundDataFlowEvent<Facility> {
+  
+  facilityDayOfWeekDay1Day_AlertsEngine: FacilityDayOfWeekDay1Day_AlertsEngine
+}
