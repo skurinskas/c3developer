@@ -1,0 +1,1 @@
+type FacilityDay1DayAlertProcessor_AlertsEngine mixes AlertProcessor<FacilityDay1DayAlertProcessorInput_AlertsEngine, FacilityNotificationLog, Facility>
