@@ -1,0 +1,2 @@
+@DFE(interval='HOUR', period='1Day', metric='DayOfWeek')
+type FacilityDayOfWeekHour1Day_AlertsEngine mixes TSDataFlowEvent<Facility>
