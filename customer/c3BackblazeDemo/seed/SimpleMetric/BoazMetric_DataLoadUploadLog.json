@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"DataLoadUploadLog"},"path":"processLogs","id":"BoazMetric_DataLoadUploadLog","version":6,"name":"BoazMetric","expression":"sum(sum(stats.successObjCount))","description":"BoazMetric"}
