@@ -1,0 +1,2 @@
+@stream(name='FooStream', partitionKey='manufacturer')
+type StreamFoo mixes KinesisStream<Foo>
