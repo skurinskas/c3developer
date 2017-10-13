@@ -1,1 +1,1 @@
-{"type":"SimpleMetric","srcType":{"typeName":"DataLoadProcessLog"},"id":"BoazProcess_DataLoadProcessLog","name":"BoazProcess","expression":"avg(avg(stats.rejectedObjCount/stats.objCount))"}
+{"type":"SimpleMetric","srcType":{"typeName":"DataLoadProcessLog"},"id":"BoazProcess_DataLoadProcessLog","name":"BoazProcess","expression":"sum(sum(stats.ObjCount))"}
