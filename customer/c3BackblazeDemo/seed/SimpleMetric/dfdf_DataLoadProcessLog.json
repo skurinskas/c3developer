@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"DataLoadProcessLog"},"id":"dfdf_DataLoadProcessLog","name":"dfdf","expression":"sum(sum(stats.objCount))"}
