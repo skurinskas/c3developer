@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"DataLoadUploadLog"},"path":"processLogs","id":"DataLoadUploadLogPerformance_DataLoadUploadLog","name":"DataLoadUploadLogPerformance","expression":"avg(avg(stats.rejectedObjCount/stats.objCount))"}
