@@ -1,0 +1,15 @@
+ui module test {
+    application test {
+        "name": "test",
+        "humanName": "test",
+        "showDesignerComponents": true,
+        "url": "test",
+        "id": "test",
+        "package": "c3BackblazeDemo",
+        "defaultPage": "Home",
+        "showMenu": true,
+        "hideNavigation": false,
+        "thumbnail": "template-thumbs/120/ui.Dashboard2x2.gif",
+        "noneditable": false
+    }
+}
