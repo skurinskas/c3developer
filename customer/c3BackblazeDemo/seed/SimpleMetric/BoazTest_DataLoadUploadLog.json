@@ -1,1 +1,1 @@
-{"type":"SimpleMetric","srcType":{"typeName":"DataLoadUploadLog"},"path":"processLogs","id":"BoazTest_DataLoadUploadLog","name":"BoazTest","expression":"avg(avg(stats.objCount))"}
+{"type":"SimpleMetric","srcType":{"typeName":"DataLoadUploadLog"},"path":"processLogs","tsDecl":{},"id":"BoazTest_DataLoadUploadLog","version":2,"name":"BoazTest","unit":{},"expression":"sum(sum(stats.objCount))","description":"BoazTest"}
