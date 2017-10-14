@@ -1,0 +1,1 @@
+{"type":"SimpleMetric","srcType":{"typeName":"DataLoadUploadLog"},"path":"processLogs","id":"BoazTest_DataLoadUploadLog","name":"BoazTest","expression":"avg(avg(stats.objCount))"}
