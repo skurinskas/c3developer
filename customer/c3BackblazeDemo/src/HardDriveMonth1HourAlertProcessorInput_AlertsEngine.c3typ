@@ -1,0 +1,5 @@
+@DFE(interval='MONTH', period='1Hour', includeSpec='id')
+type HardDriveMonth1HourAlertProcessorInput_AlertsEngine mixes CompoundDataFlowEvent<HardDrive> {
+  
+  hardDrivetemperatureMonth1Hour_AlertsEngine: HardDrivetemperatureMonth1Hour_AlertsEngine
+}
