@@ -1,0 +1,2 @@
+@DFE(interval='MONTH', period='1Hour', metric='temperature')
+type HardDrivetemperatureMonth1Hour_AlertsEngine mixes TSDataFlowEvent<HardDrive>
