@@ -1,5 +1,0 @@
-entity module backBlaze_pythonMachineLearning remix pythonMachineLearning  {
-
-	extendable entity type PythonMachineLearningClassifier
-
-}
