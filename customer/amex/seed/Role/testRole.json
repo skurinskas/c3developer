@@ -1,1 +1,0 @@
-{"type":"Role","permissions":[{"access":"allow","typeName":"Merchant"},{"access":"allow","typeName":"MerchantTransaction"}],"id":"testRole","name":"TestRole"}

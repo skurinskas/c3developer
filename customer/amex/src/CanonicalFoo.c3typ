@@ -1,1 +1,0 @@
-type CanonicalFoo mixes Canonical<CanonicalFoo>

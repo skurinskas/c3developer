@@ -1,7 +1,0 @@
-type CanonicalScott mixes Canonical<CanonicalScott> {
-  
-  /**
-   * Merchant number
-   */
-  mer_no: string
-}
