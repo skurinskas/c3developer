@@ -1,0 +1,4 @@
+type TableauTestJobOptions {
+ option1: string
+ option2: string
+}

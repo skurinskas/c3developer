@@ -1,0 +1,13 @@
+
+entity type TableauTestJob extends BatchJob<TableauTestJob, TableauTestJobOptions, TableauTestJobBatch > type key 'TTJ' {
+
+  @py(env='tableau')
+  doStart:    ~ 
+
+  @py(env='tableau')
+  processBatch: ~ 
+
+  @py(env='tableau')
+  publish_hyperfile_to_server: function(file_name: string) 
+
+}

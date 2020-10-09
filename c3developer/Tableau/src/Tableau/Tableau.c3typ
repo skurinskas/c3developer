@@ -1,0 +1,117 @@
+type Tableau mixes Config, Singleton {
+
+  /**
+   * Tableau server url
+   **/
+  server_url: string
+
+  /**
+   * User credential used to publish files to the Tableau server
+   */
+  user_name: string
+
+  /**
+   * Credential password
+   */
+  @config(secret=true)
+  password: string
+
+  /**
+   * Tableau site id
+   */
+  site_id: string
+
+  /**
+   * location of hyper process log file
+   */
+  log_dir: string
+
+  /**
+   * Publishes the specified hyper file to the tableau server.  
+   * To Do:  update credentials to be config and read config from server
+   * @file_name - Location of the hyper file. e.g. /tmp/metric_result.hyper
+   * @server_url - URL of the tableau server
+   **/
+  @py(env='tableau')
+  publish_hyperfile_to_server: function(file_name: string)
+
+
+  /**
+   * Generates a hyper file for a source type and list of metrics.
+   * @param metrics
+   *          List of metrics to be evaluated
+   * @param filter 
+   *          Filter to be applied to identify source objects
+   * @param start 
+   *          Start date of the evaluation period
+   * @param end
+   *          End date of the evaluation period
+   * @param interval 
+   *          Evaluation time range.  e.g. DAY, HOUR, MINUTE, MONTH, etc.  
+   * @param typeName
+   *          Name of the metric evaluatable type
+   * @param limit
+   *          Number of rows to retrieve in a single request
+   * @param num_sources
+   *          Total number of sources to evaluate metrics for
+   * @param table_name
+   *          Hyper file table name.  Recommend it be set to Extract
+   * @param file_name
+   *          Name of the hyper file extract
+   * @param create_mode
+   *          Hyper file create mode.  See Tableau doc for details.
+   **/
+  @py(env='tableau')
+  gen_metrics_table: function(metrics: [string], 
+                              filter: string, 
+                              start: string, 
+                              end: string, 
+                              interval: string, 
+                              typeName: string, 
+                              limit: int, 
+                              num_sources: int,
+                              table_name: string, 
+                              file_name: string,
+                              create_mode: int)
+
+
+  @py(env='tableau')
+  /**
+   * Generates a hyper file for a fetch request
+   * @param fields
+   *          Array of fields to export.  Must be a primitive field.  Example:
+   *  [
+   *    {'fieldName': 'id', 'dataType': 'string', 'nullable': False },
+   *    {'fieldName': 'lumensUOM.id', 'dataType': 'string', 'nullable': True },
+   *    {'fieldName': 'bulbType', 'dataType': 'string', 'nullable': True },
+   *    {'fieldName': 'latitude', 'dataType': 'double', 'nullable': True },
+   *    {'fieldName': 'longitude', 'dataType': 'double', 'nullable': True },
+   *    {'fieldName': 'wattage', 'dataType': 'double', 'nullable': True }
+   * ]
+   * @param filter
+   *          Filter to be applied when exporting the data.  
+   * @param typeName
+   *          Name of the type to export data for
+   * @param limit
+   *          Number of rows to retrieve in a single request
+   * @param num_sources
+   *          Total number of rows to export
+   * @param table_name
+   *          Hyper file table name.  Recommend it be set to Extract
+   * @param file_name
+   *          Name of the hyper file extract
+   * @param create_mode
+   *          Hyper file create mode.  See Tableau doc for details.
+   **/
+  gen_fetch_table: function(fields: json, 
+                              filter: string,
+                              typeName: string,
+                              limit: int,
+                              num_sources: int,
+                              table_name: string,
+                              file_name: string,
+                              create_mode: int)
+
+
+
+}

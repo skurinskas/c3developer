@@ -1,0 +1,69 @@
+## Tableau Hyperfile Connector
+
+In order to connect set the following configuration parameters:
+- Tableau.server_url
+- Tableau.user_name
+- Tableau.site_id
+- Tableau.password (secret)
+
+To get the config:
+```
+var config = Tableau.inst().getConfig()
+```
+
+To set the configuration parameters
+
+```
+config.setConfigValue("server_url", "<Tableau Server url>") 
+config.setConfigValue("user_name", "<user name>") 
+config.setConfigValue("site_id", "<Tableau site id>")
+config.setSecretValue("password", "<Tableau password>")
+```
+
+To publish fetch results to a Tableau Server:
+```
+var fields = [
+    {'fieldName': 'id', 'dataType': 'string', 'nullable': false },
+    {'fieldName': 'lumensUOM.id', 'dataType': 'string', 'nullable': true },
+    {'fieldName': 'bulbType', 'dataType': 'string', 'nullable': true },
+    {'fieldName': 'latitude', 'dataType': 'double', 'nullable': true },
+    {'fieldName': 'longitude', 'dataType': 'double', 'nullable': true },
+    {'fieldName': 'wattage', 'dataType': 'double', 'nullable': true },
+    {'fieldName': 'manufacturer.id', 'dataType': 'string', 'nullable': true },
+];
+
+var filter = "1==1";
+var typeName = "SmartBulb";
+var limit = 10
+var table_name = "SmartBulb";
+var file_name = "/tmp/SmartBulb.hyper";
+var num_sources = 100;
+var create_mode = 1;
+
+// fetches data and writes to a local hyper file on the C3 Server
+Tableau.gen_fetch_table(fields, filter, typeName, limit, num_sources, table_name, file_name, create_mode)
+
+// publishes the hyper file to Tableau server
+Tableau.publish_hyperfile_to_server(file_name)
+```
+
+To public metric results to a Tableau Server:
+```
+var metrics = ["AverageTemperature", "AverageLumens", "AverageVoltage"];
+var start = "2013-01-01";
+var end = "2013-02-01";
+var interval = "DAY";
+var filter = "1==1";
+var file_name = "/home/c3/test.hyper";
+var table_name = "MetricResult";
+var limit = 50;
+var num_sources = 100;
+var create_mode = 1;
+
+
+// evaluates metrics for the specified source type instances and writes the results to a local hyperfile.
+Tableau.gen_metrics_table(metrics, filter, start, end, interval, "SmartBulb", limit, num_sources,table_name, file_name, create_mode );
+
+// publishes the hyper file to Tableau server
+Tableau.publish_hyperfile_to_server(file_name);
+```

@@ -1,0 +1,11 @@
+{
+    "id": "py-tableau",
+    "name": "py-tableau",
+    "language": "Python",
+    "runtime": "CPython",
+    "runtimeVersion": "3.6",
+    "modules": {
+        "pip.tableauhyperapi": "==0.0.10899",
+        "pip.tableauserverclient": "==0.11"
+    }
+}

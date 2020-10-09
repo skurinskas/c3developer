@@ -1,0 +1,166 @@
+/**
+This pipeline runs tests of C3 packages on a customer-maintained Jenkins.
+As such, this is a general sketch of tasks, not specifically tailored/configured for any particular customer. 
+
+This pipeline executes the following steps:
+   1) Checkout packages/source from repo 
+   2) Run tests (in series) against a test cluster
+
+Assumptions:
+   1) Source repo contains this Jenkinsfile
+   2) Jenkins job is configured to pull the pipeline code from SCM
+   
+Requirements:
+   Jenkins >= 2.150.3
+   Jenkins plugins:
+      SCM
+      JUnit
+   Linux-based worker / slave node with the following software installed:
+      git
+      NodeJs (needed for CLI)
+      c3 CLI - This is easiest to accomplish using the "c3" container
+*/
+import groovy.transform.Field
+
+
+//***** state and behaviors to be defined by customer *****
+@Field def buildTimeoutHours                 = 5
+@Field def workerLabel                       = 'jenkins-package'  //demochange
+@Field def repoName                          = 'c3server'         //demochange
+@Field def repoDir                           = 'repo/server'      //demochange      // this is the directory where packages.json resides
+@Field def randomizeTag                      = true
+@Field def shouldRemoveTestTag               = true
+@Field def testClusterCredentialsId          = 'stage-platform'   // demochange //this is a (pre)configured Jenkins credential id
+@Field def testClusterCredentialsAreUserPwd  = true                         // supported Jenkins credentials types are user/pwd and secret text
+@Field def testClusterUrl                    = 'https://stage-platform.c3-e.com/' //demo change
+//***** end customer state and behaviors definitions *****
+
+
+// ------------------------------- Primary pipeline: Checkout, Provision, Test -------------------------------
+timestamps {
+   timeout(time: buildTimeoutHours, unit: 'HOURS') {
+      node(workerLabel) {
+         stage('Checkout') {
+            //Checkout Repo - for a full list of options, see https://jenkins.io/doc/pipeline/steps/workflow-scm-step/{
+            //Git checkout
+            checkout(   changelog:  false,
+                        poll:       false,
+                        scm: [$class: 'GitSCM',
+                              branches                         : [scm.branches[0]],
+                              doGenerateSubmoduleConfigurations: false,
+                              extensions                       : [[$class: 'RelativeTargetDirectory', relativeTargetDir: repoName],
+                                                                  [$class: 'CloneOption', noTags: true, reference: '', shallow: true, depth: 1],
+                                                                  [$class: 'PruneStaleBranch']],
+                              userRemoteConfigs                : scm.userRemoteConfigs])
+         }
+         
+         dir(repoName) {
+            //enumerate packages
+            def packageList = [ 'alerts' ] //demochange - for brevity, only testing the alerts package //def packageList = sh(returnStdout: true, script: "find ${repoDir} -maxdepth 2 -type d -name 'test'|sed -e 's|${repoDir}/\\(.*\\)/test|\\1|'|grep -v ^test\$|sort|uniq").trim().split() as List
+            def testTag = !randomizeTag ? 'test' : BUILD_TAG.replaceAll('%2[0-9A-Fa-f]', '_').replaceAll('[^A-Za-z0-9]', '_')
+            def testerExpectedReturnCodes = [0, 225] as Set // 0 = all tests passed; 225 = at least one test failure occurred
+            
+            //iterate packages (in series)
+            for (def packageName in packageList) {
+               stage("Test ${packageName}") {
+                  //provision
+                  try         { runCliShellWithCreds("c3 prov tag -E -F -r -a ${repoDir}", '', packageName, testTag, false, false) }
+                  catch(err)  { addErrorSummary(packageName, err, 'Provisioning') }
+
+                  //test
+                  def testerStdOutFile = 'shellOutput.txt'
+                  try {
+                     //run tests via "c3 tester"
+                     def status = runCliShellWithCreds('c3 tester', "> ${testerStdOutFile} 2>&1", packageName, testTag, true, false)
+                     if (!testerExpectedReturnCodes.contains(status))
+                        throw new Exception("c3 tester returned code: ${testStatus}")
+                     
+                     //fetch test results from test env
+                     def testerStdOut = sh(returnStdout: true, script: "cat ${testerStdOutFile}")
+                     def resultsOutputFile = "${packageName}-test.xml"
+                     fetchTestingOutput(packageName, testTag, status, testerStdOut, resultsOutputFile)
+                     
+                     //append test results to summary using junit plugin
+                     junit resultsOutputFile
+                  }
+                  catch(err) {
+                     def testerStdOut = ''
+                     def errorText = ''
+                     if (findFiles(glob: testerStdOutFile).size() != 0) {
+                        sh(returnStdout: true, script: "cat ${testerStdOutFile}")
+                        errorText = "Tester output:\n${testerStdOut}\n"
+                     }
+                     errorText = "${errorText}Error:\n${err}"
+                     addErrorSummary(packageName, errorText, 'Testing')
+                  }
+                  finally {
+                     sh "rm -f ${testerStdOutFile}"
+                     if (shouldRemoveTestTag) removeTestTag(packageName, testTag) 
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+// ------------------------------- Utility functions -------------------------------
+
+def addErrorSummary(packageName, err, errorPrefix) {
+   println "Error ${errorPrefix} ${packageName}:\n${err}"
+   def summaryText = "<span>${errorPrefix} <strong>${packageName}</strong> failed.</span><br/>"
+   manager.createSummary('error.png').appendText(summaryText, false)
+   currentBuild.result = Result.FAILURE.toString()
+}
+
+def runCliShellWithCreds(shellScript, shellScriptSuffix, packageName, testTag, returnStatus, returnStdout) {
+   def shellPrefix = "export NODE_TLS_REJECT_UNAUTHORIZED=0; ${shellScript} -t ${packageName}:${testTag} -e ${testClusterUrl}"
+   if (testClusterCredentialsAreUserPwd) { //user/pwd
+      withCredentials([usernamePassword(credentialsId: testClusterCredentialsId, usernameVariable: 'credUser', passwordVariable: 'credPwd')]) {
+         println "Running Cli Sh: ${shellPrefix} -u ${credUser}:${credPwd} ${shellScriptSuffix}"
+         return sh(script: "${shellPrefix} -u ${credUser}:${credPwd} ${shellScriptSuffix}", returnStatus: returnStatus, returnStdout: returnStdout)
+      }
+   }
+   else { //auth (secret-text)
+      withCredentials([string(credentialsId: testClusterCredentialsId, variable: 'credAuth')]) {
+         println "Running Cli  Sh: ${shellPrefix} -u ${credUser}:${credPwd} ${shellScriptSuffix}"
+         return sh(script: "${shellPrefix} -T ${credAuth} ${shellScriptSuffix}", returnStatus: returnStatus, returnStdout: returnStdout)
+      }
+   }
+}
+
+def cliJsShellWrapper(jsCode) {
+   return """
+      cat > jsCode.js << EOF
+         c3ImportAll()
+         ${jsCode}
+      EOF
+      c3 jsCode.js""".stripIndent()
+}
+
+def fetchTestingOutput(packageName, testTag, testerReturnStatus, testerOutput, resultsOutputFile) {
+   println 'Parsing test output for TestRunner Id'
+   def testRunnerIdPrefix = 'TestRunner id is '
+   def idStartIndex = testerOutput.indexOf(testRunnerIdPrefix)
+   if (idStartIndex == -1)
+      error("Testing returned status ${testerReturnStatus}, but output does not include the TestRunner id for fetching results")
+   idStartIndex += testRunnerIdPrefix.length()
+   def idStopIndex         = testerOutput.indexOf('\n', idStartIndex)
+   def testRunnerId        = testerOutput.substring(idStartIndex, idStopIndex)
+   def fetchTestResultsSh  = cliJsShellWrapper("console.log(TestRunner.get('${testRunnerId}').getTestResult().toXml())")
+   def shellOutput 
+   
+   try {       shellOutput = runCliShellWithCreds(fetchTestResultsSh, '', packageName, testTag, false, true)}
+   catch(e) {  error("Failed to retrieve test results for TestRunner ${testRunnerId}.  Error: ${e};\nResults fetch output:\n${shellOutput}") }
+
+   if (shellOutput == null || shellOutput == '')
+      error("TestRunner ${testRunnerId} has no test results")
+
+   println "Writing test output to ${resultsOutputFile}"
+   writeFile(file: resultsOutputFile, text: shellOutput)
+}
+
+def removeTestTag(packageName, testTag) { 
+   try {       runCliShellWithCreds(cliJsShellWrapper("Tag.get('${testTag}').remove()"), '', packageName, testTag, false, false) }
+   catch(e) {  addErrorSummary(packageName, errorText, "Deleting temporary test tag ${testTag} for")() }
+}
