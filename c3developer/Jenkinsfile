@@ -24,7 +24,7 @@ import groovy.transform.Field
 
 
 //***** state and behaviors to be defined by customer *****
-@Field def buildTimeoutHours                 = 5
+@Field def buildTimeoutHours                 = 0.25
 @Field def workerLabel                       = 'jenkins-package'        //demochange
 @Field def repoName                          = 'c3developer'            //demochange
 @Field def repoDir                           = 'c3developer/Tableau'    //demochange - this is the directory where packages.json resides
