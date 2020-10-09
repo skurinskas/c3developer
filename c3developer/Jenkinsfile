@@ -25,14 +25,14 @@ import groovy.transform.Field
 
 //***** state and behaviors to be defined by customer *****
 @Field def buildTimeoutHours                 = 5
-@Field def workerLabel                       = 'jenkins-package'  //demochange
-@Field def repoName                          = 'c3server'         //demochange
-@Field def repoDir                           = 'repo/server'      //demochange      // this is the directory where packages.json resides
+@Field def workerLabel                       = 'jenkins-package'        //demochange
+@Field def repoName                          = 'c3developer'            //demochange
+@Field def repoDir                           = 'c3developer/Tableau'    //demochange - this is the directory where packages.json resides
 @Field def randomizeTag                      = true
 @Field def shouldRemoveTestTag               = true
-@Field def testClusterCredentialsId          = 'stage-platform'   // demochange //this is a (pre)configured Jenkins credential id
+@Field def testClusterCredentialsId          = 'CIUser'   // demochange //this is a (pre)configured Jenkins credential id
 @Field def testClusterCredentialsAreUserPwd  = true                         // supported Jenkins credentials types are user/pwd and secret text
-@Field def testClusterUrl                    = 'https://stage-platform.c3-e.com/' //demo change
+@Field def testClusterUrl                    = 'https://stage-paas.c3-e.com/' //demo change
 //***** end customer state and behaviors definitions *****
 
 
@@ -56,7 +56,7 @@ timestamps {
          
          dir(repoName) {
             //enumerate packages
-            def packageList = [ 'alerts' ] //demochange - for brevity, only testing the alerts package //def packageList = sh(returnStdout: true, script: "find ${repoDir} -maxdepth 2 -type d -name 'test'|sed -e 's|${repoDir}/\\(.*\\)/test|\\1|'|grep -v ^test\$|sort|uniq").trim().split() as List
+            def packageList = [ 'Tableau' ] //demochange - for brevity, only testing the alerts package //def packageList = sh(returnStdout: true, script: "find ${repoDir} -maxdepth 2 -type d -name 'test'|sed -e 's|${repoDir}/\\(.*\\)/test|\\1|'|grep -v ^test\$|sort|uniq").trim().split() as List
             def testTag = !randomizeTag ? 'test' : BUILD_TAG.replaceAll('%2[0-9A-Fa-f]', '_').replaceAll('[^A-Za-z0-9]', '_')
             def testerExpectedReturnCodes = [0, 225] as Set // 0 = all tests passed; 225 = at least one test failure occurred
             
